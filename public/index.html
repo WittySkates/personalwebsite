@@ -5,13 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     <title><%= htmlWebpackPlugin.options.title %></title>
+    <style>
+      .scroller::-webkit-scrollbar {
+        width: 12px;
+        height: 12px;
+      }
+      .scroller::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      .scroller::-webkit-scrollbar-thumb {
+        background: rgb(175, 175, 175);
+        visibility:hidden;
+      }
+      .scroller:hover::-webkit-scrollbar-thumb {
+        visibility:visible;
+      }
+      .scroller {
+        overflow: overlay;
+        max-width: 100%;
+        height: 100vh;
+      }
+      body {
+      overflow: hidden; /* Hide scrollbars */
+      }
+    </style>
   </head>
   <body>
+    <script src="<%= BASE_URL %>particles.js"></script>
+    <script src="<%= BASE_URL %>params.js"></script>
     <noscript>
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
-    <div id="app"></div>
+    <div class="scroller">
+      <div id="app"></div>
+    </div>
     <!-- built files will be auto injected -->
   </body>
 </html>
