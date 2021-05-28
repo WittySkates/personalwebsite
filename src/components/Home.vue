@@ -1,9 +1,7 @@
 <template>
-  <div class="hello">
-
+  <div>
     <div id="particles-js"></div>
-
-     <b-jumbotron  class="animate__animated item-styling jumbo " id="Skills">
+    <b-jumbotron  class="animate__animated item-styling jumbo " id="Skills">
       <template #header>
           <b-row >
           <b-col cols="auto">Skills</b-col>
@@ -33,7 +31,7 @@
       </div>
     </b-jumbotron>
 
-     <b-jumbotron  class="animate__animated item-styling jumbo " id="NASA">
+    <b-jumbotron  class="animate__animated item-styling jumbo " id="NASA">
       <template #header>
           <b-row >
           <b-col cols="auto">NASA</b-col>
@@ -63,7 +61,7 @@
       </div>
     </b-jumbotron>
 
-     <b-jumbotron  class="animate__animated item-styling jumbo " id="Raymond James">
+    <b-jumbotron  class="animate__animated item-styling jumbo " id="Raymond James">
       <template #header>
           <b-row >
           <b-col cols="auto">Raymond James</b-col>
@@ -90,7 +88,7 @@
       </div>
     </b-jumbotron>
 
-     <b-jumbotron  class="animate__animated item-styling jumbo " id="Scanned">
+    <b-jumbotron  class="animate__animated item-styling jumbo " id="Scanned">
       <template #header>
           <b-row >
           <b-col cols="auto">Scanned</b-col>
@@ -104,7 +102,6 @@
         <b-button pill class="color-scheme" style="margin-right:10px" variant="outline-info">React</b-button>
         <b-button pill class="color-scheme" style="margin-right:10px" variant="outline-info">JavaScript</b-button>
         <b-button pill class="color-scheme" style="margin-right:10px" variant="outline-info">Firebase</b-button>          
-    
       </template>
       <div class="custom-scroller">    
         <p>
@@ -151,7 +148,6 @@
         </p>
       </div>
     </b-jumbotron>
-
   </div>
 </template>
 
@@ -264,13 +260,14 @@ canvas {
 }
 
 #particles-js {
-  position: absolute;
   z-index: 0;
   width: 100%;
-  height: 95vh;
+  height: 100%;
   background-color: #151114;
-  background-image: url("");
-  background-repeat: no-repeat;
+  position: absolute;
+  padding-bottom: 50px;
+  /* background-image: url("");
+  background-repeat: no-repeat; */
   /* background-size: 200px 200px ; */
   /* background-position: 50% 50%; */
 }

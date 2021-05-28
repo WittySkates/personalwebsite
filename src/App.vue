@@ -3,8 +3,7 @@
     <b-navbar class="nav-bar" type="dark">
       <b-navbar-brand href="/" style="margin-left:10px;margin-bottom:3px" > &lt; CD /&gt; </b-navbar-brand>
       <b-navbar-nav>
-        <!-- <b-nav-item href="#">Interactive Portfolio</b-nav-item> -->
-        <!-- <b-nav-item href="#">Standard Portfolio</b-nav-item> -->
+
         <b-nav-item href="#">Github</b-nav-item>
         <b-nav-item href="#">About</b-nav-item>
       </b-navbar-nav>
@@ -35,7 +34,6 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
-/* 2E3E6F */
 .nav-bar{
   height: 50px;
   background-color: #343a40;
