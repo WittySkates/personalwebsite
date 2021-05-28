@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-navbar class="nav-bar" type="dark">
-      <b-navbar-brand href="/" style="margin-left:10px;margin-bottom:3px" > &lt; CD /&gt; </b-navbar-brand>
+      <b-navbar-brand href="#" style="margin-left:10px;margin-bottom:3px" > &lt; CD /&gt; </b-navbar-brand>
       <b-navbar-nav>
 
         <b-nav-item href="#">Github</b-nav-item>
