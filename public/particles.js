@@ -962,7 +962,7 @@ var pJS = function(tag_id, params){
             if(pcolor == 765){
               //p.color.rgb = hexToRgb("5dab9f");
               console.log(p.content);
-              document.getElementById(p.content).setAttribute("style", "z-index: 0");
+              document.getElementById(p.content).setAttribute("style", "visibility: visible");
               document.getElementById(p.content).classList.add("animate__backInDown");
               document.getElementById("particles-js").setAttribute("style", "z-index: -1;");
               setTimeout(function(){

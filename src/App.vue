@@ -1,21 +1,15 @@
 <template>
   <div>
-    <b-navbar class="nav-bar" type="dark" >
+    <b-navbar class="nav-bar" type="dark">
+      <b-navbar-brand href="/" style="margin-left:10px;margin-bottom:3px" > &lt; CD /&gt; </b-navbar-brand>
       <b-navbar-nav>
-        <b-nav-item href="#">Home</b-nav-item>
-
-        <!-- Navbar dropdowns -->
-        <b-nav-item-dropdown text="Lang" right>
-          <b-dropdown-item href="#">EN</b-dropdown-item>
-          <b-dropdown-item href="#">ES</b-dropdown-item>
-          <b-dropdown-item href="#">RU</b-dropdown-item>
-          <b-dropdown-item href="#">FA</b-dropdown-item>
-        </b-nav-item-dropdown>
-
-        <b-nav-item-dropdown text="User" right>
-          <b-dropdown-item href="#">Account</b-dropdown-item>
-          <b-dropdown-item href="#">Settings</b-dropdown-item>
-        </b-nav-item-dropdown>
+        <!-- <b-nav-item href="#">Interactive Portfolio</b-nav-item> -->
+        <!-- <b-nav-item href="#">Standard Portfolio</b-nav-item> -->
+        <b-nav-item href="#">Github</b-nav-item>
+        <b-nav-item href="#">About</b-nav-item>
+      </b-navbar-nav>
+      <b-navbar-nav class="ms-auto">
+        <b-nav-item href="#">Resume</b-nav-item>
       </b-navbar-nav>
     </b-navbar>
     <Home></Home>

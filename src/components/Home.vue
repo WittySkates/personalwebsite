@@ -2,26 +2,13 @@
   <div class="hello">
 
     <div id="particles-js"></div>
-    
-    <div id="Skills" class="animate__animated">
-    </div>
 
-    <div id="NASA" class="animate__animated">
-      NASA
-      <button type="button" @click="toggleSelection('NASA')">Click</button>
-    </div>
-
-    <div id="Raymond James" class="animate__animated">
-      Raymond
-      <button type="button" @click="toggleSelection('Raymond James')">Click</button>
-    </div>
-
-     <b-jumbotron  class="animate__animated item-styling jumbo " id="Scanned">
+     <b-jumbotron  class="animate__animated item-styling jumbo " id="Skills">
       <template #header>
           <b-row >
-          <b-col cols="auto">Scanned</b-col>
+          <b-col cols="auto">Skills</b-col>
           <b-col cols="auto" class="ms-auto"> 
-            <b-button @click="toggleSelection('Scanned')">Close</b-button>
+            <b-button @click="toggleSelection('Skills')">Close</b-button>
           </b-col>
         </b-row>
       </template>
@@ -44,12 +31,101 @@
           • Project was accepted into the Gator Hatchery where we continued to develop our idea and business plan.
         </p>
       </div>
-
     </b-jumbotron>
-        <b-jumbotron  class="animate__animated item-styling jumbo " id="UF">
+
+     <b-jumbotron  class="animate__animated item-styling jumbo " id="NASA">
+      <template #header>
+          <b-row >
+          <b-col cols="auto">NASA</b-col>
+          <b-col cols="auto" class="ms-auto"> 
+            <b-button @click="toggleSelection('NASA')">Close</b-button>
+          </b-col>
+        </b-row>
+      </template>
+      <template #lead>
+        <b-button pill class="color-scheme" style="margin-right:10px" variant="outline-info">React Native</b-button>
+        <b-button pill class="color-scheme" style="margin-right:10px" variant="outline-info">JavaScript</b-button>
+        <b-button pill class="color-scheme" style="margin-right:10px" variant="outline-info">React Native</b-button>          
+      </template>
+      <div class="custom-scroller">    
+        <p>
+          I was a Co-Founder of this mobile app built to circumvent the inefficiencies of attendance tracking at meetings and 
+          events. Developed with React Native for both IOS and Android, we won $10,000 in the Next Generation Tech startup 
+          competition and were later accepted into the Gator Hatchery at the University of Florida. The app had users and sales in 
+          numerous states and countries before stopping development.
+          <br>
+          • Head of UI and UX development.
+          <br>
+          • This project won first place and $10,000 in a technology startup in Pinellas County.
+          <br>
+          • Project was accepted into the Gator Hatchery where we continued to develop our idea and business plan.
+        </p>
+      </div>
+    </b-jumbotron>
+
+     <b-jumbotron  class="animate__animated item-styling jumbo " id="Raymond James">
+      <template #header>
+          <b-row >
+          <b-col cols="auto">Raymond James</b-col>
+          <b-col cols="auto" class="ms-auto"> 
+            <b-button @click="toggleSelection('Raymond James')">Close</b-button>
+          </b-col>
+        </b-row>
+      </template>
+      <template #lead>
+        <b-button pill class="color-scheme" style="margin-right:10px" variant="outline-info">JavaScript</b-button>
+        <b-button pill class="color-scheme" style="margin-right:10px" variant="outline-info">Service Now Systems</b-button>          
+      </template>
+      <div class="custom-scroller">    
+        <p>
+          I worked for Raymond James through their Intern Development Program where I was placed on the team of Service 
+          Delivery and Support. During my time I utilized the ServiceNow platform to test and begin implement a Natural 
+          Language Understanding chatbot which was to assist internal IT issues that arose. This chatbot was implemented to speed 
+          up the time of ticker turn around and user ease. 
+          <br>
+          • Worked with the ServiceNow platform which spans most of the Raymond James IT system.
+          <br>
+          • Utilized JS to access and manage data to be piped into the chatbot and access documents.
+        </p>
+      </div>
+    </b-jumbotron>
+
+     <b-jumbotron  class="animate__animated item-styling jumbo " id="Scanned">
       <template #header>
           <b-row >
           <b-col cols="auto">Scanned</b-col>
+          <b-col cols="auto" class="ms-auto"> 
+            <b-button @click="toggleSelection('Scanned')">Close</b-button>
+          </b-col>
+        </b-row>
+      </template>
+      <template #lead>
+        <b-button pill class="color-scheme" style="margin-right:10px" variant="outline-info">React Native</b-button>
+        <b-button pill class="color-scheme" style="margin-right:10px" variant="outline-info">React</b-button>
+        <b-button pill class="color-scheme" style="margin-right:10px" variant="outline-info">JavaScript</b-button>
+        <b-button pill class="color-scheme" style="margin-right:10px" variant="outline-info">Firebase</b-button>          
+    
+      </template>
+      <div class="custom-scroller">    
+        <p>
+          I was a Co-Founder of this mobile app built to circumvent the inefficiencies of attendance tracking at meetings and 
+          events. Developed with React Native for both IOS and Android, we won $10,000 in the Next Generation Tech startup 
+          competition and were later accepted into the Gator Hatchery at the University of Florida. The app had users and sales in 
+          numerous states and countries before stopping development.
+          <br>
+          • Head of UI and UX development.
+          <br>
+          • This project won first place and $10,000 in a technology startup in Pinellas County.
+          <br>
+          • Project was accepted into the Gator Hatchery where we continued to develop our idea and business plan.
+        </p>
+      </div>
+    </b-jumbotron>
+
+    <b-jumbotron  class="animate__animated item-styling jumbo " id="UF">
+      <template #header>
+          <b-row >
+          <b-col cols="auto">University of Florida</b-col>
           <b-col cols="auto" class="ms-auto"> 
             <b-button @click="toggleSelection('UF')">Close</b-button>
           </b-col>
@@ -75,6 +151,7 @@
         </p>
       </div>
     </b-jumbotron>
+
   </div>
 </template>
 
@@ -87,8 +164,7 @@ export default {
       document.getElementById("particles-js").setAttribute("style", "z-index: 0")
       document.getElementById("particles-js").classList.remove("hidden")
       document.getElementById(id).classList.remove("animate__backInDown");
-      document.getElementById(id).setAttribute("style", "z-index: -2")
-
+      document.getElementById(id).setAttribute("style", "visibility: hidden")
     }
   }
 }
@@ -128,6 +204,9 @@ export default {
   border-radius: 12px;
   position: absolute;
   padding: 40px;
+
+  /* height: 50%;
+  width: 80%; */
 }
 .jumbo{
   height: 50%;
@@ -197,56 +276,19 @@ canvas {
 }
 
 #Skills{
-  position: absolute;
-  z-index: -2;
-  height: 50%;
-  width: 80%;
-  background-color: rgba(52, 58, 64, 0.8) ;
-  color: white;
-  margin-top: 10%;
-  margin-left:10% ;
-  margin-right:10% ;
-  border-radius: 25px;
-
+  visibility: hidden;
 }
 #NASA{
-  position: absolute;
-  z-index: -2;
-  height: 50%;
-  width: 80%;
-  background-color: rgba(52, 58, 64, 0.8) ; ;
-  color: white;
-  margin-top: 10%;
-  margin-left:10% ;
-  margin-right:10% ;
-  border-radius: 25px;
+  visibility: hidden;
 }
 #Raymond\ James{
-  position: absolute;
-  z-index: -2;
-  height: 50%;
-  width: 80%;
-  background-color: rgba(52, 58, 64, 0.8) ; ;
-  color: white;
-  margin-top: 10%;
-  margin-left:10% ;
-  margin-right:10% ;
-  border-radius: 25px;
+  visibility: hidden;
 }
 #UF{
-  position: absolute;
-  z-index: -2;
-  height: 50%;
-  width: 80%;
-  background-color: rgba(52, 58, 64, 0.8) ;;
-  color: white;
-  margin-top: 10%;
-  margin-left:10% ;
-  margin-right:10% ;
-  border-radius: 25px;
+  visibility: hidden;
 }
 #Scanned{
-  z-index: -2;  
+  visibility: hidden;
 }
 
 /* #topborder{
