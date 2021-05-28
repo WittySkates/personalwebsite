@@ -16,35 +16,7 @@
       <button type="button" @click="toggleSelection('Raymond James')">Click</button>
     </div>
 
-    <!-- <b-jumbotron  class="animate__animated custom-scroller item-styling" id="Scanned">
-      <template #header>
-          <b-row >
-          <b-col cols="auto">Scanned</b-col>
-          <b-col cols="auto" class="ms-auto"> 
-            <b-button @click="toggleSelection('Scanned')">Close</b-button>
-          </b-col>
-        </b-row>
-      </template>
-      <template #lead>
-        <b-button pill class="color-scheme" style="margin-right:10px" variant="outline-primary">React Native</b-button>
-        <b-button pill class="color-scheme" style="margin-right:10px" variant="outline-primary">JavaScript</b-button>
-        <b-button pill class="color-scheme" style="margin-right:10px" variant="outline-primary">React Native</b-button>          
-      </template>
-      <p>
-        I was a Co-Founder of this mobile app built to circumvent the inefficiencies of attendance tracking at meetings and 
-        events. Developed with React Native for both IOS and Android, we won $10,000 in the Next Generation Tech startup 
-        competition and were later accepted into the Gator Hatchery at the University of Florida. The app had users and sales in 
-        numerous states and countries before stopping development.
-        <br>
-        • Head of UI and UX development.
-        <br>
-        • This project won first place and $10,000 in a technology startup in Pinellas County.
-        <br>
-        • Project was accepted into the Gator Hatchery where we continued to develop our idea and business plan.
-      </p>
-    </b-jumbotron> -->
-
-    <b-jumbotron  class="animate__animated item-styling jumbo " id="Scanned">
+     <b-jumbotron  class="animate__animated item-styling jumbo " id="Scanned">
       <template #header>
           <b-row >
           <b-col cols="auto">Scanned</b-col>
