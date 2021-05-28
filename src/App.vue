@@ -43,8 +43,7 @@ export default {
 }
 /* 2E3E6F */
 .nav-bar{
-  height: 5vh;
-  min-height: 30px;
+  height: 50px;
   background-color: #343a40;
 }
 
