@@ -212,7 +212,7 @@ export default {
 }
 
 /* Clear floats after the columns */
-.row:after {
+/* .row:after {
   content: "";
   display: table;
   clear: both;
@@ -230,7 +230,7 @@ li {
 }
 a {
   color: #42b983;
-}
+} */
 
 p { color: white; font-family: 'Raleway',sans-serif; font-size: 18px; font-weight: 500; line-height: 32px; margin: 0 0 24px; }
 /* ---- reset ---- */
@@ -245,7 +245,7 @@ canvas {
   vertical-align: bottom;
 }
 
-/* ---- particles.js container ----  #b61924; 2a2a2a*/
+/* ---- particles.js container ----  Can cause browser lag with the blur effect*/
 .hidden::before {
   content: "";
   position: absolute;
@@ -266,6 +266,7 @@ canvas {
   background-color: #151114;
   position: absolute;
   padding-bottom: 50px;
+  
   /* background-image: url("");
   background-repeat: no-repeat; */
   /* background-size: 200px 200px ; */
