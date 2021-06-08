@@ -9,7 +9,7 @@ export default new Router({
         {
             path: "/wittyskates.github.io/",
             name: "About",
-            component: () => import("./components/About")
+            component: () => import("./components/Home")
         },
         {
             path: "/wittyskates.github.io/home",
