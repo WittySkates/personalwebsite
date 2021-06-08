@@ -10,18 +10,20 @@
         <b-nav-item href="#" style="padding-right:10px">Resume</b-nav-item>
       </b-navbar-nav>
     </b-navbar>
-    
+
     <div id="solarSketch">	
-      <div id="sol"><p id="sol-label">0</p></div>	
+      <div id="sol"><p id="sol-label"></p></div>	
       <div id="Planet1-orbit">
         <div id="Planet1"></div>
-        <p id="Planet1-label">1</p>
+        <p id="Planet1-label">NASA</p>
       </div>
+
       <div id="Planet2-orbit">
         <div id="Planet2"></div>
-        <p id="Planet2-label">2</p>
+        <p id="Planet2-label">RJF</p>
       </div>
-      <div id="Planet3-orbit">
+
+      <!-- <div id="Planet3-orbit">
         <div id="Planet3-3-orbit">
             <div id="Planet3-3"></div>
           <p id="Planet3-3-label">3.3</p>
@@ -36,15 +38,17 @@
         </div>
         <div id="Planet3"></div>
         <p id="Planet3-label">3</p>
-        </div>
-        <div id="Planet4-orbit">
+      </div> -->
+
+      <div id="Planet4-orbit">
         <div id="Planet4-1-orbit">
             <div id="Planet4-1"></div>
           <p id="Planet4-1-label">4.1</p>
         </div>
         <div id="Planet4"></div>
         <p id="Planet4-label">4</p>
-        </div>
+      </div>
+
     </div>
   </div>
 </template>
@@ -72,18 +76,21 @@ export default {
 body {
     width: 100%;
     height: 100%;
-    background-image: url(https://github.com/pesegal/CSS3-System-Sketch/blob/master/img/gg66203835.jpg?raw=true);
+    /* background-image: url(https://github.com/pesegal/CSS3-System-Sketch/blob/master/img/gg66203835.jpg?raw=true); */
+    background-color: #343a40;
 }
 
 #solarSketch {
-  position: relative;
-  top: 700px;
-  /* left: 50%; */
+  position: absolute;
+
+  /* top: 450px; */
+  margin-top: 450px;
+  left: 50%;
 }
 
 #container {
   position: absolute;
-  top: 3%;
+  top: 8%;
   left: 2%;
   border: 3px solid white;
   padding-left: 20px;
@@ -92,7 +99,7 @@ body {
 
 #container h1 {
   color: white;
-  font-family: helvetica;
+  /* font-family: helvetica; */
   font-size: 20px;
   
 }
@@ -100,9 +107,9 @@ body {
 #container p {
   margin-top: 0px;
   color: white;
-  font-family: helvetica;
+  /* font-family: helvetica; */
   font-size: 15px;
-  font-style: italic;
+  /* font-style: italic; */
   align-content: center;
 }
 
@@ -142,10 +149,10 @@ body {
   position: absolute;
   top:  0;
   left: 50%;
-  width: 15px;
-  height: 15px;
+  width: 60px;
+  height: 60px;
   margin-left: -10px;
-  margin-top: -10px;
+  margin-top: -25px;
   background: white;
   border-color: white;
   border-width: 1px;
@@ -168,11 +175,11 @@ body {
   border-color: white;
   border-radius: 50%;
 
-  -webkit-animation: spin-left 10s linear infinite;
-  -moz-animation: spin-left 10s linear infinite;
-  -ms-animation: spin-left 10s linear infinite;
-  -o-animation: spin-left 10s linear infinite;
-  animation: spin-left 10s linear infinite;
+  -webkit-animation: spin-left 15s linear infinite;
+  -moz-animation: spin-left 15s linear infinite;
+  -ms-animation: spin-left 15s linear infinite;
+  -o-animation: spin-left 15s linear infinite;
+  animation: spin-left 15s linear infinite;
 }
 
 
@@ -180,18 +187,19 @@ body {
   position: absolute;
   top:  0;
   left: 50%;
-  width: 15px;
-  height: 15px;
-  margin-left: -20px;
-  margin-top: -26px;
-  color: white;
-  font-size: 11px;
+  /* width: 15px;
+  height: 15px; */
+  margin-left: 0px;
+  margin-top: -8px;
+  color: #343a40;
+  font-size: 15px;
+  font-weight: bold;
 
-  -webkit-animation: spin-right 10s linear infinite;
-  -moz-animation: spin-right 10s linear infinite;
-  -ms-animation: spin-right 10s linear infinite;
-  -o-animation: spin-right 10s linear infinite;
-  animation: spin-right 10s linear infinite;
+  -webkit-animation: spin-right 15s linear infinite;
+  -moz-animation: spin-right 15s linear infinite;
+  -ms-animation: spin-right 15s linear infinite;
+  -o-animation: spin-right 15s linear infinite;
+  animation: spin-right 15s linear infinite;
 }
 
 /*Planet 2 Group*/
@@ -200,10 +208,10 @@ body {
   position: absolute;
   top:  0;
   left: 50%;
-  width: 20px;
-  height: 20px;
+  width: 50px;
+  height: 50px;
   margin-left: -10px;
-  margin-top: -13px;
+  margin-top: -25px;
   background: white;
   border-color: white;
   border-width: 1px;
@@ -216,10 +224,10 @@ body {
   top: 50%;
   left: 50%;
 
-  width: 500px;
-  height: 500px;
-  margin-top: -250px;
-  margin-left: -250px;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
 
   border-width: 2.2px;
   border-style: dashed;
@@ -237,12 +245,13 @@ body {
   position: absolute;
   top:  0;
   left: 50%;
-  width: 15px;
-  height: 15px;
-  margin-left: -20px;
-  margin-top: -25px;
-  color: white;
-  font-size: 11px;
+  /* width: 15px;
+  height: 15px; */
+  margin-left: 2px;
+  margin-top: -11px;
+  color: #343a40;
+  font-size: 15px;
+  font-weight: bold;
 
   -webkit-animation: spin-left 100s linear infinite;
   -moz-animation: spin-left 100s linear infinite;
@@ -360,21 +369,21 @@ body {
 
 #Planet3-3-orbit {
   position: absolute;
-      top:  0;
-      left: 50%;
-      width: 250px;
-      height: 250px;
-    margin-left: -125px;
-      margin-top: -125px;
+  top:  0;
+  left: 50%;
+  width: 250px;
+  height: 250px;
+  margin-left: -125px;
+  margin-top: -125px;
     
-    border: 1px dashed white;
-    border-radius: 50%;
-    
-    -webkit-animation: spin-left 30s linear infinite;
-    -moz-animation: spin-left 30s linear infinite;
-    -ms-animation: spin-left 30s linear infinite;
-    -o-animation: spin-left 30s linear i0snfinite;
-    animation: spin-left 30s linear infinite;
+  border: 1px dashed white;
+  border-radius: 50%;
+  
+  -webkit-animation: spin-left 30s linear infinite;
+  -moz-animation: spin-left 30s linear infinite;
+  -ms-animation: spin-left 30s linear infinite;
+  -o-animation: spin-left 30s linear i0snfinite;
+  animation: spin-left 30s linear infinite;
 }
 
 #Planet3-label {  
@@ -384,7 +393,7 @@ body {
   width: 15px;
   height: 15px;
   margin-left: -29px;
-  margin-top: -32px;
+  margin-top: -38px;
   color: white;
   font-size: 11px;
 
@@ -483,10 +492,10 @@ body {
   top: 50%;
   left: 50%;
   
-  width: 1200px;
-  height: 1200px;
-  margin-top: -600px;
-  margin-left: -600px;
+  width: 800px;
+  height: 800px;
+  margin-top: -400px;
+  margin-left: -400px;
   
   border-width:4px;
   border-style: dashed;
