@@ -7,7 +7,7 @@ export default new Router({
     mode: "history",
     routes: [
         {
-            path: "/wittyskates.github.io/",
+            path: "/",
             name: "Home",
             component: () => import("./components/Home")
         },
