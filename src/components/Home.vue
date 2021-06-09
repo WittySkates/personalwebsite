@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- <b-navbar class="nav-bar" type="dark">
+    <b-navbar class="nav-bar" type="dark">
       <b-navbar-brand href="/wittyskates.github.io/home" style="margin-left:10px;margin-bottom:2px" > &lt; CD /&gt; </b-navbar-brand>
       <b-navbar-nav>
         <b-nav-item href="#">Github</b-nav-item>
@@ -9,7 +9,7 @@
       <b-navbar-nav class="ms-auto">
         <b-nav-item href="#" style="padding-right:10px">Resume</b-nav-item>
       </b-navbar-nav>
-    </b-navbar> -->
+    </b-navbar>
 
     <div id="solarSketch">	
       <div id="sol"><p id="sol-label"></p></div>	
@@ -50,14 +50,17 @@
 
 export default {
   name: 'Home',
-  methods: {
-
-  }
 }
 
 </script>
 
 <style>
+body {
+    width: 100%;
+    height: 100%;
+    /* background-image: url(https://github.com/pesegal/CSS3-System-Sketch/blob/master/img/gg66203835.jpg?raw=true);  */
+    background-color: #232741;
+}
 
 .nav-bar{
   height: 50px;
@@ -65,13 +68,6 @@ export default {
 }
 
 /* Basic Layout Bigger Orbiter*/
-
-body {
-    width: 100%;
-    height: 100%;
-    /* background-image: url(https://github.com/pesegal/CSS3-System-Sketch/blob/master/img/gg66203835.jpg?raw=true); */
-    background-color: #232741;
-}
 
 #solarSketch {
   position: fixed;
@@ -81,7 +77,7 @@ body {
   left: 50%;
 }
 
-#container {
+/* #container {
   position: absolute;
   top: 8%;
   left: 2%;
@@ -92,7 +88,7 @@ body {
 
 #container h1 {
   color: white;
-  /* font-family: helvetica; */
+  font-family: helvetica;
   font-size: 20px;
   
 }
@@ -100,11 +96,11 @@ body {
 #container p {
   margin-top: 0px;
   color: white;
-  /* font-family: helvetica; */
+  font-family: helvetica;
   font-size: 15px;
-  /* font-style: italic; */
+  font-style: italic;
   align-content: center;
-}
+} */
 
 /*Sol Group*/
 
