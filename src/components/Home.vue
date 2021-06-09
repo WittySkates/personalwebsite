@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-navbar class="nav-bar" type="dark">
+    <!-- <b-navbar class="nav-bar" type="dark">
       <b-navbar-brand href="/wittyskates.github.io/home" style="margin-left:10px;margin-bottom:2px" > &lt; CD /&gt; </b-navbar-brand>
       <b-navbar-nav>
         <b-nav-item href="#">Github</b-nav-item>
@@ -9,14 +9,12 @@
       <b-navbar-nav class="ms-auto">
         <b-nav-item href="#" style="padding-right:10px">Resume</b-nav-item>
       </b-navbar-nav>
-    </b-navbar>
+    </b-navbar> -->
 
     <div id="solarSketch">	
-      <div id="sol"><p id="sol-label"></p></div>	
-      <div id="Planet1-orbit">
-        <div id="Planet1"></div>
-        <p id="Planet1-label">UF</p>
-      </div>
+      <div id="sol"><p id="sol-label"></p></div>
+      
+
 
       <div id="Planet2-orbit">
         <div id="Planet2"></div>
@@ -42,7 +40,28 @@
         <p id="Planet4-label">NASA</p>
       </div>
 
+      <div id="Planet1-orbit">
+        <div id="Planet1" @click="scrollInto('UF')" style="cursor: pointer;"></div>
+        <p id="Planet1-label"  @click="scrollInto('UF')" style="cursor: pointer;">UF</p>
+      </div>
+
     </div>
+    <div class="breaker"></div>
+    <div class="content">
+      <div id="UF">
+        <p>TESTING</p>
+        <p>TESTING</p>
+        <p>TESTING</p>
+        <p>TESTING</p>
+        <p>TESTING</p>
+        <p>TESTING</p>
+        <p>TESTING</p>
+        <p>TESTING</p>
+        <p>TESTING</p>
+        <p>TESTING</p>
+      </div>
+    </div>
+    
   </div>
 </template>
 
@@ -50,18 +69,41 @@
 
 export default {
   name: 'Home',
+  methods: {
+
+    scrollInto(id){
+      document.getElementById(id).scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+
+  }
 }
 
 </script>
 
 <style>
-body {
-    width: 100%;
-    height: 100%;
-    /* background-image: url(https://github.com/pesegal/CSS3-System-Sketch/blob/master/img/gg66203835.jpg?raw=true);  */
-    background-color: #232741;
+/* body {
+  width: 100%;
+  height: 100%;
+  background-color: #232741;
+} */
+a{
+  text-decoration: none;
+}
+.breaker{
+  background-color: #232741;
+  padding-top: 500px;
+  padding-bottom: 500px;
 }
 
+.content{
+  height: 100%;
+  position: relative;
+  color: white;
+  background-color: #343a40;
+  padding-bottom: 10px ;
+}
 .nav-bar{
   height: 50px;
   background-color: #343a40;
@@ -70,37 +112,13 @@ body {
 /* Basic Layout Bigger Orbiter*/
 
 #solarSketch {
-  position: fixed;
-
-  /* top: 450px; */
-  margin-top: 450px;
-  left: 50%;
+  position: relative;
+  top: 450px;
+  /* margin-top: 450px; */
+  left: 0%;
+  background-color: #232741 ;
 }
 
-/* #container {
-  position: absolute;
-  top: 8%;
-  left: 2%;
-  border: 3px solid white;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-#container h1 {
-  color: white;
-  font-family: helvetica;
-  font-size: 20px;
-  
-}
-
-#container p {
-  margin-top: 0px;
-  color: white;
-  font-family: helvetica;
-  font-size: 15px;
-  font-style: italic;
-  align-content: center;
-} */
 
 /*Sol Group*/
 
@@ -444,6 +462,7 @@ body {
   border-style: dashed;
   border-color: white;
   border-radius: 50%;
+  
   
   -webkit-animation: spin-right 150s linear infinite;
   -moz-animation: spin-right 150s linear infinite;
