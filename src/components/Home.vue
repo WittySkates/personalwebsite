@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-navbar class="nav-bar" type="dark">
+    <!-- <b-navbar class="nav-bar" type="dark">
       <b-navbar-brand href="/wittyskates.github.io/home" style="margin-left:10px;margin-bottom:2px" > &lt; CD /&gt; </b-navbar-brand>
       <b-navbar-nav>
         <b-nav-item href="#">Github</b-nav-item>
@@ -9,44 +9,37 @@
       <b-navbar-nav class="ms-auto">
         <b-nav-item href="#" style="padding-right:10px">Resume</b-nav-item>
       </b-navbar-nav>
-    </b-navbar>
+    </b-navbar> -->
 
     <div id="solarSketch">	
       <div id="sol"><p id="sol-label"></p></div>	
       <div id="Planet1-orbit">
         <div id="Planet1"></div>
-        <p id="Planet1-label">NASA</p>
+        <p id="Planet1-label">UF</p>
       </div>
 
       <div id="Planet2-orbit">
         <div id="Planet2"></div>
-        <p id="Planet2-label">RJF</p>
+        <p id="Planet2-label">Scanned</p>
       </div>
 
-      <!-- <div id="Planet3-orbit">
-        <div id="Planet3-3-orbit">
-            <div id="Planet3-3"></div>
-          <p id="Planet3-3-label">3.3</p>
-        </div>
+      <div id="Planet3-orbit">
         <div id="Planet3-1-orbit">
-            <div id="Planet3-1"></div>
-          <p id="Planet3-1-label">3.1</p>
+          <div id="Planet3-1"></div>
+          <!-- <div id="Planet3-1-1"></div> -->
+          <p id="Planet3-1-label"></p>
         </div>
         <div id="Planet3-2-orbit">
-            <div id="Planet3-2"></div>
-          <p id="Planet3-2-label">3.2</p>
+          <div id="Planet3-2"></div>
+          <p id="Planet3-2-label"></p>
         </div>
         <div id="Planet3"></div>
-        <p id="Planet3-label">3</p>
-      </div> -->
+        <p id="Planet3-label">RJF</p>
+      </div>
 
       <div id="Planet4-orbit">
-        <div id="Planet4-1-orbit">
-            <div id="Planet4-1"></div>
-          <p id="Planet4-1-label">4.1</p>
-        </div>
         <div id="Planet4"></div>
-        <p id="Planet4-label">4</p>
+        <p id="Planet4-label">NASA</p>
       </div>
 
     </div>
@@ -77,11 +70,11 @@ body {
     width: 100%;
     height: 100%;
     /* background-image: url(https://github.com/pesegal/CSS3-System-Sketch/blob/master/img/gg66203835.jpg?raw=true); */
-    background-color: #343a40;
+    background-color: #232741;
 }
 
 #solarSketch {
-  position: absolute;
+  position: fixed;
 
   /* top: 450px; */
   margin-top: 450px;
@@ -121,10 +114,10 @@ body {
   left: 50%;
 
   background: white;
-  height: 100px;
-  width: 100px;
-  margin-top: -50px; 
-  margin-left: -50px;
+  height: 150px;
+  width: 150px;
+  margin-top: -75px; 
+  margin-left: -75px;
 
   border-color: white;
   border-width: 10px;
@@ -149,8 +142,8 @@ body {
   position: absolute;
   top:  0;
   left: 50%;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   margin-left: -10px;
   margin-top: -25px;
   background: white;
@@ -175,11 +168,11 @@ body {
   border-color: white;
   border-radius: 50%;
 
-  -webkit-animation: spin-left 15s linear infinite;
-  -moz-animation: spin-left 15s linear infinite;
-  -ms-animation: spin-left 15s linear infinite;
-  -o-animation: spin-left 15s linear infinite;
-  animation: spin-left 15s linear infinite;
+  -webkit-animation: spin-left 20s linear infinite;
+  -moz-animation: spin-left 20s linear infinite;
+  -ms-animation: spin-left 20s linear infinite;
+  -o-animation: spin-left 20s linear infinite;
+  animation: spin-left 20s linear infinite;
 }
 
 
@@ -189,17 +182,17 @@ body {
   left: 50%;
   /* width: 15px;
   height: 15px; */
-  margin-left: 0px;
-  margin-top: -8px;
-  color: #343a40;
+  margin-left: 6px;
+  margin-top: -11px;
+  color: #232741;
   font-size: 15px;
   font-weight: bold;
 
-  -webkit-animation: spin-right 15s linear infinite;
-  -moz-animation: spin-right 15s linear infinite;
-  -ms-animation: spin-right 15s linear infinite;
-  -o-animation: spin-right 15s linear infinite;
-  animation: spin-right 15s linear infinite;
+  -webkit-animation: spin-right 20s linear infinite;
+  -moz-animation: spin-right 20s linear infinite;
+  -ms-animation: spin-right 20s linear infinite;
+  -o-animation: spin-right 20s linear infinite;
+  animation: spin-right 20s linear infinite;
 }
 
 /*Planet 2 Group*/
@@ -208,10 +201,10 @@ body {
   position: absolute;
   top:  0;
   left: 50%;
-  width: 50px;
-  height: 50px;
+  width: 80px;
+  height: 80px;
   margin-left: -10px;
-  margin-top: -25px;
+  margin-top: -32px;
   background: white;
   border-color: white;
   border-width: 1px;
@@ -224,10 +217,10 @@ body {
   top: 50%;
   left: 50%;
 
-  width: 400px;
-  height: 400px;
-  margin-top: -200px;
-  margin-left: -200px;
+  width: 420px;
+  height: 420px;
+  margin-top: -210px;
+  margin-left: -210px;
 
   border-width: 2.2px;
   border-style: dashed;
@@ -247,9 +240,9 @@ body {
   left: 50%;
   /* width: 15px;
   height: 15px; */
-  margin-left: 2px;
-  margin-top: -11px;
-  color: #343a40;
+  margin-left: 0px;
+  margin-top: -5px;
+  color: #232741;
   font-size: 15px;
   font-weight: bold;
 
@@ -280,8 +273,17 @@ body {
 #Planet3-1 {
   width: 8px;
   height: 8px;
-  margin-left: 10px;
+  margin-left: 5px;
   margin-top: 10px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 0 64px white; 
+}
+#Planet3-1-1 {
+  width: 8px;
+  height: 8px;
+  margin-left: 89px;
+  margin-top: 50px;
   border-radius: 50%;
   background: white;
   box-shadow: 0 0 64px white; 
@@ -290,18 +292,8 @@ body {
 #Planet3-2 {
   width: 10px;
   height: 10px;
-  margin-left: 23px;
+  margin-left: 8px;
   margin-top: 16px;
-  border-radius: 50%;
-  background: white;
-  box-shadow: 0 0 64px white; 
-}
-
-#Planet3-3 {
-  width: 12px;
-  height: 12px;
-  margin-left: 30px;
-  margin-top: 30px;
   border-radius: 50%;
   background: white;
   box-shadow: 0 0 64px white; 
@@ -312,10 +304,10 @@ body {
   top: 50%;
   left: 50%;
 
-  width: 800px;
-  height: 800px;
-  margin-top: -400px;
-  margin-left: -400px;
+  width: 600px;
+  height: 600px;
+  margin-top: -300px;
+  margin-left: -300px;
 
   border-width:3px;
   border-style: dashed;
@@ -333,29 +325,29 @@ body {
   position: absolute;
   top:  0;
   left: 50%;
-  width: 100px;
-  height: 100px;
-  margin-left: -50px;
-  margin-top: -52px;
+  width: 80px;
+  height: 80px;
+  margin-left: -40px;
+  margin-top: -42px;
 
   border: 1px dashed white;
   border-radius: 50%;
 
-  -webkit-animation: spin-left 5s linear infinite;
-  -moz-animation: spin-left 5s linear infinite;
-  -ms-animation: spin-left 5s linear infinite;
-  -o-animation: spin-left 5s linear infinite;
-  animation: spin-left 5s linear infinite;
+  -webkit-animation: spin-left 10s linear infinite;
+  -moz-animation: spin-left 10s linear infinite;
+  -ms-animation: spin-left 10s linear infinite;
+  -o-animation: spin-left 10s linear infinite;
+  animation: spin-left 10s linear infinite;
 }
 
 #Planet3-2-orbit {
   position: absolute;
   top:  0;
   left: 50%;
-  width: 170px;
-  height: 170px;
-  margin-left: -85px;
-  margin-top: -85px;
+  width: 120px;
+  height: 120px;
+  margin-left: -60px;
+  margin-top: -62px;
 
   border: 1px dashed white;
   border-radius: 50%;
@@ -367,35 +359,17 @@ body {
   animation: spin-right 20s linear infinite;
 }
 
-#Planet3-3-orbit {
-  position: absolute;
-  top:  0;
-  left: 50%;
-  width: 250px;
-  height: 250px;
-  margin-left: -125px;
-  margin-top: -125px;
-    
-  border: 1px dashed white;
-  border-radius: 50%;
-  
-  -webkit-animation: spin-left 30s linear infinite;
-  -moz-animation: spin-left 30s linear infinite;
-  -ms-animation: spin-left 30s linear infinite;
-  -o-animation: spin-left 30s linear i0snfinite;
-  animation: spin-left 30s linear infinite;
-}
-
 #Planet3-label {  
   position: absolute;
   top:  0;
   left: 50%;
-  width: 15px;
-  height: 15px;
-  margin-left: -29px;
-  margin-top: -38px;
-  color: white;
-  font-size: 11px;
+  /* width: 15px;
+  height: 15px; */
+  margin-left: -12px;
+  margin-top: -13px;
+  color: #232741;
+  font-size: 15px;
+  font-weight: bold;
 
   -webkit-animation: spin-left 200s linear infinite;
   -moz-animation: spin-left 200s linear infinite;
@@ -442,50 +416,23 @@ body {
   animation: spin-left 18.1818181818181818s linear infinite;
 }
 
-#Planet3-3-label {
-  position: absolute;
-  top:  0;
-  left: 50%;
-  width: 15px;
-  height: 15px;
-  margin-left: -110px;
-  margin-top: 14px;
-  color: white;
-  font-size: 11px;
-
-  -webkit-animation: spin-right 35.29411764705882352s linear infinite;
-  -moz-animation: spin-right 35.29411764705882352s linear infinite;
-  -ms-animation: spin-right 35.29411764705882352s linear infinite;
-  -o-animation: spin-right 35.29411764705882352s linear infinite;
-  animation: spin-right 35.29411764705882352s linear infinite;
-}
-
 /*Planet 4 Group*/
 
 #Planet4 {
   position: absolute;
   top:  0;
   left: 50%;
-  width: 30px;
-  height: 30px;
-  margin-left: -15px;
-  margin-top: -18px;
+  width: 60px;
+  height: 60px;
+  margin-left: -10px;
+  margin-top: -30px;
   background: white;
   border-color: white;
-  border-width: 2px;
+  border-width: 1px;
   border-style: solid;
-  border-radius: 50%;     
+  border-radius: 50%;   
 }
 
-#Planet4-1 {
-  width: 10px;
-  height: 10px;
-  margin-left: 10px;
-  margin-top: 10px;
-  border-radius: 50%;
-  background: white;
-  box-shadow: 0 0 64px white; 
-}
 
 #Planet4-orbit {
   position: absolute;
@@ -507,62 +454,25 @@ body {
   -ms-animation: spin-right 150s linear infinite;
   -o-animation: spin-right 150s linear infinite;
   animation: spin-right 150s linear infinite;
-  position: absolute;  
-}
-
-#Planet4-1-orbit {
-  position: absolute;
-  top:  0;
-  left: 50%;
-  width: 100px;
-  height: 100px;
-  margin-left: -50px;
-  margin-top: -50px;
-
-  border: 1px dashed white;
-  border-radius: 50%;
-
-  -webkit-animation: spin-right 30s linear infinite;
-  -moz-animation: spin-right 30s linear infinite;
-  -ms-animation: spin-right 30s linear infinite;
-  -o-animation: spin-right 30s linear i0snfinite;
-  animation: spin-right 30s linear infinite;
 }
 
 #Planet4-label {
   position: absolute;
   top:  0;
   left: 50%;
-  width: 15px;
-  height: 15px;
-  margin-left: -25px;
-  margin-top: -25px;
-  color: white;
-  font-size: 11px;
-    
+  /* width: 15px;
+  height: 15px; */
+  margin-left: 0px;
+  margin-top: -12px;
+  color: #232741;
+  font-size: 15px;
+  font-weight: bold;
+
   -webkit-animation: spin-left 150s linear infinite;
   -moz-animation: spin-left 150s linear infinite;
   -ms-animation: spin-left 150s linear infinite;
   -o-animation: spin-left 150s linear infinite;
   animation: spin-left 150s linear infinite;
-}
-
-#Planet4-1-label {
-  position: absolute;
-  top:  0;
-  left: 50%;
-  width: 15px;
-  height: 15px;
-  margin-left: -58px;
-  margin-top: 0px;
-  color: white;
-  font-size: 11px;
-    
-  -webkit-animation: spin-left 25s linear infinite;
-  -moz-animation: spin-left 25s linear infinite;
-  -ms-animation: spin-left 25s linear infinite;
-  -o-animation: spin-left 25s linear infinite;
-  animation: spin-left 25s linear infinite; 
 }
 
 /*Defining the rotational keyframe at-rules*/
