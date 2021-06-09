@@ -15,29 +15,28 @@
       <div id="sol"><p id="sol-label"></p></div>
       
 
-
-      <div id="Planet2-orbit">
-        <div id="Planet2"></div>
-        <p id="Planet2-label">Scanned</p>
+    <div id="Planet4-orbit">
+        <div id="Planet4" @click="scrollInto('NASA')" style="cursor: pointer;"></div>
+        <p id="Planet4-label" @click="scrollInto('NASA')" style="cursor: pointer;">NASA</p>
       </div>
 
       <div id="Planet3-orbit">
+        <div id="Planet3-2-orbit">
+          <div id="Planet3-2"></div>
+          <p id="Planet3-2-label"></p>
+        </div>
         <div id="Planet3-1-orbit">
           <div id="Planet3-1"></div>
           <!-- <div id="Planet3-1-1"></div> -->
           <p id="Planet3-1-label"></p>
         </div>
-        <div id="Planet3-2-orbit">
-          <div id="Planet3-2"></div>
-          <p id="Planet3-2-label"></p>
-        </div>
-        <div id="Planet3"></div>
-        <p id="Planet3-label">RJF</p>
+        <div id="Planet3" @click="scrollInto('UF')" style="cursor: pointer;"></div>
+        <p id="Planet3-label" @click="scrollInto('RJF')" style="cursor: pointer;">RJF</p>
       </div>
 
-      <div id="Planet4-orbit">
-        <div id="Planet4"></div>
-        <p id="Planet4-label">NASA</p>
+      <div id="Planet2-orbit">
+        <div id="Planet2"  @click="scrollInto('Scanned')" style="cursor: pointer;"></div>
+        <p id="Planet2-label"  @click="scrollInto('Scanned')" style="cursor: pointer;">Scanned</p>
       </div>
 
       <div id="Planet1-orbit">
@@ -48,7 +47,7 @@
     </div>
     <div class="breaker"></div>
     <div class="content">
-      <div id="UF">
+      <div id="UF">UF
         <p>TESTING</p>
         <p>TESTING</p>
         <p>TESTING</p>
@@ -60,6 +59,42 @@
         <p>TESTING</p>
         <p>TESTING</p>
       </div>
+      <div id="Scanned">Scanned
+        <p>TESTING</p>
+        <p>TESTING</p>
+        <p>TESTING</p>
+        <p>TESTING</p>
+        <p>TESTING</p>
+        <p>TESTING</p>
+        <p>TESTING</p>
+        <p>TESTING</p>
+        <p>TESTING</p>
+        <p>TESTING</p>
+      </div>
+      <div id="RJF">RJF
+        <p>TESTING</p>
+        <p>TESTING</p>
+        <p>TESTING</p>
+        <p>TESTING</p>
+        <p>TESTING</p>
+        <p>TESTING</p>
+        <p>TESTING</p>
+        <p>TESTING</p>
+        <p>TESTING</p>
+        <p>TESTING</p>
+      </div>    
+      <div id="NASA">NASA
+        <p>TESTING</p>
+        <p>TESTING</p>
+        <p>TESTING</p>
+        <p>TESTING</p>
+        <p>TESTING</p>
+        <p>TESTING</p>
+        <p>TESTING</p>
+        <p>TESTING</p>
+        <p>TESTING</p>
+        <p>TESTING</p>
+      </div>  
     </div>
     
   </div>
@@ -158,8 +193,8 @@ a{
   left: 50%;
   width: 50px;
   height: 50px;
-  margin-left: -10px;
-  margin-top: -25px;
+  margin-left: 97px;
+  margin-top: 100px;
   background: white;
   border-color: white;
   border-width: 1px;
@@ -196,8 +231,8 @@ a{
   left: 50%;
   /* width: 15px;
   height: 15px; */
-  margin-left: 6px;
-  margin-top: -11px;
+  margin-left: 113px;
+  margin-top: 113px;
   color: #232741;
   font-size: 15px;
   font-weight: bold;
@@ -217,8 +252,8 @@ a{
   left: 50%;
   width: 80px;
   height: 80px;
-  margin-left: -10px;
-  margin-top: -32px;
+  margin-left: -100px;
+  margin-top: 365px;
   background: white;
   border-color: white;
   border-width: 1px;
@@ -241,11 +276,11 @@ a{
   border-color: white;
   border-radius: 80%;
 
-  -webkit-animation: spin-right 100s linear infinite;
-  -moz-animation: spin-right 100s linear infinite;
-  -ms-animation: spin-right 100s linear infinite;
-  -o-animation: spin-right 100s linear infinite;
-  animation: spin-right 100s linear infinite;
+  -webkit-animation: spin-right 60s linear infinite;
+  -moz-animation: spin-right 60s linear infinite;
+  -ms-animation: spin-right 60s linear infinite;
+  -o-animation: spin-right 60s linear infinite;
+  animation: spin-right 60s linear infinite;
 }
 
 #Planet2-label {
@@ -254,17 +289,17 @@ a{
   left: 50%;
   /* width: 15px;
   height: 15px; */
-  margin-left: 0px;
-  margin-top: -5px;
+  margin-left: -90px;
+  margin-top: 394px;
   color: #232741;
   font-size: 15px;
   font-weight: bold;
 
-  -webkit-animation: spin-left 100s linear infinite;
-  -moz-animation: spin-left 100s linear infinite;
-  -ms-animation: spin-left 100s linear infinite;
-  -o-animation: spin-left 100s linear infinite;
-  animation: spin-left 100s linear infinite;
+  -webkit-animation: spin-left 60s linear infinite;
+  -moz-animation: spin-left 60s linear infinite;
+  -ms-animation: spin-left 60s linear infinite;
+  -o-animation: spin-left 60s linear infinite;
+  animation: spin-left 60s linear infinite;
 }
 
 /*Planet 3 Group*/
@@ -328,11 +363,11 @@ a{
   border-color: white;
   border-radius: 50%;
 
-  -webkit-animation: spin-right 200s linear infinite;
-  -moz-animation: spin-right 200s linear infinite;
-  -ms-animation: spin-right 200s linear infinite;
-  -o-animation: spin-right 200s linear infinite;
-  animation: spin-right 200s linear infinite;
+  -webkit-animation: spin-right 120s linear infinite;
+  -moz-animation: spin-right 120s linear infinite;
+  -ms-animation: spin-right 120s linear infinite;
+  -o-animation: spin-right 120s linear infinite;
+  animation: spin-right 120s linear infinite;
 }
 
 #Planet3-1-orbit {
@@ -385,11 +420,11 @@ a{
   font-size: 15px;
   font-weight: bold;
 
-  -webkit-animation: spin-left 200s linear infinite;
-  -moz-animation: spin-left 200s linear infinite;
-  -ms-animation: spin-left 200s linear infinite;
-  -o-animation: spin-left 200s linear infinite;
-  animation: spin-left 200s linear infinite; 
+  -webkit-animation: spin-left 120s linear infinite;
+  -moz-animation: spin-left 120s linear infinite;
+  -ms-animation: spin-left 120s linear infinite;
+  -o-animation: spin-left 120s linear infinite;
+  animation: spin-left 120s linear infinite; 
 }
 
 /*The Animation time for moon labels is calculated by using harmonic sums. See Readme.md*/
@@ -438,8 +473,8 @@ a{
   left: 50%;
   width: 60px;
   height: 60px;
-  margin-left: -10px;
-  margin-top: -30px;
+  margin-left: -310px;
+  margin-top: 85px;
   background: white;
   border-color: white;
   border-width: 1px;
@@ -464,11 +499,11 @@ a{
   border-radius: 50%;
   
   
-  -webkit-animation: spin-right 150s linear infinite;
-  -moz-animation: spin-right 150s linear infinite;
-  -ms-animation: spin-right 150s linear infinite;
-  -o-animation: spin-right 150s linear infinite;
-  animation: spin-right 150s linear infinite;
+  -webkit-animation: spin-right 200s linear infinite;
+  -moz-animation: spin-right 200s linear infinite;
+  -ms-animation: spin-right 200s linear infinite;
+  -o-animation: spin-right 200s linear infinite;
+  animation: spin-right 200s linear infinite; 
 }
 
 #Planet4-label {
@@ -477,17 +512,17 @@ a{
   left: 50%;
   /* width: 15px;
   height: 15px; */
-  margin-left: 0px;
-  margin-top: -12px;
+  margin-left: -302px;
+  margin-top: 104px;
   color: #232741;
   font-size: 15px;
   font-weight: bold;
 
-  -webkit-animation: spin-left 150s linear infinite;
-  -moz-animation: spin-left 150s linear infinite;
-  -ms-animation: spin-left 150s linear infinite;
-  -o-animation: spin-left 150s linear infinite;
-  animation: spin-left 150s linear infinite;
+  -webkit-animation: spin-left 200s linear infinite;
+  -moz-animation: spin-left 200s linear infinite;
+  -ms-animation: spin-left 200s linear infinite;
+  -o-animation: spin-left 200s linear infinite;
+  animation: spin-left 200s linear infinite;
 }
 
 /*Defining the rotational keyframe at-rules*/
