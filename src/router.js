@@ -8,13 +8,8 @@ export default new Router({
     routes: [
         {
             path: "/wittyskates.github.io/",
-            name: "About",
-            component: () => import("./components/Home")
-        },
-        {
-            path: "/wittyskates.github.io/home",
             name: "Home",
             component: () => import("./components/Home")
-        }
+        },
     ]
 });
