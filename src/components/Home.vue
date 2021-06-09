@@ -1,153 +1,48 @@
 <template>
   <div>
-    <div id="particles-js"></div>
-    <b-jumbotron  class="animate__animated item-styling jumbo " id="Skills">
-      <template #header>
-          <b-row >
-          <b-col cols="auto">Skills</b-col>
-          <b-col cols="auto" class="ms-auto"> 
-            <b-button @click="toggleSelection('Skills')">Close</b-button>
-          </b-col>
-        </b-row>
-      </template>
-      <template #lead>
-        <b-button pill class="color-scheme" style="margin-right:10px" variant="outline-info">React Native</b-button>
-        <b-button pill class="color-scheme" style="margin-right:10px" variant="outline-info">JavaScript</b-button>
-        <b-button pill class="color-scheme" style="margin-right:10px" variant="outline-info">React Native</b-button>          
-      </template>
-      <div class="custom-scroller">    
-        <p>
-          I was a Co-Founder of this mobile app built to circumvent the inefficiencies of attendance tracking at meetings and 
-          events. Developed with React Native for both IOS and Android, we won $10,000 in the Next Generation Tech startup 
-          competition and were later accepted into the Gator Hatchery at the University of Florida. The app had users and sales in 
-          numerous states and countries before stopping development.
-          <br>
-          • Head of UI and UX development.
-          <br>
-          • This project won first place and $10,000 in a technology startup in Pinellas County.
-          <br>
-          • Project was accepted into the Gator Hatchery where we continued to develop our idea and business plan.
-        </p>
-      </div>
-    </b-jumbotron>
+    <!-- <b-navbar class="nav-bar" type="dark">
+      <b-navbar-brand href="/wittyskates.github.io/home" style="margin-left:10px;margin-bottom:2px" > &lt; CD /&gt; </b-navbar-brand>
+      <b-navbar-nav>
+        <b-nav-item href="#">Github</b-nav-item>
+        <b-nav-item href="/wittyskates.github.io/">About</b-nav-item>
+      </b-navbar-nav>
+      <b-navbar-nav class="ms-auto">
+        <b-nav-item href="#" style="padding-right:10px">Resume</b-nav-item>
+      </b-navbar-nav>
+    </b-navbar> -->
 
-    <b-jumbotron  class="animate__animated item-styling jumbo " id="NASA">
-      <template #header>
-          <b-row >
-          <b-col cols="auto">NASA</b-col>
-          <b-col cols="auto" class="ms-auto"> 
-            <b-button @click="toggleSelection('NASA')">Close</b-button>
-          </b-col>
-        </b-row>
-      </template>
-      <template #lead>
-        <b-button pill class="color-scheme" style="margin-right:10px" variant="outline-info">React Native</b-button>
-        <b-button pill class="color-scheme" style="margin-right:10px" variant="outline-info">JavaScript</b-button>
-        <b-button pill class="color-scheme" style="margin-right:10px" variant="outline-info">React Native</b-button>          
-      </template>
-      <div class="custom-scroller">    
-        <p>
-          I was a Co-Founder of this mobile app built to circumvent the inefficiencies of attendance tracking at meetings and 
-          events. Developed with React Native for both IOS and Android, we won $10,000 in the Next Generation Tech startup 
-          competition and were later accepted into the Gator Hatchery at the University of Florida. The app had users and sales in 
-          numerous states and countries before stopping development.
-          <br>
-          • Head of UI and UX development.
-          <br>
-          • This project won first place and $10,000 in a technology startup in Pinellas County.
-          <br>
-          • Project was accepted into the Gator Hatchery where we continued to develop our idea and business plan.
-        </p>
+    <div id="solarSketch">	
+      <div id="sol"><p id="sol-label"></p></div>	
+      <div id="Planet1-orbit">
+        <div id="Planet1"></div>
+        <p id="Planet1-label">UF</p>
       </div>
-    </b-jumbotron>
 
-    <b-jumbotron  class="animate__animated item-styling jumbo " id="Raymond James">
-      <template #header>
-          <b-row >
-          <b-col cols="auto">Raymond James</b-col>
-          <b-col cols="auto" class="ms-auto"> 
-            <b-button @click="toggleSelection('Raymond James')">Close</b-button>
-          </b-col>
-        </b-row>
-      </template>
-      <template #lead>
-        <b-button pill class="color-scheme" style="margin-right:10px" variant="outline-info">JavaScript</b-button>
-        <b-button pill class="color-scheme" style="margin-right:10px" variant="outline-info">Service Now Systems</b-button>          
-      </template>
-      <div class="custom-scroller">    
-        <p>
-          I worked for Raymond James through their Intern Development Program where I was placed on the team of Service 
-          Delivery and Support. During my time I utilized the ServiceNow platform to test and begin implement a Natural 
-          Language Understanding chatbot which was to assist internal IT issues that arose. This chatbot was implemented to speed 
-          up the time of ticker turn around and user ease. 
-          <br>
-          • Worked with the ServiceNow platform which spans most of the Raymond James IT system.
-          <br>
-          • Utilized JS to access and manage data to be piped into the chatbot and access documents.
-        </p>
+      <div id="Planet2-orbit">
+        <div id="Planet2"></div>
+        <p id="Planet2-label">Scanned</p>
       </div>
-    </b-jumbotron>
 
-    <b-jumbotron  class="animate__animated item-styling jumbo " id="Scanned">
-      <template #header>
-          <b-row >
-          <b-col cols="auto">Scanned</b-col>
-          <b-col cols="auto" class="ms-auto"> 
-            <b-button @click="toggleSelection('Scanned')">Close</b-button>
-          </b-col>
-        </b-row>
-      </template>
-      <template #lead>
-        <b-button pill class="color-scheme" style="margin-right:10px" variant="outline-info">React Native</b-button>
-        <b-button pill class="color-scheme" style="margin-right:10px" variant="outline-info">React</b-button>
-        <b-button pill class="color-scheme" style="margin-right:10px" variant="outline-info">JavaScript</b-button>
-        <b-button pill class="color-scheme" style="margin-right:10px" variant="outline-info">Firebase</b-button>          
-      </template>
-      <div class="custom-scroller">    
-        <p>
-          I was a Co-Founder of this mobile app built to circumvent the inefficiencies of attendance tracking at meetings and 
-          events. Developed with React Native for both IOS and Android, we won $10,000 in the Next Generation Tech startup 
-          competition and were later accepted into the Gator Hatchery at the University of Florida. The app had users and sales in 
-          numerous states and countries before stopping development.
-          <br>
-          • Head of UI and UX development.
-          <br>
-          • This project won first place and $10,000 in a technology startup in Pinellas County.
-          <br>
-          • Project was accepted into the Gator Hatchery where we continued to develop our idea and business plan.
-        </p>
+      <div id="Planet3-orbit">
+        <div id="Planet3-1-orbit">
+          <div id="Planet3-1"></div>
+          <!-- <div id="Planet3-1-1"></div> -->
+          <p id="Planet3-1-label"></p>
+        </div>
+        <div id="Planet3-2-orbit">
+          <div id="Planet3-2"></div>
+          <p id="Planet3-2-label"></p>
+        </div>
+        <div id="Planet3"></div>
+        <p id="Planet3-label">RJF</p>
       </div>
-    </b-jumbotron>
 
-    <b-jumbotron  class="animate__animated item-styling jumbo " id="UF">
-      <template #header>
-          <b-row >
-          <b-col cols="auto">University of Florida</b-col>
-          <b-col cols="auto" class="ms-auto"> 
-            <b-button @click="toggleSelection('UF')">Close</b-button>
-          </b-col>
-        </b-row>
-      </template>
-      <template #lead>
-        <b-button pill class="color-scheme" style="margin-right:10px" variant="outline-info">React Native</b-button>
-        <b-button pill class="color-scheme" style="margin-right:10px" variant="outline-info">JavaScript</b-button>
-        <b-button pill class="color-scheme" style="margin-right:10px" variant="outline-info">React Native</b-button>          
-      </template>
-      <div class="custom-scroller">    
-        <p>
-          I was a Co-Founder of this mobile app built to circumvent the inefficiencies of attendance tracking at meetings and 
-          events. Developed with React Native for both IOS and Android, we won $10,000 in the Next Generation Tech startup 
-          competition and were later accepted into the Gator Hatchery at the University of Florida. The app had users and sales in 
-          numerous states and countries before stopping development.
-          <br>
-          • Head of UI and UX development.
-          <br>
-          • This project won first place and $10,000 in a technology startup in Pinellas County.
-          <br>
-          • Project was accepted into the Gator Hatchery where we continued to develop our idea and business plan.
-        </p>
+      <div id="Planet4-orbit">
+        <div id="Planet4"></div>
+        <p id="Planet4-label">NASA</p>
       </div>
-    </b-jumbotron>
+
+    </div>
   </div>
 </template>
 
@@ -156,151 +51,470 @@
 export default {
   name: 'Home',
   methods: {
-    toggleSelection(id){
-      document.getElementById("particles-js").setAttribute("style", "z-index: 0")
-      document.getElementById("particles-js").classList.remove("hidden")
-      document.getElementById(id).classList.remove("animate__backInDown");
-      document.getElementById(id).setAttribute("style", "visibility: hidden")
-    }
+
   }
 }
+
 </script>
 
 <style>
-.custom-scroller::-webkit-scrollbar {
-  width: 12px;
-  height: 12px;
-}
-.custom-scroller::-webkit-scrollbar-track {
-  background: transparent;
 
-}
-.custom-scroller::-webkit-scrollbar-thumb {
-  background: rgb(175, 175, 175);
-  visibility:hidden;
-}
-.custom-scroller:hover::-webkit-scrollbar-thumb {
-  visibility:visible;
-  border-radius: 12px;
-}
-.custom-scroller {
-  overflow: overlay;
-  max-width: 100%;
-  height: 70%;
-  /* Full Scrolling */
-  /* height: 50%  */
-
-}
-.item-styling{
-  background-color: rgba(52, 58, 64, 0.8) ;;
-  color: white;
-  margin-top: 10%;
-  margin-left:10% ;
-  margin-right:10% ;
-  border-radius: 12px;
-  position: absolute;
-  padding: 40px;
-
-  /* height: 50%;
-  width: 80%; */
-}
-.jumbo{
-  height: 50%;
-  min-height: 350px;
-  overflow-y: hidden;
-  overflow-x: hidden;
+.nav-bar{
+  height: 50px;
+  background-color: #343a40;
 }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-h3 {
-margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-
-p { color: white; font-family: 'Raleway',sans-serif; font-size: 18px; font-weight: 500; line-height: 32px; margin: 0 0 24px; }
-/* ---- reset ---- */
+/* Basic Layout Bigger Orbiter*/
 
 body {
-  margin: 0;
-  font:normal 75% Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: 100%;
+    /* background-image: url(https://github.com/pesegal/CSS3-System-Sketch/blob/master/img/gg66203835.jpg?raw=true); */
+    background-color: #232741;
 }
 
-canvas {
-  display: block;
-  vertical-align: bottom;
+#solarSketch {
+  position: fixed;
+
+  /* top: 450px; */
+  margin-top: 450px;
+  left: 50%;
 }
 
-/* ---- particles.js container ----  #b61924; 2a2a2a*/
-.hidden::before {
-  content: "";
+#container {
   position: absolute;
-  z-index: 3;
-  width: 100%;
-  height: 100%;
-  -webkit-backdrop-filter: blur(5px); 
-  backdrop-filter: blur(5px);         
-  pointer-events: none; 
-  left: 0%;
-  visibility: visible;
+  top: 8%;
+  left: 2%;
+  border: 3px solid white;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-#particles-js {
-  z-index: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #151114;
-  position: absolute;
-  padding-bottom: 50px;
-  /* background-image: url("");
-  background-repeat: no-repeat; */
-  /* background-size: 200px 200px ; */
-  /* background-position: 50% 50%; */
-}
-
-#Skills{
-  visibility: hidden;
-}
-#NASA{
-  visibility: hidden;
-}
-#Raymond\ James{
-  visibility: hidden;
-}
-#UF{
-  visibility: hidden;
-}
-#Scanned{
-  visibility: hidden;
-}
-
-/* #topborder{
-  width: 90%;
-  height: 50px;
-  margin-top: -20px;
-  box-shadow: 0 20px 20px -20px #333;
-} */
-
-/* #Raymond\ James{
-  background-color: #232741;
+#container h1 {
   color: white;
-  padding: 50px;
-  padding-left: 150px;
-  padding-right: 150px;
+  /* font-family: helvetica; */
+  font-size: 20px;
+  
+}
 
-} */
+#container p {
+  margin-top: 0px;
+  color: white;
+  /* font-family: helvetica; */
+  font-size: 15px;
+  /* font-style: italic; */
+  align-content: center;
+}
+
+/*Sol Group*/
+
+#sol {
+  position: absolute;
+  top: 59%;
+  left: 50%;
+
+  background: white;
+  height: 150px;
+  width: 150px;
+  margin-top: -75px; 
+  margin-left: -75px;
+
+  border-color: white;
+  border-width: 10px;
+  border-style: solid;
+  border-radius: 50%;   
+}
+
+#sol-label {
+  position: absolute;
+  top:  0;
+  left: 50%;
+  width: 15px;
+  height: 15px;
+  margin-left: -60px;
+  margin-top: -12px;
+  color: white;
+  font-size: 12px;
+}
+
+/* Planet 1 Group*/
+#Planet1 {
+  position: absolute;
+  top:  0;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  margin-left: -10px;
+  margin-top: -25px;
+  background: white;
+  border-color: white;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 50%;
+}
+
+#Planet1-orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 250px;
+  height: 250px;
+  margin-top: -125px;
+  margin-left: -125px;
+
+  border-width: 1.8px;
+  border-style: dashed;
+  border-color: white;
+  border-radius: 50%;
+
+  -webkit-animation: spin-left 20s linear infinite;
+  -moz-animation: spin-left 20s linear infinite;
+  -ms-animation: spin-left 20s linear infinite;
+  -o-animation: spin-left 20s linear infinite;
+  animation: spin-left 20s linear infinite;
+}
+
+
+#Planet1-label {
+  position: absolute;
+  top:  0;
+  left: 50%;
+  /* width: 15px;
+  height: 15px; */
+  margin-left: 6px;
+  margin-top: -11px;
+  color: #232741;
+  font-size: 15px;
+  font-weight: bold;
+
+  -webkit-animation: spin-right 20s linear infinite;
+  -moz-animation: spin-right 20s linear infinite;
+  -ms-animation: spin-right 20s linear infinite;
+  -o-animation: spin-right 20s linear infinite;
+  animation: spin-right 20s linear infinite;
+}
+
+/*Planet 2 Group*/
+
+#Planet2 {
+  position: absolute;
+  top:  0;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  margin-left: -10px;
+  margin-top: -32px;
+  background: white;
+  border-color: white;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 50%; 
+}
+
+#Planet2-orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 420px;
+  height: 420px;
+  margin-top: -210px;
+  margin-left: -210px;
+
+  border-width: 2.2px;
+  border-style: dashed;
+  border-color: white;
+  border-radius: 80%;
+
+  -webkit-animation: spin-right 100s linear infinite;
+  -moz-animation: spin-right 100s linear infinite;
+  -ms-animation: spin-right 100s linear infinite;
+  -o-animation: spin-right 100s linear infinite;
+  animation: spin-right 100s linear infinite;
+}
+
+#Planet2-label {
+  position: absolute;
+  top:  0;
+  left: 50%;
+  /* width: 15px;
+  height: 15px; */
+  margin-left: 0px;
+  margin-top: -5px;
+  color: #232741;
+  font-size: 15px;
+  font-weight: bold;
+
+  -webkit-animation: spin-left 100s linear infinite;
+  -moz-animation: spin-left 100s linear infinite;
+  -ms-animation: spin-left 100s linear infinite;
+  -o-animation: spin-left 100s linear infinite;
+  animation: spin-left 100s linear infinite;
+}
+
+/*Planet 3 Group*/
+
+#Planet3 {
+  position: absolute;
+  top:  0;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  margin-left: -25px;
+  margin-top: -28px;
+  background: white;
+  border-color: white;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 50%;     
+}
+
+#Planet3-1 {
+  width: 8px;
+  height: 8px;
+  margin-left: 5px;
+  margin-top: 10px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 0 64px white; 
+}
+#Planet3-1-1 {
+  width: 8px;
+  height: 8px;
+  margin-left: 89px;
+  margin-top: 50px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 0 64px white; 
+}
+
+#Planet3-2 {
+  width: 10px;
+  height: 10px;
+  margin-left: 8px;
+  margin-top: 16px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 0 64px white; 
+}
+
+#Planet3-orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 600px;
+  height: 600px;
+  margin-top: -300px;
+  margin-left: -300px;
+
+  border-width:3px;
+  border-style: dashed;
+  border-color: white;
+  border-radius: 50%;
+
+  -webkit-animation: spin-right 200s linear infinite;
+  -moz-animation: spin-right 200s linear infinite;
+  -ms-animation: spin-right 200s linear infinite;
+  -o-animation: spin-right 200s linear infinite;
+  animation: spin-right 200s linear infinite;
+}
+
+#Planet3-1-orbit {
+  position: absolute;
+  top:  0;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  margin-left: -40px;
+  margin-top: -42px;
+
+  border: 1px dashed white;
+  border-radius: 50%;
+
+  -webkit-animation: spin-left 10s linear infinite;
+  -moz-animation: spin-left 10s linear infinite;
+  -ms-animation: spin-left 10s linear infinite;
+  -o-animation: spin-left 10s linear infinite;
+  animation: spin-left 10s linear infinite;
+}
+
+#Planet3-2-orbit {
+  position: absolute;
+  top:  0;
+  left: 50%;
+  width: 120px;
+  height: 120px;
+  margin-left: -60px;
+  margin-top: -62px;
+
+  border: 1px dashed white;
+  border-radius: 50%;
+
+  -webkit-animation: spin-right 20s linear infinite;
+  -moz-animation: spin-right 20s linear infinite;
+  -ms-animation: spin-right 20s linear infinite;
+  -o-animation: spin-right 20s linear infinite;
+  animation: spin-right 20s linear infinite;
+}
+
+#Planet3-label {  
+  position: absolute;
+  top:  0;
+  left: 50%;
+  /* width: 15px;
+  height: 15px; */
+  margin-left: -12px;
+  margin-top: -13px;
+  color: #232741;
+  font-size: 15px;
+  font-weight: bold;
+
+  -webkit-animation: spin-left 200s linear infinite;
+  -moz-animation: spin-left 200s linear infinite;
+  -ms-animation: spin-left 200s linear infinite;
+  -o-animation: spin-left 200s linear infinite;
+  animation: spin-left 200s linear infinite; 
+}
+
+/*The Animation time for moon labels is calculated by using harmonic sums. See Readme.md*/
+
+#Planet3-1-label {  
+  position: absolute;
+  top:  0;
+  left: 50%;
+  width: 15px;
+  height: 15px;
+  margin-left: -54px;
+  margin-top: -2px;
+  color: white;
+  font-size: 11px;
+
+  -webkit-animation: spin-right 5.12820512820512820512820s linear infinite;
+  -moz-animation: spin-right 5.12820512820512820512820s linear infinite;
+  -ms-animation: spin-right 5.12820512820512820512820s linear infinite;
+  -o-animation: spin-right 5.12820512820512820512820s linear infinite;
+  animation: spin-right 5.12820512820512820512820s linear infinite;
+}
+
+#Planet3-2-label {
+  position: absolute;
+  top:  0;
+  left: 50%;
+  width: 15px;
+  height: 15px;
+  margin-left: -78px;
+  margin-top: 2px;
+  color: white;
+  font-size: 11px;
+
+  -webkit-animation: spin-left 18.1818181818181818s linear infinite;
+  -moz-animation: spin-left 18.1818181818181818s linear infinite;
+  -ms-animation: spin-left 18.1818181818181818s linear infinite;
+  -o-animation: spin-left 18.1818181818181818s linear infinite;
+  animation: spin-left 18.1818181818181818s linear infinite;
+}
+
+/*Planet 4 Group*/
+
+#Planet4 {
+  position: absolute;
+  top:  0;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  margin-left: -10px;
+  margin-top: -30px;
+  background: white;
+  border-color: white;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 50%;   
+}
+
+
+#Planet4-orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  
+  width: 800px;
+  height: 800px;
+  margin-top: -400px;
+  margin-left: -400px;
+  
+  border-width:4px;
+  border-style: dashed;
+  border-color: white;
+  border-radius: 50%;
+  
+  -webkit-animation: spin-right 150s linear infinite;
+  -moz-animation: spin-right 150s linear infinite;
+  -ms-animation: spin-right 150s linear infinite;
+  -o-animation: spin-right 150s linear infinite;
+  animation: spin-right 150s linear infinite;
+}
+
+#Planet4-label {
+  position: absolute;
+  top:  0;
+  left: 50%;
+  /* width: 15px;
+  height: 15px; */
+  margin-left: 0px;
+  margin-top: -12px;
+  color: #232741;
+  font-size: 15px;
+  font-weight: bold;
+
+  -webkit-animation: spin-left 150s linear infinite;
+  -moz-animation: spin-left 150s linear infinite;
+  -ms-animation: spin-left 150s linear infinite;
+  -o-animation: spin-left 150s linear infinite;
+  animation: spin-left 150s linear infinite;
+}
+
+/*Defining the rotational keyframe at-rules*/
+
+@-webkit-keyframes spin-right {
+  100% {
+    -webkit-transform: rotate(360deg);
+       -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+         -o-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-right {
+  100% {
+    -webkit-transform: rotate(360deg);
+       -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+         -o-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin-left {
+  100% {
+    -webkit-transform: rotate(-360deg);
+       -moz-transform: rotate(-360deg);
+        -ms-transform: rotate(-360deg);
+         -o-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+@keyframes spin-left {
+  100% {
+    -webkit-transform: rotate(-360deg);
+       -moz-transform: rotate(-360deg);
+        -ms-transform: rotate(-360deg);
+         -o-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
 </style>
