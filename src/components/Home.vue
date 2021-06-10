@@ -11,11 +11,8 @@
       </b-navbar-nav>
     </b-navbar> -->
 
-    <div id="solarSketch">	
-      <div id="sol"><p id="sol-label"></p></div>
-      
-
-    <div id="Planet4-orbit">
+    <div id="solarSketch">	    
+      <div id="Planet4-orbit">
         <div id="Planet4" @click="scrollInto('NASA')" style="cursor: pointer;"></div>
         <p id="Planet4-label" @click="scrollInto('NASA')" style="cursor: pointer;">NASA</p>
       </div>
@@ -27,7 +24,6 @@
         </div>
         <div id="Planet3-1-orbit">
           <div id="Planet3-1"></div>
-          <!-- <div id="Planet3-1-1"></div> -->
           <p id="Planet3-1-label"></p>
         </div>
         <div id="Planet3" @click="scrollInto('UF')" style="cursor: pointer;"></div>
@@ -44,57 +40,86 @@
         <p id="Planet1-label"  @click="scrollInto('UF')" style="cursor: pointer;">UF</p>
       </div>
 
+      <div id="sol" @click="scrollInto('About')" style="cursor: pointer;"><p id="sol-label"></p></div>
     </div>
+
     <div class="breaker"></div>
+    
     <div class="content">
-      <div id="UF">UF
-        <p>TESTING</p>
-        <p>TESTING</p>
-        <p>TESTING</p>
-        <p>TESTING</p>
-        <p>TESTING</p>
-        <p>TESTING</p>
-        <p>TESTING</p>
-        <p>TESTING</p>
-        <p>TESTING</p>
-        <p>TESTING</p>
+      <div class="text" id="About">
+        <h1>About Me</h1>
+        <p>
+          I am a senior at the University of Florida currently pursuing a degree in Computer Engineering with a focus on software. 
+          I enjoy learning new things and expanding my horizon in the engineering field. I have found a passion for software development 
+          and machine learning and want to apply my skills to find new and efficient solutions to current problems.
+          <br>
+          I want to be a part of something bigger than myself and positively affect and inspire others. Creating has and always will 
+          be my passion, the feeling of building or designing something new is what drives me to move forward.
+        </p>
       </div>
-      <div id="Scanned">Scanned
-        <p>TESTING</p>
-        <p>TESTING</p>
-        <p>TESTING</p>
-        <p>TESTING</p>
-        <p>TESTING</p>
-        <p>TESTING</p>
-        <p>TESTING</p>
-        <p>TESTING</p>
-        <p>TESTING</p>
-        <p>TESTING</p>
+
+      <div class="text" id="UF">
+        <h1>UF</h1>
       </div>
-      <div id="RJF">RJF
-        <p>TESTING</p>
-        <p>TESTING</p>
-        <p>TESTING</p>
-        <p>TESTING</p>
-        <p>TESTING</p>
-        <p>TESTING</p>
-        <p>TESTING</p>
-        <p>TESTING</p>
-        <p>TESTING</p>
-        <p>TESTING</p>
-      </div>    
-      <div id="NASA">NASA
-        <p>TESTING</p>
-        <p>TESTING</p>
-        <p>TESTING</p>
-        <p>TESTING</p>
-        <p>TESTING</p>
-        <p>TESTING</p>
-        <p>TESTING</p>
-        <p>TESTING</p>
-        <p>TESTING</p>
-        <p>TESTING</p>
-      </div>  
+
+      <div class="text" id="Scanned">
+        <h1>Scanned</h1>
+        <b-row>
+          <b-col cols="7">
+          <p>
+            A mobile app attendance tracking system with which won 1st place and $10,000 in the Next Generation Tech Competition in Pinellas County.
+            <br>
+            • Head of UI and UX development.
+            <br>
+            • Project won first place and $10,000 in a technology startup in Pinellas County.
+            <br>
+            • Project was accepted into the Gator Hatchery where we continued to develop our idea and business plan.
+          </p>
+          </b-col>
+          <b-col cols="5">
+            <b-row align-h="end">
+              <b-col cols="auto">
+                <p>Firebase</p>
+              </b-col>
+              <b-col  cols="auto">
+                <p>Javascript</p>
+              </b-col>
+            </b-row>
+          </b-col>
+        </b-row>
+      </div>
+
+      <div class="text" id="RJF">
+        <h1>Raymond James</h1>
+        <h4>Internship Summer 2021</h4>
+        <p>
+          • Utilized the ServiceNow platform to create reporting analytics using active data in the system.
+          <br>
+          • Analyzed numerous data sources spanning multiple sectors of Raymond James to discover issues or new relations.
+          <br>
+          • Worked with the ServiceNow platform which spans most of the Raymond James IT system.
+        </p>        
+        <h4>Internship Summer 2020</h4>
+        <p>
+          • Employed the ServiceNow platform to test and implement a Natural Language Understanding chatbot which was to assist internal IT issues that arose.
+          <br>
+
+          • Worked with the ServiceNow platform which spans most of the Raymond James IT system.
+          <br>
+          • Utilized JS to access and manage data and documents that were piped into the chatbot.
+        </p>
+      </div>
+
+      <div class="text" id="NASA">
+        <h1>NASA</h1>
+        <p>
+          The need to understand the surface and near subsurface of the moon is crucial for the advancements of future missions.
+          Our mission was to develop a payload that can map surface water at a scale of a few kilometers for most of the Permanently Shadowed Regions (PSRs)
+          at the lunar South Polar Region, and for at least one location in a PSR, the abundance of water ice in the top 1 meter of the regolith needs to be 
+          determined at a ~ +-1% accuracy, or better, at a spatial sampling of ~ 100m.
+        </p>
+      </div>
+
     </div>
     
   </div>
@@ -118,14 +143,17 @@ export default {
 </script>
 
 <style>
+
 /* body {
   width: 100%;
   height: 100%;
   background-color: #232741;
 } */
+
 a{
   text-decoration: none;
 }
+
 .breaker{
   background-color: #232741;
   padding-top: 500px;
@@ -138,6 +166,18 @@ a{
   color: white;
   background-color: #343a40;
   padding-bottom: 10px ;
+  padding-top: 80px;
+}
+
+.text{
+  margin-right: 20%;
+  margin-left: 20%;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.colu{
+  text-align: right;
 }
 .nav-bar{
   height: 50px;
@@ -324,15 +364,6 @@ a{
   height: 8px;
   margin-left: 5px;
   margin-top: 10px;
-  border-radius: 50%;
-  background: white;
-  box-shadow: 0 0 64px white; 
-}
-#Planet3-1-1 {
-  width: 8px;
-  height: 8px;
-  margin-left: 89px;
-  margin-top: 50px;
   border-radius: 50%;
   background: white;
   box-shadow: 0 0 64px white; 
