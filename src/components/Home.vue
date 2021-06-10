@@ -56,12 +56,47 @@
           I want to be a part of something bigger than myself and positively affect and inspire others. Creating has and always will 
           be my passion, the feeling of building or designing something new is what drives me to move forward.
         </p>
+        <div class="about">
+          <div class="tech">C++</div>
+          <div class="tech">C</div>
+          <div class="tech">Java</div>
+          <div class="tech">Vue</div>
+          <div class="tech">React</div>
+          <div class="tech">JavaScript</div>
+          <div class="tech">Python</div>
+          <div class="tech">HTML</div>
+          <div class="tech">CSS</div>
+          <div class="tech">VHDL</div>
+          <div class="tech">Flutter</div>
+        </div>
       </div>
 
       <div class="vl"><h1 id="date">2021</h1></div>
 
       <div class="text" id="UF">
         <h1>UF</h1>
+        <b-row>
+          <b-col cols="7">
+            <p>
+              The need to understand the surface and near subsurface of the moon is crucial for the advancements of future missions.
+              Our mission was to develop a payload that can map surface water at a scale of a few kilometers for most of the Permanently Shadowed Regions (PSRs)
+              at the lunar South Polar Region, and for at least one location in a PSR, the abundance of water ice in the top 1 meter of the regolith needs to be 
+              determined at a ~ +-1% accuracy, or better, at a spatial sampling of ~ 100m.
+            </p>
+          </b-col>
+          <b-col cols="5">
+            <div class="flexy">
+              <div class="tech">Machine Learning</div>
+              <div class="tech">Data Science</div>
+              <div class="tech">Algorithms</div>
+              <div class="tech">Digital Logic</div>
+              <div class="tech">Digital Design</div>
+              <!-- <div class="tech">Circuits</div> -->
+              <div class="tech">Software Engineering</div>
+              <!-- <div class="tech">Computer Org</div> -->
+            </div>
+          </b-col>
+        </b-row>
       </div>
 
       <!-- <div class="vl"><h1 id="date">2021</h1></div> -->
@@ -79,10 +114,8 @@
           </b-col>
           <b-col cols="5">
             <div class="flexy">
-              <div class="tech">ServiceNow</div>
+              <div class="tech">CAD</div>
               <div class="tech">Python</div>
-              <div class="tech">SQL</div>
-              <div class="tech">scikit-learn</div>
             </div>
           </b-col>
         </b-row>
@@ -130,9 +163,7 @@
           <b-col cols="5">
             <div class="flexy">
               <div class="tech">ServiceNow</div>
-              <div class="tech">Python</div>
-              <div class="tech">SQL</div>
-              <div class="tech">scikit-learn</div>
+              <div class="tech">JavaScript</div>
             </div>
           </b-col>
         </b-row>
@@ -156,10 +187,10 @@
           </b-col>
           <b-col cols="5">
             <div class="flexy">
-              <div class="tech">ServiceNow</div>
-              <div class="tech">Python</div>
-              <div class="tech">SQL</div>
-              <div class="tech">scikit-learn</div>
+              <div class="tech">JavaScript</div>
+              <div class="tech">React Native</div>
+              <div class="tech">Firebase</div>
+              <div class="tech">React</div>
             </div>
           </b-col>
         </b-row>
@@ -167,10 +198,10 @@
 
       <div class="social-links">
         <a href="https://www.facebook.com/WittySkates"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.linkedin.com/in/dupuisconnor/"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/WittySkates"><i class="fab fa-github"></i></a>
         <a href="https://www.instagram.com/connor__dupuis/"><i class="fab fa-instagram"></i></a>
         <a href="https://twitter.com/dupuis_connor"><i class="fab fa-twitter"></i></a>
-        <a href="https://github.com/WittySkates"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/dupuisconnor/"><i class="fab fa-linkedin-in"></i></a>
       </div>
 
     </div>
@@ -324,6 +355,11 @@ h1{
   gap: 10px;
 }
 
+/* .flexy > div{
+  text-align:center;
+  margin:5px; 
+} */
+
 .tech{
   padding: 10px;
   border-radius: 12px;
@@ -332,19 +368,27 @@ h1{
 
 }
 
-/* .flexy > div{
+.about{
+  display: flex;
+  flex-wrap: wrap;
+  /* padding-bottom: 20px; */
+  padding-top: 20px;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* .about > div{
   text-align:center;
   margin:5px; 
 } */
-
 
 .nav-bar{
   height: 50px;
   background-color: #343a40;
 }
+
 /* Socials */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-
 
 .social-links {
   display: flex;
