@@ -58,9 +58,49 @@
         </p>
       </div>
 
+      <div class="vl"><h1 id="date">2021</h1></div>
+
       <div class="text" id="UF">
         <h1>UF</h1>
       </div>
+
+      <!-- <div class="vl"><h1 id="date">2021</h1></div> -->
+
+      <div class="text" id="NASA">
+        <h1>NASA</h1>
+        <p>
+          The need to understand the surface and near subsurface of the moon is crucial for the advancements of future missions.
+          Our mission was to develop a payload that can map surface water at a scale of a few kilometers for most of the Permanently Shadowed Regions (PSRs)
+          at the lunar South Polar Region, and for at least one location in a PSR, the abundance of water ice in the top 1 meter of the regolith needs to be 
+          determined at a ~ +-1% accuracy, or better, at a spatial sampling of ~ 100m.
+        </p>
+      </div>
+
+      <!-- <div class="vl"><h1 id="date">2021</h1></div> -->
+
+      <div class="text" id="RJF">
+        <h1>Raymond James</h1>
+        <h4>Internship Summer 2021</h4>
+        <p>
+          • Utilized the ServiceNow platform to create reporting analytics using active data in the system.
+          <br>
+          • Analyzed numerous data sources spanning multiple sectors of Raymond James to discover issues or new relations.
+          <br>
+          • Worked with the ServiceNow platform which spans most of the Raymond James IT system.
+        </p>
+        <div class="vl"><h1 id="date">2020</h1></div>
+        <h4>Internship Summer 2020</h4>
+        <p>
+          • Employed the ServiceNow platform to test and implement a Natural Language Understanding chatbot which was to assist internal IT issues that arose.
+          <br>
+
+          • Worked with the ServiceNow platform which spans most of the Raymond James IT system.
+          <br>
+          • Utilized JS to access and manage data and documents that were piped into the chatbot.
+        </p>
+      </div>
+
+      <div class="vl"><h1 id="date">2018</h1></div>
 
       <div class="text" id="Scanned">
         <h1>Scanned</h1>
@@ -89,35 +129,12 @@
         </b-row>
       </div>
 
-      <div class="text" id="RJF">
-        <h1>Raymond James</h1>
-        <h4>Internship Summer 2021</h4>
-        <p>
-          • Utilized the ServiceNow platform to create reporting analytics using active data in the system.
-          <br>
-          • Analyzed numerous data sources spanning multiple sectors of Raymond James to discover issues or new relations.
-          <br>
-          • Worked with the ServiceNow platform which spans most of the Raymond James IT system.
-        </p>        
-        <h4>Internship Summer 2020</h4>
-        <p>
-          • Employed the ServiceNow platform to test and implement a Natural Language Understanding chatbot which was to assist internal IT issues that arose.
-          <br>
-
-          • Worked with the ServiceNow platform which spans most of the Raymond James IT system.
-          <br>
-          • Utilized JS to access and manage data and documents that were piped into the chatbot.
-        </p>
-      </div>
-
-      <div class="text" id="NASA">
-        <h1>NASA</h1>
-        <p>
-          The need to understand the surface and near subsurface of the moon is crucial for the advancements of future missions.
-          Our mission was to develop a payload that can map surface water at a scale of a few kilometers for most of the Permanently Shadowed Regions (PSRs)
-          at the lunar South Polar Region, and for at least one location in a PSR, the abundance of water ice in the top 1 meter of the regolith needs to be 
-          determined at a ~ +-1% accuracy, or better, at a spatial sampling of ~ 100m.
-        </p>
+      <div class="social-links">
+        <a href="https://www.facebook.com/WittySkates"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/connor__dupuis/"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com/dupuis_connor"><i class="fab fa-twitter"></i></a>
+        <a href="https://github.com/WittySkates"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/dupuisconnor/"><i class="fab fa-linkedin-in"></i></a>
       </div>
 
     </div>
@@ -153,6 +170,9 @@ export default {
 a{
   text-decoration: none;
 }
+h1{
+  /* text-align: center; */
+}
 
 .breaker{
   background-color: #232741;
@@ -176,13 +196,82 @@ a{
   text-justify: inter-word;
 }
 
-.colu{
-  text-align: right;
+.vl {
+  border-left: 1px solid white;
+  height: 400px;
+  position: relative;
+  margin-left: 50%;
+  margin-top: 90px;
+  margin-bottom: 90px;
 }
+#date{
+  text-align: left;
+  margin-left: -68px;
+  padding-top: 160px;
+  letter-spacing: 15px;
+}
+
 .nav-bar{
   height: 50px;
   background-color: #343a40;
 }
+/* Socials */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+.social-links {
+  display:flex;
+  padding-bottom: 20px;
+  padding-top: 100px;
+  justify-content: center;
+}
+
+.social-links a {
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.10);
+  margin: 0 30px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.5s;
+}
+
+.social-links a .fab {
+  font-size: 30px;
+  line-height: 80px;
+  position: relative;
+  z-index: 10;
+  transition: color 0.5s;
+}
+
+.social-links a::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: -90px;
+  left: 0;
+  background: #232741;
+  /* background: linear-gradient(-45deg, #ed1c94, #ffec17); */
+  position: absolute;
+  transition: 0.5s;
+}
+
+.social-links a:hover::after {
+  top: 0;
+}
+
+.social-links a:hover .fab {
+  color: #fff;
+}
+
+.social-links a:hover {
+  transform: translateY(-10px);
+}
+
 
 /* Basic Layout Bigger Orbiter*/
 
