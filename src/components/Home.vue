@@ -255,7 +255,7 @@ h1{
 }
 
 #stars {
-  background: #2d3037;
+  background: #232741;
   width: 100%;
   height: 100%;
 }
