@@ -10,40 +10,41 @@
         <b-nav-item href="#" style="padding-right:10px">Resume</b-nav-item>
       </b-navbar-nav>
     </b-navbar> -->
-
-    <div id="solarSketch">	    
-      <div id="Planet4-orbit">
-        <div id="Planet4" @click="scrollInto('NASA')" style="cursor: pointer;"></div>
-        <p id="Planet4-label" @click="scrollInto('NASA')" style="cursor: pointer;">NASA</p>
-      </div>
-
-      <div id="Planet3-orbit">
-        <div id="Planet3-2-orbit">
-          <div id="Planet3-2"></div>
-          <p id="Planet3-2-label"></p>
+    <div id="stars">
+      <div id="solarSketch">	    
+        <div id="Planet4-orbit">
+          <div id="Planet4" @click="scrollInto('NASA')" style="cursor: pointer;"></div>
+          <p id="Planet4-label" @click="scrollInto('NASA')" style="cursor: pointer;">NASA</p>
         </div>
-        <div id="Planet3-1-orbit">
-          <div id="Planet3-1"></div>
-          <p id="Planet3-1-label"></p>
+
+        <div id="Planet3-orbit">
+          <div id="Planet3-2-orbit">
+            <div id="Planet3-2"></div>
+            <p id="Planet3-2-label"></p>
+          </div>
+          <div id="Planet3-1-orbit">
+            <div id="Planet3-1"></div>
+            <p id="Planet3-1-label"></p>
+          </div>
+          <div id="Planet3" @click="scrollInto('UF')" style="cursor: pointer;"></div>
+          <p id="Planet3-label" @click="scrollInto('RJF')" style="cursor: pointer;">RJF</p>
         </div>
-        <div id="Planet3" @click="scrollInto('UF')" style="cursor: pointer;"></div>
-        <p id="Planet3-label" @click="scrollInto('RJF')" style="cursor: pointer;">RJF</p>
-      </div>
 
-      <div id="Planet2-orbit">
-        <div id="Planet2"  @click="scrollInto('Scanned')" style="cursor: pointer;"></div>
-        <p id="Planet2-label"  @click="scrollInto('Scanned')" style="cursor: pointer;">Scanned</p>
-      </div>
+        <div id="Planet2-orbit">
+          <div id="Planet2"  @click="scrollInto('Scanned')" style="cursor: pointer;"></div>
+          <p id="Planet2-label"  @click="scrollInto('Scanned')" style="cursor: pointer;">Scanned</p>
+        </div>
 
-      <div id="Planet1-orbit">
-        <div id="Planet1" @click="scrollInto('UF')" style="cursor: pointer;"></div>
-        <p id="Planet1-label"  @click="scrollInto('UF')" style="cursor: pointer;">UF</p>
-      </div>
+        <div id="Planet1-orbit">
+          <div id="Planet1" @click="scrollInto('UF')" style="cursor: pointer;"></div>
+          <p id="Planet1-label"  @click="scrollInto('UF')" style="cursor: pointer;">UF</p>
+        </div>
 
-      <div id="sol" @click="scrollInto('About')" style="cursor: pointer;"><p id="sol-label"></p></div>
+        <div id="sol" @click="scrollInto('About')" style="cursor: pointer;"><p id="sol-label"></p></div>
+      </div>
     </div>
 
-    <div class="breaker"></div>
+    <div class="breaker" id="stars"></div>
     
     <div class="content">
       <div class="text" id="About">
@@ -52,7 +53,6 @@
           I am a senior at the University of Florida currently pursuing a degree in Computer Engineering with a focus on software. 
           I enjoy learning new things and expanding my horizon in the engineering field. I have found a passion for software development 
           and machine learning and want to apply my skills to find new and efficient solutions to current problems.
-          <br>
           I want to be a part of something bigger than myself and positively affect and inspire others. Creating has and always will 
           be my passion, the feeling of building or designing something new is what drives me to move forward.
         </p>
@@ -68,12 +68,24 @@
 
       <div class="text" id="NASA">
         <h1>NASA</h1>
-        <p>
-          The need to understand the surface and near subsurface of the moon is crucial for the advancements of future missions.
-          Our mission was to develop a payload that can map surface water at a scale of a few kilometers for most of the Permanently Shadowed Regions (PSRs)
-          at the lunar South Polar Region, and for at least one location in a PSR, the abundance of water ice in the top 1 meter of the regolith needs to be 
-          determined at a ~ +-1% accuracy, or better, at a spatial sampling of ~ 100m.
-        </p>
+        <b-row>
+          <b-col cols="7">
+            <p>
+              The need to understand the surface and near subsurface of the moon is crucial for the advancements of future missions.
+              Our mission was to develop a payload that can map surface water at a scale of a few kilometers for most of the Permanently Shadowed Regions (PSRs)
+              at the lunar South Polar Region, and for at least one location in a PSR, the abundance of water ice in the top 1 meter of the regolith needs to be 
+              determined at a ~ +-1% accuracy, or better, at a spatial sampling of ~ 100m.
+            </p>
+          </b-col>
+          <b-col cols="5">
+            <div class="flexy">
+              <div class="tech">ServiceNow</div>
+              <div class="tech">Python</div>
+              <div class="tech">SQL</div>
+              <div class="tech">scikit-learn</div>
+            </div>
+          </b-col>
+        </b-row>
       </div>
 
       <!-- <div class="vl"><h1 id="date">2021</h1></div> -->
@@ -81,23 +93,49 @@
       <div class="text" id="RJF">
         <h1>Raymond James</h1>
         <h4>Internship Summer 2021</h4>
-        <p>
-          • Utilized the ServiceNow platform to create reporting analytics using active data in the system.
-          <br>
-          • Analyzed numerous data sources spanning multiple sectors of Raymond James to discover issues or new relations.
-          <br>
-          • Worked with the ServiceNow platform which spans most of the Raymond James IT system.
-        </p>
-        <div class="vl"><h1 id="date">2020</h1></div>
-        <h4>Internship Summer 2020</h4>
-        <p>
-          • Employed the ServiceNow platform to test and implement a Natural Language Understanding chatbot which was to assist internal IT issues that arose.
-          <br>
+        <b-row>
+          <b-col cols="7">
+            <p>
+              • Utilized the ServiceNow platform to create reporting analytics using active data in the system.
+              <br>
+              • Analyzed numerous data sources spanning multiple sectors of Raymond James to discover issues or new relations.
+              <br>
+              • Worked with the ServiceNow platform which spans most of the Raymond James IT system.
+            </p>
+          </b-col>
+          <b-col cols="5">
+            <div class="flexy">
+              <div class="tech">ServiceNow</div>
+              <div class="tech">Python</div>
+              <div class="tech">SQL</div>
+              <div class="tech">scikit-learn</div>
+            </div>
+          </b-col>
+        </b-row>
 
-          • Worked with the ServiceNow platform which spans most of the Raymond James IT system.
-          <br>
-          • Utilized JS to access and manage data and documents that were piped into the chatbot.
-        </p>
+        <div class="vl"><h1 id="date">2020</h1></div>
+
+        <h4>Internship Summer 2020</h4>
+        <b-row>
+          <b-col cols="7">
+            <p>
+              • Employed the ServiceNow platform to test and implement a Natural Language Understanding chatbot which was to assist internal IT issues that arose.
+              <br>
+
+              • Worked with the ServiceNow platform which spans most of the Raymond James IT system.
+              <br>
+              • Utilized JS to access and manage data and documents that were piped into the chatbot.
+            </p>
+          </b-col>
+          <b-col cols="5">
+            <div class="flexy">
+              <div class="tech">ServiceNow</div>
+              <div class="tech">Python</div>
+              <div class="tech">SQL</div>
+              <div class="tech">scikit-learn</div>
+            </div>
+          </b-col>
+        </b-row>
       </div>
 
       <div class="vl"><h1 id="date">2018</h1></div>
@@ -117,14 +155,12 @@
           </p>
           </b-col>
           <b-col cols="5">
-            <b-row align-h="end">
-              <b-col cols="auto">
-                <p>Firebase</p>
-              </b-col>
-              <b-col  cols="auto">
-                <p>Javascript</p>
-              </b-col>
-            </b-row>
+            <div class="flexy">
+              <div class="tech">ServiceNow</div>
+              <div class="tech">Python</div>
+              <div class="tech">SQL</div>
+              <div class="tech">scikit-learn</div>
+            </div>
           </b-col>
         </b-row>
       </div>
@@ -153,8 +189,44 @@ export default {
         behavior: 'smooth'
       });
     }
+  },
 
+  mounted(){
+    let canvas = document.getElementById('stars');
+
+    console.log(document.getElementById('stars'));
+
+    function createStar() {
+      let star = document.createElement('span');
+      star.className = 'star';
+      
+      let width = canvas.scrollWidth,
+          height = canvas.scrollHeight;
+      
+      star.style.left = Math.random() * width + 'px';
+      star.style.top = Math.random() * height + 'px';
+      
+      star.style.width = star.style.height = 2 + Math.random() * 6 + 'px';
+      
+      let time = 5 + Math.random() * 10;
+      
+      star.style.animation = 'fade ' + time + 's'
+      
+      canvas.appendChild(star);
+      
+      setTimeout(function () {
+        canvas.removeChild(star);
+      }, 1000 * time);
+      return star;
+}
+
+for (var i = 0; i < 50; i++) createStar();
+
+setInterval(function () {
+  for (var i = 0; i < 5; i++) createStar();
+}, 250);
   }
+  
 }
 
 </script>
@@ -174,8 +246,41 @@ h1{
   /* text-align: center; */
 }
 
+/* Starry Night */
+
+@keyframes fade {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+#stars {
+  background: #2d3037;
+  width: 100%;
+  height: 100%;
+}
+
+.star {
+  animation: fade 10s;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);;
+  position: absolute;
+}
+
+/* h1 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 0; right: 0;
+  transform: translateY(-50%);
+  color: white;
+  text-align: center;
+  font-size: 100px;
+  font-family: 'Montserrat', sans-serif;
+} */
+
 .breaker{
-  background-color: #232741;
+  /* background-color: #232741; */
   padding-top: 500px;
   padding-bottom: 500px;
 }
@@ -211,6 +316,28 @@ h1{
   letter-spacing: 15px;
 }
 
+.flexy{
+  display: flex;
+  -webkit-flex-direction: row-reverse; 
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tech{
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.20);
+  background-color: #343a40;
+
+}
+
+/* .flexy > div{
+  text-align:center;
+  margin:5px; 
+} */
+
+
 .nav-bar{
   height: 50px;
   background-color: #343a40;
@@ -220,7 +347,7 @@ h1{
 
 
 .social-links {
-  display:flex;
+  display: flex;
   padding-bottom: 20px;
   padding-top: 100px;
   justify-content: center;
