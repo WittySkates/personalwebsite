@@ -44,14 +44,14 @@
       </div>
     </div>
 
-    <div class="breaker"></div>
+    <!-- <div class="breaker"></div> -->
     
     <div class="content">
       <div class="text" id="About">
         <h1>About Me</h1>
         <p>
           I am a senior at the University of Florida currently pursuing a degree in Computer Engineering with a focus on software. 
-          I enjoy learning new things and expanding my horizon in the engineering field. I have found a passion for software development 
+          I enjoy learning new things and expanding my horizons in the engineering field. I have found a passion for software development 
           and machine learning and want to apply my skills to find new and efficient solutions to current problems.
           I want to be a part of something bigger than myself and positively affect and inspire others. Creating has and always will 
           be my passion, the feeling of building or designing something new is what drives me to move forward.
@@ -86,14 +86,13 @@
           </b-col>
           <b-col cols="5">
             <div class="flexy">
-              <div class="tech">Machine Learning</div>
               <div class="tech">Data Science</div>
               <div class="tech">Algorithms</div>
               <div class="tech">Digital Logic</div>
               <div class="tech">Digital Design</div>
-              <!-- <div class="tech">Circuits</div> -->
+              <div class="tech">Databases</div>
+              <div class="tech">Machine Learning</div>
               <div class="tech">Software Engineering</div>
-              <!-- <div class="tech">Computer Org</div> -->
             </div>
           </b-col>
         </b-row>
@@ -116,6 +115,8 @@
             <div class="flexy">
               <div class="tech">CAD</div>
               <div class="tech">Python</div>
+              <div class="tech">Siemens nx</div>
+              <div class="tech">Arduino</div>
             </div>
           </b-col>
         </b-row>
@@ -163,6 +164,8 @@
           <b-col cols="5">
             <div class="flexy">
               <div class="tech">ServiceNow</div>
+              <div class="tech">NLP</div>
+              <div class="tech">NLU</div>
               <div class="tech">JavaScript</div>
             </div>
           </b-col>
@@ -205,7 +208,6 @@
       </div>
 
     </div>
-    
   </div>
 </template>
 
@@ -273,8 +275,14 @@ setInterval(function () {
 a{
   text-decoration: none;
 }
+
 h1{
   /* text-align: center; */
+}
+
+p{
+  padding-bottom: 0px;
+  margin-bottom: 0px;
 }
 
 /* Starry Night */
@@ -288,7 +296,7 @@ h1{
 #stars {
   background: #232741;
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 
 .star {
@@ -310,11 +318,11 @@ h1{
   font-family: 'Montserrat', sans-serif;
 } */
 
-.breaker{
+/* .breaker{
   background-color: #232741;
   padding-top: 500px;
   padding-bottom: 500px;
-}
+} */
 
 .content{
   height: 100%;
@@ -330,6 +338,7 @@ h1{
   margin-left: 20%;
   text-align: justify;
   text-justify: inter-word;
+  margin-bottom: 50px;
 }
 
 .vl {
@@ -353,10 +362,12 @@ h1{
   flex-direction: row-reverse;
   flex-wrap: wrap;
   gap: 10px;
+  justify-content:space-between;
+
 }
 
 /* .flexy > div{
-  text-align:center;
+  text-align:center;s
   margin:5px; 
 } */
 
@@ -392,8 +403,8 @@ h1{
 
 .social-links {
   display: flex;
-  padding-bottom: 20px;
-  padding-top: 100px;
+  padding-bottom: 50px;
+  /* padding-top: 50px; */
   justify-content: center;
 }
 
