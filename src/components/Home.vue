@@ -44,7 +44,7 @@
       </div>
     </div>
 
-    <div class="breaker" id="stars"></div>
+    <div class="breaker"></div>
     
     <div class="content">
       <div class="text" id="About">
@@ -311,7 +311,7 @@ h1{
 } */
 
 .breaker{
-  /* background-color: #232741; */
+  background-color: #232741;
   padding-top: 500px;
   padding-bottom: 500px;
 }
