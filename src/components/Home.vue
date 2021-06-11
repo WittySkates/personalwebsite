@@ -71,7 +71,10 @@
         </div>
       </div>
 
-      <div class="vl"><h1 id="date">2021</h1></div>
+      <div class="center">
+        <h1>2021</h1>
+      </div>
+      <div class="vl"></div>
 
       <div class="text" id="UF">
         <h1>UF</h1>
@@ -147,7 +150,10 @@
           </b-col>
         </b-row>
 
-        <div class="vl"><h1 id="date">2020</h1></div>
+      <div class="center">
+        <h1 style="margin-top:50px">2020</h1>
+      </div>
+      <div class="vl"></div>
 
         <h4>Internship Summer 2020</h4>
         <b-row>
@@ -172,7 +178,10 @@
         </b-row>
       </div>
 
-      <div class="vl"><h1 id="date">2018</h1></div>
+      <div class="center">
+        <h1>2018</h1>
+      </div>
+      <div class="vl"></div>
 
       <div class="text" id="Scanned">
         <h1>Scanned</h1>
@@ -199,7 +208,7 @@
         </b-row>
       </div>
 
-      <div class="vl"><h1 id="contact">Contact</h1></div>
+      <div class="vl"></div>
 
       <div class="social-links">
         <a href="https://www.facebook.com/WittySkates"><i class="fab fa-facebook-f"></i></a>
@@ -355,11 +364,15 @@ p{
   margin-bottom: 90px;
 }
 
-#date{
-  text-align: left;
-  margin-left: -68px;
-  padding-top: 160px;
-  letter-spacing: 15px;
+.center{
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 16px;
+  right: 0px;
+  text-align: center;
+  margin-top: 200px;
+  letter-spacing: 20px;
 }
 
 #contact{
