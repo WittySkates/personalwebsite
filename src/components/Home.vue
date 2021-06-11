@@ -199,6 +199,8 @@
         </b-row>
       </div>
 
+      <div class="vl"><h1 id="contact">Contact</h1></div>
+
       <div class="social-links">
         <a href="https://www.facebook.com/WittySkates"><i class="fab fa-facebook-f"></i></a>
         <a href="https://www.linkedin.com/in/dupuisconnor/"><i class="fab fa-linkedin-in"></i></a>
@@ -219,8 +221,11 @@ export default {
 
     scrollInto(id){
       document.getElementById(id).scrollIntoView({
-        behavior: 'smooth'
+        behavior: 'smooth',
+        block: 'center',
+        // inline: 'end',
       });
+      console.log(id);
     }
   },
 
@@ -349,9 +354,17 @@ p{
   margin-top: 90px;
   margin-bottom: 90px;
 }
+
 #date{
   text-align: left;
   margin-left: -68px;
+  padding-top: 160px;
+  letter-spacing: 15px;
+}
+
+#contact{
+  text-align: left;
+  margin-left: -125px;
   padding-top: 160px;
   letter-spacing: 15px;
 }
