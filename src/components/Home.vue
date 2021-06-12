@@ -78,6 +78,7 @@
 
       <div class="text" id="UF">
         <h1>University of Florida</h1>
+          <h4>Overview</h4>
         <b-row>
           <b-col cols="7">
             <p>
@@ -127,6 +128,7 @@
 
       <div class="text" id="NASA">
         <h1>NASA</h1>
+        <h4>Mission Concept Academy</h4>
         <b-row>
           <b-col cols="7">
             <p>
