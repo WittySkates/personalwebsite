@@ -77,7 +77,7 @@
       <div class="vl"></div>
 
       <div class="text" id="UF">
-        <h1>UF</h1>
+        <h1>University of Florida</h1>
         <b-row>
           <b-col cols="7">
             <p>
@@ -96,6 +96,28 @@
               <div class="tech">Databases</div>
               <div class="tech">Machine Learning</div>
               <div class="tech">Software Engineering</div>
+            </div>
+          </b-col>
+        </b-row>
+        <br>
+        <h4>Raytheon (IPPD)</h4>
+        <b-row>
+          <b-col cols="7">
+            <p>
+              The need to understand the surface and near subsurface of the moon is crucial for the advancements of future missions.
+              Our mission was to develop a payload that can map surface water at a scale of a few kilometers for most of the Permanently Shadowed Regions (PSRs)
+              at the lunar South Polar Region, and for at least one location in a PSR, the abundance of water ice in the top 1 meter of the regolith needs to be 
+              determined at a ~ +-1% accuracy, or better, at a spatial sampling of ~ 100m.
+            </p>
+          </b-col>
+          <b-col cols="5">
+            <div class="flexy">
+              <div class="tech">Node</div>
+              <div class="tech">PostgreSQL</div>
+              <div class="tech">CSS</div>
+              <div class="tech">HTML</div>
+              <div class="tech">Vue</div>
+              <div class="tech">JavaScript</div>
             </div>
           </b-col>
         </b-row>
@@ -280,10 +302,8 @@ setInterval(function () {
 
 <style>
 
-/* body {
-  width: 100%;
-  height: 100%;
-  background-color: #232741;
+/* html, body {
+  overflow-x: hidden;
 } */
 
 a{
@@ -311,6 +331,7 @@ p{
   background: #232741;
   width: 100%;
   height: 100vh;
+  min-height: 900px;
 }
 
 .star {
@@ -332,11 +353,11 @@ p{
   font-family: 'Montserrat', sans-serif;
 } */
 
-/* .breaker{
+.breaker{
   background-color: #232741;
   padding-top: 500px;
   padding-bottom: 500px;
-} */
+}
 
 .content{
   height: 100%;
@@ -409,7 +430,7 @@ p{
   display: flex;
   flex-wrap: wrap;
   /* padding-bottom: 20px; */
-  padding-top: 20px;
+  padding-top: 30px;
   justify-content: center;
   gap: 10px;
 }
@@ -485,7 +506,7 @@ p{
 
 #solarSketch {
   position: relative;
-  top: 450px;
+  top: 50%;
   /* margin-top: 450px; */
   left: 0%;
   background-color: #232741 ;
