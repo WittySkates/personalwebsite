@@ -99,6 +99,8 @@
               <div class="tech">Databases</div>
               <div class="tech">Machine Learning</div>
               <div class="tech">Software Engineering</div>
+              <div class="tech">Operating Systems</div>
+              <div class="tech">Computer Org.</div>
             </div>
           </b-col>
         </b-row>
@@ -182,7 +184,8 @@
               <div class="tech">ServiceNow</div>
               <div class="tech">Python</div>
               <div class="tech">SQL</div>
-              <div class="tech">scikit-learn</div>
+              <div class="tech">Tableau</div>
+              <div class="tech">Scikit-learn</div>
             </div>
           </b-col>
         </b-row>
