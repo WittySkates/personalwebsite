@@ -39,8 +39,10 @@
           <div id="Planet1" @click="scrollInto('UF')" style="cursor: pointer;"></div>
           <p id="Planet1-label"  @click="scrollInto('UF')" style="cursor: pointer;">UF</p>
         </div>
+        
+        <img id="sol" src="../assets/me.png" alt="Avatar" @click="scrollInto('About')" style="cursor: pointer;">
 
-        <div id="sol" @click="scrollInto('About')" style="cursor: pointer;"><p id="sol-label"></p></div>
+        <!-- <div id="sol" @click="scrollInto('About')" style="cursor: pointer;"><p id="sol-label"></p></div> -->
       </div>
     </div>
 
@@ -78,7 +80,7 @@
 
       <div class="text" id="UF">
         <h1>University of Florida</h1>
-          <h4>Overview</h4>
+        <h4>Overview</h4>
         <b-row>
           <b-col cols="7">
             <p>
@@ -100,16 +102,29 @@
             </div>
           </b-col>
         </b-row>
+
         <br>
+        
         <h4>Raytheon (IPPD)</h4>
         <b-row>
           <b-col cols="7">
             <p>
-              The need to understand the surface and near subsurface of the moon is crucial for the advancements of future missions.
-              Our mission was to develop a payload that can map surface water at a scale of a few kilometers for most of the Permanently Shadowed Regions (PSRs)
-              at the lunar South Polar Region, and for at least one location in a PSR, the abundance of water ice in the top 1 meter of the regolith needs to be 
-              determined at a ~ +-1% accuracy, or better, at a spatial sampling of ~ 100m.
-            </p>
+              This project was sponsored by Raytheon Intelligence & Space. Raytheon Intelligence & Space is the 
+              division of Raytheon that provides sensors, training, and cyber and software services to defense 
+              and aerospace clients. This project replaced the existing end of life GUI that relied on Adobe 
+              Flash, which was deprecated in December 2020 by developing a new front-end using a well-supported framework. 
+              The goal was to retain the functionality of the legacy GUI and improve on the design. 
+              The solution provided important usability improvements to the client by allowing users 
+              to interface with an intuitive display. These outcomes improved the sponsor’s
+              business by maintaining a positive relationship with their clients by providing a GUI of comparable 
+              quality to the EOL GUI provided to the client previously. 
+              The most important issue in the project was providing the functionality requested by the client in an 
+              intuitive and easy-to-use display. The team achieved this by developing the design in 
+              coordination with the liaison engineers and by incorporating extensive user experience testing 
+              throughout the development of the project. The largest risks involved data security and privacy. The 
+              application must be secure, so the team implemented best practices for security and work with 
+              the liaison engineers to ensure the application meet the security needs.
+              </p>
           </b-col>
           <b-col cols="5">
             <div class="flexy">
@@ -157,11 +172,9 @@
         <b-row>
           <b-col cols="7">
             <p>
-              • Utilized the ServiceNow platform to create reporting analytics using active data in the system.
-              <br>
-              • Analyzed numerous data sources spanning multiple sectors of Raymond James to discover issues or new relations.
-              <br>
-              • Worked with the ServiceNow platform which spans most of the Raymond James IT system.
+              My second summer internship with Raymond James. This timespan comprised of creating reporting analytics using active 
+              data, analyzing numerous data sources spanning multiple sectors of Raymond James, and utilizing the ServiceNow 
+              platform to develop tools for easy data access.
             </p>
           </b-col>
           <b-col cols="5">
@@ -183,12 +196,10 @@
         <b-row>
           <b-col cols="7">
             <p>
-              • Employed the ServiceNow platform to test and implement a Natural Language Understanding chatbot which was to assist internal IT issues that arose.
-              <br>
-
-              • Worked with the ServiceNow platform which spans most of the Raymond James IT system.
-              <br>
-              • Utilized JS to access and manage data and documents that were piped into the chatbot.
+              I worked for Raymond James through their Intern Development Program where I was placed on the team of Service 
+              Delivery and Support. During my time I utilized the ServiceNow platform to test and begin implement a Natural 
+              Language Understanding chatbot which was to assist internal IT issues that arose. This chatbot was implemented to speed 
+              up the time of ticker turn around and user ease. 
             </p>
           </b-col>
           <b-col cols="5">
@@ -209,16 +220,14 @@
 
       <div class="text" id="Scanned">
         <h1>Scanned</h1>
+        <h4>Co-Founder</h4>
         <b-row>
           <b-col cols="7">
           <p>
-            A mobile app attendance tracking system with which won 1st place and $10,000 in the Next Generation Tech Competition in Pinellas County.
-            <br>
-            • Head of UI and UX development.
-            <br>
-            • Project won first place and $10,000 in a technology startup in Pinellas County.
-            <br>
-            • Project was accepted into the Gator Hatchery where we continued to develop our idea and business plan.
+            I was a Co-Founder of this mobile app built to circumvent the inefficiencies of attendance tracking at meetings and 
+            events. Developed with React Native for both IOS and Android, we won $10,000 and first place in the Next Generation 
+            Tech startup competition and were later accepted into the Gator Hatchery at the University of Florida. The app had users 
+            and sales in numerous states and countries before stopping development.
           </p>
           </b-col>
           <b-col cols="5">
@@ -375,7 +384,7 @@ p{
   margin-left: 20%;
   text-align: justify;
   text-justify: inter-word;
-  margin-bottom: 50px;
+  margin-bottom: 70px;
 }
 
 .vl {
@@ -522,16 +531,17 @@ p{
   top: 59%;
   left: 50%;
 
-  background: white;
-  height: 150px;
-  width: 150px;
-  margin-top: -75px; 
-  margin-left: -75px;
+  background: #232741;
+  height: 180px;
+  width: 180px;
+  margin-top: -90px; 
+  margin-left: -90px;
 
   border-color: white;
   border-width: 10px;
   border-style: solid;
-  border-radius: 50%;   
+  border-radius: 50%;
+  z-index: 5;
 }
 
 #sol-label {
@@ -553,7 +563,7 @@ p{
   left: 50%;
   width: 50px;
   height: 50px;
-  margin-left: 97px;
+  margin-left: 102px;
   margin-top: 100px;
   background: white;
   border-color: white;
@@ -567,10 +577,10 @@ p{
   top: 50%;
   left: 50%;
 
-  width: 250px;
-  height: 250px;
-  margin-top: -125px;
-  margin-left: -125px;
+  width: 260px;
+  height: 260px;
+  margin-top: -130px;
+  margin-left: -130px;
 
   border-width: 1.8px;
   border-style: dashed;
@@ -591,8 +601,8 @@ p{
   left: 50%;
   /* width: 15px;
   height: 15px; */
-  margin-left: 113px;
-  margin-top: 113px;
+  margin-left: 118px;
+  margin-top: 114px;
   color: #232741;
   font-size: 15px;
   font-weight: bold;
