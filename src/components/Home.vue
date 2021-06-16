@@ -191,7 +191,7 @@
         </b-row>
 
       <div class="center">
-        <h1 style="margin-top:50px">2020</h1>
+        <h1 style="margin-top:70px">2020</h1>
       </div>
       <div class="vl"></div>
 
@@ -392,7 +392,7 @@ p{
 
 .vl {
   border-left: 1px solid white;
-  height: 400px;
+  height: 350px;
   position: relative;
   margin-left: 50%;
   margin-top: 90px;
@@ -406,7 +406,7 @@ p{
   left: 16px;
   right: 0px;
   text-align: center;
-  margin-top: 200px;
+  margin-top: 150px;
   letter-spacing: 20px;
 }
 
