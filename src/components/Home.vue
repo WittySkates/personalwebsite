@@ -13,8 +13,8 @@
     <div id="stars">
       <div id="solarSketch">	    
         <div id="Planet4-orbit">
-          <div id="Planet4" @click="scrollInto('NASA')" style="cursor: pointer;"></div>
-          <p id="Planet4-label" @click="scrollInto('NASA')" style="cursor: pointer;">NASA</p>
+          <div id="Planet4" @click="scrollInto('Raytheon')" style="cursor: pointer;"></div>
+          <p id="Planet4-label" @click="scrollInto('Raytheon')" style="cursor: pointer;">Raytheon</p>
         </div>
 
         <div id="Planet3-orbit">
@@ -36,8 +36,8 @@
         </div>
 
         <div id="Planet1-orbit">
-          <div id="Planet1" @click="scrollInto('UF')" style="cursor: pointer;"></div>
-          <p id="Planet1-label"  @click="scrollInto('UF')" style="cursor: pointer;">UF</p>
+          <div id="Planet1" @click="scrollInto('NASA')" style="cursor: pointer;"></div>
+          <p id="Planet1-label"  @click="scrollInto('NASA')" style="cursor: pointer;">NASA</p>
         </div>
         
         <img id="sol" src="../assets/me.png" alt="Avatar" @click="scrollInto('About')" style="cursor: pointer;">
@@ -79,7 +79,7 @@
       </div>
       <div class="vl"></div>
 
-      <div class="text" id="UF">
+      <!-- <div class="text" id="UF">
         <h1>University of Florida</h1>
         <h4>Overview</h4>
         <b-row>
@@ -93,15 +93,15 @@
           </b-col>
           <b-col cols="4">
             <div class="flexy">
-              <!-- <div class="tech">Data Science</div>
-              <div class="tech">Algorithms</div>
+              <div class="tech">Data Science</div>
               <div class="tech">Digital Logic</div>
               <div class="tech">Digital Design</div>
               <div class="tech">Databases Systems</div>
+              <div class="tech">Algorithms</div>
               <div class="tech">Machine Learning</div>
               <div class="tech">Software Engineering</div>
               <div class="tech">Operating Systems</div>
-              <div class="tech">Signals and Systems</div> -->
+              <div class="tech">Signals and Systems</div>
             </div>
           </b-col>
         </b-row>
@@ -122,6 +122,36 @@
               application must be secure, so the team implemented best practices for security and work with 
               the liaison engineers to ensure the application meet the security needs.
               </p>
+          </b-col>
+          <b-col cols="4">
+            <div class="flexy">
+              <div class="tech">Node</div>
+              <div class="tech">PostgreSQL</div>
+              <div class="tech">CSS</div>
+              <div class="tech">HTML</div>
+              <div class="tech">Vue</div>
+              <div class="tech">JavaScript</div>
+            </div>
+          </b-col>
+        </b-row>
+      </div> -->
+
+      <div class="text" id="Raytheon">
+        <h1>Raytheon</h1>
+        <h4>Integrated Product and Process Design</h4>
+        <b-row>
+          <b-col cols="8">
+            <p class="desc">
+              This project was sponsored by Raytheon Intelligence & Space. The goal was to replace the existing end of life GUI that relied on Adobe 
+              Flash, which was deprecated in December 2020 by developing a new front-end using a well-supported framework. 
+              The goal was to retain the functionality of the legacy GUI and improve on the design. 
+              The most important issue in the project was providing the functionality requested by the client in an 
+              intuitive and easy-to-use display. The team achieved this by developing the design in 
+              coordination with the liaison engineers and by incorporating extensive user experience testing 
+              throughout the development of the project. The largest risks involved data security and privacy. The 
+              application must be secure, so the team implemented best practices for security and work with 
+              the liaison engineers to ensure the application meet the security needs.
+            </p>
           </b-col>
           <b-col cols="4">
             <div class="flexy">
@@ -600,7 +630,7 @@ p{
   left: 50%;
   /* width: 15px;
   height: 15px; */
-  margin-left: 118px;
+  margin-left: 107px;
   margin-top: 114px;
   color: #232741;
   font-size: 15px;
@@ -831,9 +861,9 @@ p{
   position: absolute;
   top:  0;
   left: 50%;
-  width: 60px;
-  height: 60px;
-  margin-left: -310px;
+  width: 75px;
+  height: 75px;
+  margin-left: -323px;
   margin-top: 85px;
   background: white;
   border-color: white;
@@ -848,10 +878,10 @@ p{
   top: 50%;
   left: 50%;
   
-  width: 800px;
-  height: 800px;
-  margin-top: -400px;
-  margin-left: -400px;
+  width: 820px;
+  height: 820px;
+  margin-top: -410px;
+  margin-left: -410px;
   
   border-width:4px;
   border-style: dashed;
@@ -872,8 +902,8 @@ p{
   left: 50%;
   /* width: 15px;
   height: 15px; */
-  margin-left: -302px;
-  margin-top: 104px;
+  margin-left: -319px;
+  margin-top: 111px;
   color: #232741;
   font-size: 15px;
   font-weight: bold;
