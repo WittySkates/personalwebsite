@@ -1,20 +1,48 @@
 <template>
   <div>
-    <!-- <b-navbar class="nav-bar" type="dark">
-      <b-navbar-brand href="/wittyskates.github.io/home" style="margin-left:10px;margin-bottom:2px" > &lt; CD /&gt; </b-navbar-brand>
+    <div class="animate__animated animate__backInDown" id="fader">
+      <span>Navigate using the planets!</span>
+    </div>
+
+    <b-navbar class="nav-bar" type="dark" sticky>
+      <b-navbar-brand
+        @click="scrollInto('About')"
+        style="margin-left:10px;margin-bottom:2px;cursor:pointer"
+      >
+        &lt; CD /&gt;
+      </b-navbar-brand>
       <b-navbar-nav>
-        <b-nav-item href="#">Github</b-nav-item>
-        <b-nav-item href="/wittyskates.github.io/">About</b-nav-item>
+        <div class="nav-flex">
+          <b-nav-item @click="scrollInto('NASA')">NASA</b-nav-item>
+          <b-nav-item @click="scrollInto('Scanned')">Scanned</b-nav-item>
+          <b-nav-item @click="scrollInto('RJF')">RJF</b-nav-item>
+          <b-nav-item @click="scrollInto('Raytheon')">Raytheon</b-nav-item>
+        </div>
       </b-navbar-nav>
-      <b-navbar-nav class="ms-auto">
-        <b-nav-item href="#" style="padding-right:10px">Resume</b-nav-item>
+      <b-navbar-nav style="font-size: 17px;" class="ms-auto">
+        <b-nav-item
+          href="./Resume.pdf"
+          target="blank"
+          style="padding-right:15px"
+          >Resume</b-nav-item
+        >
       </b-navbar-nav>
-    </b-navbar> -->
+    </b-navbar>
     <div id="stars">
-      <div id="solarSketch">	    
+      <div id="solarSketch">
         <div id="Planet4-orbit">
-          <div id="Planet4" @click="scrollInto('Raytheon')" style="cursor: pointer;"></div>
-          <p id="Planet4-label" @click="scrollInto('Raytheon')" style="cursor: pointer;">Raytheon</p>
+          <div
+            id="Planet4"
+            @click="scrollInto('Raytheon')"
+            style="cursor: pointer;"
+          ></div>
+          <p
+            id="Planet4-label"
+            @click="scrollInto('Raytheon')"
+            style="cursor: pointer;"
+          >
+            Raytheon
+          </p>
         </div>
 
         <div id="Planet3-orbit">
@@ -26,37 +54,75 @@
             <div id="Planet3-1"></div>
             <p id="Planet3-1-label"></p>
           </div>
-          <div id="Planet3" @click="scrollInto('UF')" style="cursor: pointer;"></div>
-          <p id="Planet3-label" @click="scrollInto('RJF')" style="cursor: pointer;">RJF</p>
+          <div
+            id="Planet3"
+            @click="scrollInto('RJF')"
+            style="cursor: pointer;"
+          ></div>
+          <p
+            id="Planet3-label"
+            @click="scrollInto('RJF')"
+            style="cursor: pointer;"
+          >
+            RJF
+          </p>
         </div>
 
         <div id="Planet2-orbit">
-          <div id="Planet2"  @click="scrollInto('Scanned')" style="cursor: pointer;"></div>
-          <p id="Planet2-label"  @click="scrollInto('Scanned')" style="cursor: pointer;">Scanned</p>
+          <div
+            id="Planet2"
+            @click="scrollInto('Scanned')"
+            style="cursor: pointer;"
+          ></div>
+          <p
+            id="Planet2-label"
+            @click="scrollInto('Scanned')"
+            style="cursor: pointer;"
+          >
+            Scanned
+          </p>
         </div>
 
         <div id="Planet1-orbit">
-          <div id="Planet1" @click="scrollInto('NASA')" style="cursor: pointer;"></div>
-          <p id="Planet1-label"  @click="scrollInto('NASA')" style="cursor: pointer;">NASA</p>
+          <div
+            id="Planet1"
+            @click="scrollInto('NASA')"
+            style="cursor: pointer;"
+          ></div>
+          <p
+            id="Planet1-label"
+            @click="scrollInto('NASA')"
+            style="cursor: pointer;"
+          >
+            NASA
+          </p>
         </div>
-        
-        <img id="sol" src="../assets/me.png" alt="Avatar" @click="scrollInto('About')" style="cursor: pointer;">
+
+        <img
+          id="sol"
+          src="../assets/me.png"
+          alt="Avatar"
+          @click="scrollInto('About')"
+          style="cursor: pointer;"
+        />
 
         <!-- <div id="sol" @click="scrollInto('About')" style="cursor: pointer;"><p id="sol-label"></p></div> -->
       </div>
     </div>
 
-    <!-- <div class="breaker"></div> -->
-    
     <div class="content">
       <div class="text" id="About">
         <h1>About Me</h1>
         <p class="desc">
-          I am a senior at the University of Florida currently pursuing a degree in Computer Engineering with a focus on software. 
-          I enjoy learning new things and expanding my horizons in the engineering field. I have found a passion for software development 
-          and machine learning and want to apply my skills to find new and efficient solutions to current problems.
-          I want to be a part of something bigger than myself and positively affect and inspire others. Creating has and always will 
-          be my passion, the feeling of building or designing something new is what drives me to move forward.
+          I am a senior at the University of Florida currently pursuing a degree
+          in Computer Engineering with a focus on software. I enjoy learning new
+          things and expanding my horizons in the engineering field. I have
+          found a passion for software development and machine learning and want
+          to apply my skills to find new and efficient solutions to current
+          problems. I want to be a part of something bigger than myself and
+          positively affect and inspire others. Creating has and always will be
+          my passion, the feeling of building or designing something new is what
+          drives me to move forward.
         </p>
         <div class="about">
           <div class="tech">C++</div>
@@ -79,78 +145,26 @@
       </div>
       <div class="vl"></div>
 
-      <!-- <div class="text" id="UF">
-        <h1>University of Florida</h1>
-        <h4>Overview</h4>
-        <b-row>
-          <b-col cols="8">
-            <p class="desc">
-              The need to understand the surface and near subsurface of the moon is crucial for the advancements of future missions.
-              Our mission was to develop a payload that can map surface water at a scale of a few kilometers for most of the Permanently Shadowed Regions (PSRs)
-              at the lunar South Polar Region, and for at least one location in a PSR, the abundance of water ice in the top 1 meter of the regolith needs to be 
-              determined at a ~ +-1% accuracy, or better, at a spatial sampling of ~ 100m.
-            </p>
-          </b-col>
-          <b-col cols="4">
-            <div class="flexy">
-              <div class="tech">Data Science</div>
-              <div class="tech">Digital Logic</div>
-              <div class="tech">Digital Design</div>
-              <div class="tech">Databases Systems</div>
-              <div class="tech">Algorithms</div>
-              <div class="tech">Machine Learning</div>
-              <div class="tech">Software Engineering</div>
-              <div class="tech">Operating Systems</div>
-              <div class="tech">Signals and Systems</div>
-            </div>
-          </b-col>
-        </b-row>
-
-        <br>
-        
-        <h4>Raytheon (IPPD)</h4>
-        <b-row>
-          <b-col cols="8">
-            <p class="desc">
-              This project was sponsored by Raytheon Intelligence & Space. The goal was to replace the existing end of life GUI that relied on Adobe 
-              Flash, which was deprecated in December 2020 by developing a new front-end using a well-supported framework. 
-              The goal was to retain the functionality of the legacy GUI and improve on the design. 
-              The most important issue in the project was providing the functionality requested by the client in an 
-              intuitive and easy-to-use display. The team achieved this by developing the design in 
-              coordination with the liaison engineers and by incorporating extensive user experience testing 
-              throughout the development of the project. The largest risks involved data security and privacy. The 
-              application must be secure, so the team implemented best practices for security and work with 
-              the liaison engineers to ensure the application meet the security needs.
-              </p>
-          </b-col>
-          <b-col cols="4">
-            <div class="flexy">
-              <div class="tech">Node</div>
-              <div class="tech">PostgreSQL</div>
-              <div class="tech">CSS</div>
-              <div class="tech">HTML</div>
-              <div class="tech">Vue</div>
-              <div class="tech">JavaScript</div>
-            </div>
-          </b-col>
-        </b-row>
-      </div> -->
-
       <div class="text" id="Raytheon">
         <h1>Raytheon</h1>
         <h4>Integrated Product and Process Design</h4>
         <b-row>
           <b-col cols="8">
             <p class="desc">
-              This project was sponsored by Raytheon Intelligence & Space. The goal was to replace the existing end of life GUI that relied on Adobe 
-              Flash, which was deprecated in December 2020 by developing a new front-end using a well-supported framework. 
-              The goal was to retain the functionality of the legacy GUI and improve on the design. 
-              The most important issue in the project was providing the functionality requested by the client in an 
-              intuitive and easy-to-use display. The team achieved this by developing the design in 
-              coordination with the liaison engineers and by incorporating extensive user experience testing 
-              throughout the development of the project. The largest risks involved data security and privacy. The 
-              application must be secure, so the team implemented best practices for security and work with 
-              the liaison engineers to ensure the application meet the security needs.
+              This project was sponsored by Raytheon Intelligence & Space. The
+              goal was to replace the existing end of life GUI that relied on
+              Adobe Flash, which was deprecated in December 2020 by developing a
+              new front-end using a well-supported framework. The goal was to
+              retain the functionality of the legacy GUI and improve on the
+              design. The most important issue in the project was providing the
+              functionality requested by the client in an intuitive and
+              easy-to-use display. The team achieved this by developing the
+              design in coordination with the liaison engineers and by
+              incorporating extensive user experience testing throughout the
+              development of the project. The largest risks involved data
+              security and privacy. The application must be secure, so the team
+              implemented best practices for security and work with the liaison
+              engineers to ensure the application meet the security needs.
             </p>
           </b-col>
           <b-col cols="4">
@@ -174,10 +188,14 @@
         <b-row>
           <b-col cols="8">
             <p class="desc">
-              The need to understand the surface and near subsurface of the moon is crucial for the advancements of future missions.
-              Our mission was to develop a payload that can map surface water at a scale of a few kilometers for most of the Permanently Shadowed Regions (PSRs)
-              at the lunar South Polar Region, and for at least one location in a PSR, the abundance of water ice in the top 1 meter of the regolith needs to be 
-              determined at a ~ +-1% accuracy, or better, at a spatial sampling of ~ 100m.
+              The need to understand the surface and near subsurface of the moon
+              is crucial for the advancements of future missions. Our mission
+              was to develop a payload that can map surface water at a scale of
+              a few kilometers for most of the Permanently Shadowed Regions
+              (PSRs) at the lunar South Polar Region, and for at least one
+              location in a PSR, the abundance of water ice in the top 1 meter
+              of the regolith needs to be determined at a ~ +-1% accuracy, or
+              better, at a spatial sampling of ~ 100m.
             </p>
           </b-col>
           <b-col cols="4">
@@ -199,9 +217,11 @@
         <b-row>
           <b-col cols="8">
             <p class="desc">
-              My second summer internship with Raymond James. This timespan comprised of creating reporting analytics using active 
-              data, analyzing numerous data sources spanning multiple sectors of Raymond James, and utilizing the ServiceNow 
-              platform to develop tools for easy data access.
+              My second summer internship with Raymond James. This timespan
+              comprised of creating reporting analytics using active data,
+              analyzing numerous data sources spanning multiple sectors of
+              Raymond James, and utilizing the ServiceNow platform to develop
+              tools for easy data access.
             </p>
           </b-col>
           <b-col cols="4">
@@ -215,19 +235,22 @@
           </b-col>
         </b-row>
 
-      <div class="center">
-        <h1 style="margin-top:70px">2020</h1>
-      </div>
-      <div class="vl"></div>
+        <div class="center">
+          <h1 style="margin-top:70px">2020</h1>
+        </div>
+        <div class="vl"></div>
 
         <h4>Internship Summer 2020</h4>
         <b-row>
           <b-col cols="8">
             <p class="desc">
-              I worked for Raymond James through their Intern Development Program where I was placed on the team of Service 
-              Delivery and Support. During my time I utilized the ServiceNow platform to test and begin implement a Natural 
-              Language Understanding chatbot which was to assist internal IT issues that arose. This chatbot was implemented to speed 
-              up the time of ticker turn around and user ease. 
+              I worked for Raymond James through their Intern Development
+              Program where I was placed on the team of Service Delivery and
+              Support. During my time I utilized the ServiceNow platform to test
+              and begin implement a Natural Language Understanding chatbot which
+              was to assist internal IT issues that arose. This chatbot was
+              implemented to speed up the time of ticker turn around and user
+              ease.
             </p>
           </b-col>
           <b-col cols="4">
@@ -251,12 +274,15 @@
         <h4>Co-Founder</h4>
         <b-row>
           <b-col cols="8">
-          <p class="desc">
-            I was a Co-Founder of this mobile app built to circumvent the inefficiencies of attendance tracking at meetings and 
-            events. Developed with React Native for both IOS and Android, we won $10,000 and first place in the Next Generation 
-            Tech startup competition and were later accepted into the Gator Hatchery at the University of Florida. The app had users 
-            and sales in numerous states and countries before stopping development.
-          </p>
+            <p class="desc">
+              I was a Co-Founder of this mobile app built to circumvent the
+              inefficiencies of attendance tracking at meetings and events.
+              Developed with React Native for both IOS and Android, we won
+              $10,000 and first place in the Next Generation Tech startup
+              competition and were later accepted into the Gator Hatchery at the
+              University of Florida. The app had users and sales in numerous
+              states and countries before stopping development.
+            </p>
           </b-col>
           <b-col cols="4">
             <div class="flexy">
@@ -272,142 +298,166 @@
       <div class="vl"></div>
 
       <div class="social-links">
-        <a href="https://www.facebook.com/WittySkates"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.linkedin.com/in/dupuisconnor/"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://github.com/WittySkates"><i class="fab fa-github"></i></a>
-        <a href="https://www.instagram.com/connor__dupuis/"><i class="fab fa-instagram"></i></a>
-        <a href="https://twitter.com/dupuis_connor"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.facebook.com/WittySkates"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+        <a href="https://www.linkedin.com/in/dupuisconnor/"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
+        <a href="https://github.com/WittySkates"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a href="https://www.instagram.com/connor__dupuis/"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="https://twitter.com/dupuis_connor"
+          ><i class="fab fa-twitter"></i
+        ></a>
       </div>
-
     </div>
   </div>
 </template>
 
 <script>
-
 export default {
-  name: 'Home',
+  name: "Home",
   methods: {
-
-    scrollInto(id){
+    scrollInto(id) {
       document.getElementById(id).scrollIntoView({
-        behavior: 'smooth',
-        block: 'center',
+        behavior: "smooth",
+        block: "center",
         // inline: 'end',
       });
       console.log(id);
-    }
+    },
   },
 
-  mounted(){
-    let canvas = document.getElementById('stars');
+  mounted() {
+    setTimeout(function() {
+      const element = document.getElementById("fader");
+      element.classList.add("animate__fadeOut");
+    }, 3000);
+    setTimeout(function() {
+      document
+        .getElementById("fader")
+        .setAttribute("style", "visibility: hidden; z-index: -1");
+      console.log("test");
+    }, 6000);
+    let canvas = document.getElementById("stars");
 
-    console.log(document.getElementById('stars'));
+    console.log(document.getElementById("stars"));
 
     function createStar() {
-      let star = document.createElement('span');
-      star.className = 'star';
-      
+      let star = document.createElement("span");
+      star.className = "star";
+
       let width = canvas.scrollWidth,
-          height = canvas.scrollHeight;
-      
-      star.style.left = Math.random() * width + 'px';
-      star.style.top = Math.random() * height + 'px';
-      
-      star.style.width = star.style.height = 2 + Math.random() * 6 + 'px';
-      
+        height = canvas.scrollHeight;
+
+      star.style.left = Math.random() * width + "px";
+      star.style.top = Math.random() * height + "px";
+
+      star.style.width = star.style.height = 2 + Math.random() * 6 + "px";
+
       let time = 5 + Math.random() * 10;
-      
-      star.style.animation = 'fade ' + time + 's'
-      
+
+      star.style.animation = "fade " + time + "s";
+
       canvas.appendChild(star);
-      
-      setTimeout(function () {
+
+      setTimeout(function() {
         canvas.removeChild(star);
       }, 1000 * time);
       return star;
-}
+    }
 
-for (var i = 0; i < 50; i++) createStar();
+    for (var i = 0; i < 50; i++) createStar();
 
-setInterval(function () {
-  for (var i = 0; i < 5; i++) createStar();
-}, 250);
-  }
-  
-}
-
+    setInterval(function() {
+      for (var i = 0; i < 5; i++) createStar();
+    }, 250);
+  },
+};
 </script>
 
 <style>
-
-a{
-  text-decoration: none;
-}
-
-h1{
-  /* text-align: center; */
-}
-
-p{
-  /* padding-bottom: 0px;
-  margin-bottom: 0px; */
-}
-
-.desc{
-  font-size:18px;
-
-}
-/* Starry Night */
-
-@keyframes fade {
-  0% { opacity: 0; }
-  50% { opacity: 1; }
-  100% { opacity: 0; }
-}
-
-#stars {
-  background: #232741;
-  width: 100%;
-  height: 100vh;
-  min-height: 900px;
-}
-
-.star {
-  animation: fade 10s;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.3);;
+#fader {
+  z-index: 5;
   position: absolute;
+  color: white;
+  top: 10%;
+  height: 10vh;
+  background-color: #343a40ee;
+  margin-left: 40%;
+  margin-right: 40%;
+  width: 20%;
+  text-align: center;
+  border-radius: 20px;
 }
 
-/* h1 {
+#fader span {
   margin: 0;
   position: absolute;
   top: 50%;
-  left: 0; right: 0;
-  transform: translateY(-50%);
-  color: white;
-  text-align: center;
-  font-size: 100px;
-  font-family: 'Montserrat', sans-serif;
-} */
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
-.breaker{
+a {
+  text-decoration: none;
+}
+.desc {
+  font-size: 18px;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.nav-item.nav-item.nav-item a {
+  color: rgb(240, 240, 240);
+}
+#stars {
+  background: #232741;
+  width: 100%;
+  height: 95vh;
+  min-height: 875px;
+}
+.nav-flex {
+  display: flex;
+  gap: 20px;
+  font-size: 17px;
+}
+.star {
+  animation: fade 10s;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  position: absolute;
+}
+
+.breaker {
   background-color: #232741;
   padding-top: 500px;
   padding-bottom: 500px;
 }
 
-.content{
+.content {
   height: 100%;
   position: relative;
   color: rgb(240, 240, 240);
   background-color: #343a40;
-  padding-bottom: 10px ;
+  padding-bottom: 10px;
   padding-top: 80px;
 }
 
-.text{
+.text {
   margin-right: 20%;
   margin-left: 20%;
   text-align: justify;
@@ -424,7 +474,7 @@ p{
   margin-bottom: 90px;
 }
 
-.center{
+.center {
   position: absolute;
   margin-left: auto;
   margin-right: auto;
@@ -435,38 +485,36 @@ p{
   letter-spacing: 20px;
 }
 
-#contact{
+#contact {
   text-align: left;
   margin-left: -125px;
   padding-top: 160px;
   letter-spacing: 15px;
 }
 
-.flexy{
+.flexy {
   display: flex;
-  /* -webkit-flex-direction: row-reverse; 
+  /* -webkit-flex-direction: row-reverse;
   flex-direction: row-reverse; */
   flex-wrap: wrap;
   gap: 10px;
-  justify-content:space-between;
+  justify-content: space-between;
   /* justify-content:flex-start; */
-
 }
 
 /* .flexy > div{
   text-align:center;s
-  margin:5px; 
+  margin:5px;
 } */
 
-.tech{
+.tech {
   padding: 10px;
   border-radius: 12px;
-  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.20);
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.2);
   background-color: #343a40;
-
 }
 
-.about{
+.about {
   display: flex;
   flex-wrap: wrap;
   /* padding-bottom: 20px; */
@@ -477,16 +525,18 @@ p{
 
 /* .about > div{
   text-align:center;
-  margin:5px; 
+  margin:5px;
 } */
 
-.nav-bar{
-  height: 50px;
-  background-color: #343a40;
+.nav-bar {
+  z-index: 3;
+  height: 5vh;
+  min-height: 30px;
+  background-color: #232741;
 }
 
 /* Socials */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
 .social-links {
   display: flex;
@@ -501,7 +551,7 @@ p{
   text-align: center;
   text-decoration: none;
   color: white;
-  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.10);
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.1);
   margin: 0 30px;
   border-radius: 50%;
   position: relative;
@@ -518,7 +568,7 @@ p{
 }
 
 .social-links a::after {
-  content: '';
+  content: "";
   width: 100%;
   height: 100%;
   top: -90px;
@@ -541,7 +591,6 @@ p{
   transform: translateY(-10px);
 }
 
-
 /* Basic Layout Bigger Orbiter*/
 
 #solarSketch {
@@ -549,9 +598,8 @@ p{
   top: 50%;
   /* margin-top: 450px; */
   left: 0%;
-  background-color: #232741 ;
+  background-color: #232741;
 }
-
 
 /*Sol Group*/
 
@@ -563,19 +611,19 @@ p{
   background: #232741;
   height: 180px;
   width: 180px;
-  margin-top: -90px; 
+  margin-top: -90px;
   margin-left: -90px;
 
   border-color: white;
   border-width: 10px;
   border-style: solid;
   border-radius: 50%;
-  z-index: 5;
+  z-index: 0;
 }
 
 #sol-label {
   position: absolute;
-  top:  0;
+  top: 0;
   left: 50%;
   width: 15px;
   height: 15px;
@@ -588,7 +636,7 @@ p{
 /* Planet 1 Group*/
 #Planet1 {
   position: absolute;
-  top:  0;
+  top: 0;
   left: 50%;
   width: 50px;
   height: 50px;
@@ -623,10 +671,9 @@ p{
   animation: spin-left 20s linear infinite;
 }
 
-
 #Planet1-label {
   position: absolute;
-  top:  0;
+  top: 0;
   left: 50%;
   /* width: 15px;
   height: 15px; */
@@ -647,7 +694,7 @@ p{
 
 #Planet2 {
   position: absolute;
-  top:  0;
+  top: 0;
   left: 50%;
   width: 80px;
   height: 80px;
@@ -657,7 +704,7 @@ p{
   border-color: white;
   border-width: 1px;
   border-style: solid;
-  border-radius: 50%; 
+  border-radius: 50%;
 }
 
 #Planet2-orbit {
@@ -684,7 +731,7 @@ p{
 
 #Planet2-label {
   position: absolute;
-  top:  0;
+  top: 0;
   left: 50%;
   /* width: 15px;
   height: 15px; */
@@ -705,7 +752,7 @@ p{
 
 #Planet3 {
   position: absolute;
-  top:  0;
+  top: 0;
   left: 50%;
   width: 50px;
   height: 50px;
@@ -715,7 +762,7 @@ p{
   border-color: white;
   border-width: 2px;
   border-style: solid;
-  border-radius: 50%;     
+  border-radius: 50%;
 }
 
 #Planet3-1 {
@@ -725,7 +772,7 @@ p{
   margin-top: 10px;
   border-radius: 50%;
   background: white;
-  box-shadow: 0 0 64px white; 
+  box-shadow: 0 0 64px white;
 }
 
 #Planet3-2 {
@@ -735,7 +782,7 @@ p{
   margin-top: 16px;
   border-radius: 50%;
   background: white;
-  box-shadow: 0 0 64px white; 
+  box-shadow: 0 0 64px white;
 }
 
 #Planet3-orbit {
@@ -748,7 +795,7 @@ p{
   margin-top: -300px;
   margin-left: -300px;
 
-  border-width:3px;
+  border-width: 3px;
   border-style: dashed;
   border-color: white;
   border-radius: 50%;
@@ -762,7 +809,7 @@ p{
 
 #Planet3-1-orbit {
   position: absolute;
-  top:  0;
+  top: 0;
   left: 50%;
   width: 80px;
   height: 80px;
@@ -781,7 +828,7 @@ p{
 
 #Planet3-2-orbit {
   position: absolute;
-  top:  0;
+  top: 0;
   left: 50%;
   width: 120px;
   height: 120px;
@@ -798,9 +845,9 @@ p{
   animation: spin-right 20s linear infinite;
 }
 
-#Planet3-label {  
+#Planet3-label {
   position: absolute;
-  top:  0;
+  top: 0;
   left: 50%;
   /* width: 15px;
   height: 15px; */
@@ -814,14 +861,14 @@ p{
   -moz-animation: spin-left 120s linear infinite;
   -ms-animation: spin-left 120s linear infinite;
   -o-animation: spin-left 120s linear infinite;
-  animation: spin-left 120s linear infinite; 
+  animation: spin-left 120s linear infinite;
 }
 
 /*The Animation time for moon labels is calculated by using harmonic sums. See Readme.md*/
 
-#Planet3-1-label {  
+#Planet3-1-label {
   position: absolute;
-  top:  0;
+  top: 0;
   left: 50%;
   width: 15px;
   height: 15px;
@@ -830,16 +877,16 @@ p{
   color: white;
   font-size: 11px;
 
-  -webkit-animation: spin-right 5.12820512820512820512820s linear infinite;
-  -moz-animation: spin-right 5.12820512820512820512820s linear infinite;
-  -ms-animation: spin-right 5.12820512820512820512820s linear infinite;
-  -o-animation: spin-right 5.12820512820512820512820s linear infinite;
-  animation: spin-right 5.12820512820512820512820s linear infinite;
+  -webkit-animation: spin-right 5.1282051282051282051282s linear infinite;
+  -moz-animation: spin-right 5.1282051282051282051282s linear infinite;
+  -ms-animation: spin-right 5.1282051282051282051282s linear infinite;
+  -o-animation: spin-right 5.1282051282051282051282s linear infinite;
+  animation: spin-right 5.1282051282051282051282s linear infinite;
 }
 
 #Planet3-2-label {
   position: absolute;
-  top:  0;
+  top: 0;
   left: 50%;
   width: 15px;
   height: 15px;
@@ -859,7 +906,7 @@ p{
 
 #Planet4 {
   position: absolute;
-  top:  0;
+  top: 0;
   left: 50%;
   width: 75px;
   height: 75px;
@@ -869,36 +916,34 @@ p{
   border-color: white;
   border-width: 1px;
   border-style: solid;
-  border-radius: 50%;   
+  border-radius: 50%;
 }
-
 
 #Planet4-orbit {
   position: absolute;
   top: 50%;
   left: 50%;
-  
+
   width: 820px;
   height: 820px;
   margin-top: -410px;
   margin-left: -410px;
-  
-  border-width:4px;
+
+  border-width: 4px;
   border-style: dashed;
   border-color: white;
   border-radius: 50%;
-  
-  
+
   -webkit-animation: spin-right 200s linear infinite;
   -moz-animation: spin-right 200s linear infinite;
   -ms-animation: spin-right 200s linear infinite;
   -o-animation: spin-right 200s linear infinite;
-  animation: spin-right 200s linear infinite; 
+  animation: spin-right 200s linear infinite;
 }
 
 #Planet4-label {
   position: absolute;
-  top:  0;
+  top: 0;
   left: 50%;
   /* width: 15px;
   height: 15px; */
@@ -920,41 +965,40 @@ p{
 @-webkit-keyframes spin-right {
   100% {
     -webkit-transform: rotate(360deg);
-       -moz-transform: rotate(360deg);
-        -ms-transform: rotate(360deg);
-         -o-transform: rotate(360deg);
-            transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
 @keyframes spin-right {
   100% {
     -webkit-transform: rotate(360deg);
-       -moz-transform: rotate(360deg);
-        -ms-transform: rotate(360deg);
-         -o-transform: rotate(360deg);
-            transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
 @-webkit-keyframes spin-left {
   100% {
     -webkit-transform: rotate(-360deg);
-       -moz-transform: rotate(-360deg);
-        -ms-transform: rotate(-360deg);
-         -o-transform: rotate(-360deg);
-            transform: rotate(-360deg);
+    -moz-transform: rotate(-360deg);
+    -ms-transform: rotate(-360deg);
+    -o-transform: rotate(-360deg);
+    transform: rotate(-360deg);
   }
 }
 
 @keyframes spin-left {
   100% {
     -webkit-transform: rotate(-360deg);
-       -moz-transform: rotate(-360deg);
-        -ms-transform: rotate(-360deg);
-         -o-transform: rotate(-360deg);
-            transform: rotate(-360deg);
+    -moz-transform: rotate(-360deg);
+    -ms-transform: rotate(-360deg);
+    -o-transform: rotate(-360deg);
+    transform: rotate(-360deg);
   }
 }
-
 </style>
