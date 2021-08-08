@@ -103,7 +103,7 @@
 
         <img
           id="sol"
-          src="../assets/me.png"
+          src="../assets/me.jpeg"
           alt="Avatar"
           @click="scrollInto('About')"
           style="cursor: pointer;"
@@ -445,15 +445,15 @@ export default {
       if (window.innerWidth > 768 || id === "About") {
         document.getElementById(id).scrollIntoView({
           behavior: "smooth",
-          block: "center",
+          block: "start",
         });
-        // console.log(id);
+        console.log(id);
       } else {
         document.getElementById(`${id}-mobile`).scrollIntoView({
           behavior: "smooth",
           block: "start",
         });
-        // console.log(`${id}-mobile`);
+        console.log(`${id}-mobile`);
       }
     },
   },
@@ -1098,6 +1098,13 @@ a {
   .desktop {
     display: inherit;
   }
+  #About,
+  #Raytheon,
+  #NASA,
+  #Scanned,
+  #RJF {
+    scroll-margin-top: 50px;
+  }
 }
 
 /* Mobile CSS */
@@ -1115,12 +1122,15 @@ a {
   .mobile {
     display: inherit;
   }
-
+  #About,
   #Raytheon-mobile,
   #NASA-mobile,
   #Scanned-mobile,
   #RJF-mobile {
-    scroll-margin-top: 400px;
+    scroll-margin-top: 280px;
+  }
+  #Scanned-mobile {
+    margin-bottom: 150px;
   }
 }
 
