@@ -1095,9 +1095,6 @@ a {
   .mobile {
     display: none;
   }
-  .desktop {
-    display: inherit;
-  }
   #About,
   #Raytheon,
   #NASA,
@@ -1119,9 +1116,6 @@ a {
     height: inherit;
   }
 
-  .mobile {
-    display: inherit;
-  }
   #About,
   #Raytheon-mobile,
   #NASA-mobile,
