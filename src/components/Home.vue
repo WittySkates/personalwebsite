@@ -1,33 +1,36 @@
 <template>
   <div>
-    <div class="animate__animated animate__backInDown" id="fader">
+    <div class="animate__animated animate__backInDown desktop" id="fader">
       <span>Navigate using the planets!</span>
     </div>
 
-    <b-navbar class="nav-bar" type="dark" sticky>
+    <b-navbar toggleable="md" class="nav-bar" type="dark" sticky>
       <b-navbar-brand
         @click="scrollInto('About')"
         style="margin-left:10px;margin-bottom:2px;cursor:pointer"
       >
         &lt; CD /&gt;
       </b-navbar-brand>
-      <b-navbar-nav>
-        <div class="nav-flex">
+      <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+
+      <b-collapse id="nav-collapse" is-nav>
+        <b-navbar-nav>
           <b-nav-item @click="scrollInto('NASA')">NASA</b-nav-item>
           <b-nav-item @click="scrollInto('Scanned')">Scanned</b-nav-item>
           <b-nav-item @click="scrollInto('RJF')">RJF</b-nav-item>
           <b-nav-item @click="scrollInto('Raytheon')">Raytheon</b-nav-item>
-        </div>
-      </b-navbar-nav>
-      <b-navbar-nav style="font-size: 17px;" class="ms-auto">
-        <b-nav-item
-          href="./Resume.pdf"
-          target="blank"
-          style="padding-right:15px"
-          >Resume</b-nav-item
-        >
-      </b-navbar-nav>
+        </b-navbar-nav>
+        <b-navbar-nav style="font-size: 17px;" class="ms-auto">
+          <b-nav-item
+            href="./Resume.pdf"
+            target="blank"
+            style="padding-right:15px"
+            >Resume</b-nav-item
+          >
+        </b-navbar-nav>
+      </b-collapse>
     </b-navbar>
+
     <div id="stars">
       <div id="solarSketch">
         <div id="Planet4-orbit">
@@ -105,8 +108,6 @@
           @click="scrollInto('About')"
           style="cursor: pointer;"
         />
-
-        <!-- <div id="sol" @click="scrollInto('About')" style="cursor: pointer;"><p id="sol-label"></p></div> -->
       </div>
     </div>
 
@@ -145,7 +146,7 @@
       </div>
       <div class="vl"></div>
 
-      <div class="text" id="Raytheon">
+      <div class="text desktop" id="Raytheon">
         <h1>Raytheon</h1>
         <h4>Integrated Product and Process Design</h4>
         <b-row>
@@ -180,9 +181,7 @@
         </b-row>
       </div>
 
-      <!-- <div class="vl"><h1 id="date">2021</h1></div> -->
-
-      <div class="text" id="NASA">
+      <div class="text desktop" id="NASA">
         <h1>NASA</h1>
         <h4>Mission Concept Academy</h4>
         <b-row>
@@ -209,9 +208,7 @@
         </b-row>
       </div>
 
-      <!-- <div class="vl"><h1 id="date">2021</h1></div> -->
-
-      <div class="text" id="RJF">
+      <div class="text desktop" id="RJF">
         <h1>Raymond James</h1>
         <h4>Internship Summer 2021</h4>
         <b-row>
@@ -264,12 +261,12 @@
         </b-row>
       </div>
 
-      <div class="center">
+      <div class="center desktop">
         <h1>2018</h1>
       </div>
-      <div class="vl"></div>
+      <div class="vl desktop"></div>
 
-      <div class="text" id="Scanned">
+      <div class="text desktop" id="Scanned">
         <h1>Scanned</h1>
         <h4>Co-Founder</h4>
         <b-row>
@@ -293,6 +290,127 @@
             </div>
           </b-col>
         </b-row>
+      </div>
+
+      <!-- Mobile Rendering -->
+
+      <div class="text mobile" id="Raytheon">
+        <h1>Raytheon</h1>
+        <h4>Integrated Product and Process Design</h4>
+        <p class="desc">
+          This project was sponsored by Raytheon Intelligence & Space. The goal
+          was to replace the existing end of life GUI that relied on Adobe
+          Flash, which was deprecated in December 2020 by developing a new
+          front-end using a well-supported framework. The goal was to retain the
+          functionality of the legacy GUI and improve on the design. The most
+          important issue in the project was providing the functionality
+          requested by the client in an intuitive and easy-to-use display. The
+          team achieved this by developing the design in coordination with the
+          liaison engineers and by incorporating extensive user experience
+          testing throughout the development of the project. The largest risks
+          involved data security and privacy. The application must be secure, so
+          the team implemented best practices for security and work with the
+          liaison engineers to ensure the application meet the security needs.
+        </p>
+        <div class="flexy-mobile">
+          <div class="tech">Node</div>
+          <div class="tech">PostgreSQL</div>
+          <div class="tech">CSS</div>
+          <div class="tech">HTML</div>
+          <div class="tech">Vue</div>
+          <div class="tech">JavaScript</div>
+        </div>
+      </div>
+
+      <div class="text mobile" id="NASA">
+        <h1>NASA</h1>
+        <h4>Mission Concept Academy</h4>
+        <p class="desc">
+          The need to understand the surface and near subsurface of the moon is
+          crucial for the advancements of future missions. Our mission was to
+          develop a payload that can map surface water at a scale of a few
+          kilometers for most of the Permanently Shadowed Regions (PSRs) at the
+          lunar South Polar Region, and for at least one location in a PSR, the
+          abundance of water ice in the top 1 meter of the regolith needs to be
+          determined at a ~ +-1% accuracy, or better, at a spatial sampling of ~
+          100m.
+        </p>
+        <div class="flexy-mobile">
+          <div class="tech">CAD</div>
+          <div class="tech">Python</div>
+          <div class="tech">Siemens nx</div>
+          <div class="tech">Arduino</div>
+        </div>
+      </div>
+
+      <div class="text mobile" id="RJF">
+        <h1>Raymond James</h1>
+        <h4>Internship Summer 2021</h4>
+
+        <p class="desc">
+          My second summer internship with Raymond James. This timespan
+          comprised of creating reporting analytics using active data, analyzing
+          numerous data sources spanning multiple sectors of Raymond James, and
+          utilizing the ServiceNow platform to develop tools for easy data
+          access.
+        </p>
+        <div class="flexy-mobile">
+          <div class="tech">ServiceNow</div>
+          <div class="tech">Python</div>
+          <div class="tech">SQL</div>
+          <div class="tech">Tableau</div>
+          <div class="tech">Scikit-learn</div>
+        </div>
+
+        <div class="center">
+          <h1 style="margin-top:70px">2020</h1>
+        </div>
+        <div class="vl"></div>
+
+        <h4>Internship Summer 2020</h4>
+
+        <p class="desc">
+          I worked for Raymond James through their Intern Development Program
+          where I was placed on the team of Service Delivery and Support. During
+          my time I utilized the ServiceNow platform to test and begin implement
+          a Natural Language Understanding chatbot which was to assist internal
+          IT issues that arose. This chatbot was implemented to speed up the
+          time of ticker turn around and user ease.
+        </p>
+
+        <div class="flexy-mobile">
+          <div class="tech">ServiceNow</div>
+          <div class="tech">NLP</div>
+          <div class="tech">NLU</div>
+          <div class="tech">JavaScript</div>
+        </div>
+      </div>
+
+      <div class="center mobile">
+        <h1>2018</h1>
+      </div>
+      <div class="vl mobile"></div>
+
+      <div class="text mobile" id="Scanned">
+        <h1>Scanned</h1>
+        <h4>Co-Founder</h4>
+
+        <p class="desc">
+          I was a Co-Founder of this mobile app built to circumvent the
+          inefficiencies of attendance tracking at meetings and events.
+          Developed with React Native for both IOS and Android, we won $10,000
+          and first place in the Next Generation Tech startup competition and
+          were later accepted into the Gator Hatchery at the University of
+          Florida. The app had users and sales in numerous states and countries
+          before stopping development.
+        </p>
+
+        <div class="flexy-mobile">
+          <div class="tech">JavaScript</div>
+          <div class="tech">React Native</div>
+          <div class="tech">Firebase</div>
+          <div class="tech">React</div>
+        </div>
       </div>
 
       <div class="vl"></div>
@@ -500,6 +618,12 @@ a {
   gap: 10px;
   justify-content: space-between;
   /* justify-content:flex-start; */
+}
+.flexy-mobile {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
 }
 
 /* .flexy > div{
@@ -958,6 +1082,27 @@ a {
   -ms-animation: spin-left 200s linear infinite;
   -o-animation: spin-left 200s linear infinite;
   animation: spin-left 200s linear infinite;
+}
+
+.mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  #stars,
+  #fader {
+    display: none;
+  }
+  .nav-bar {
+    height: inherit;
+  }
+
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: inherit !important;
+  }
 }
 
 /*Defining the rotational keyframe at-rules*/
