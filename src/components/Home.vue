@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="animate__animated animate__backInDown desktop" id="fader">
+    <div class="animate__animated animate__backInDown" id="fader">
       <span>Navigate using the planets!</span>
     </div>
 
@@ -146,6 +146,7 @@
       </div>
       <div class="vl"></div>
 
+      <!-- Desktop Rendering -->
       <div class="text desktop" id="Raytheon">
         <h1>Raytheon</h1>
         <h4>Integrated Product and Process Design</h4>
@@ -294,7 +295,7 @@
 
       <!-- Mobile Rendering -->
 
-      <div class="text mobile" id="Raytheon">
+      <div class="text mobile" id="Raytheon-mobile">
         <h1>Raytheon</h1>
         <h4>Integrated Product and Process Design</h4>
         <p class="desc">
@@ -322,7 +323,7 @@
         </div>
       </div>
 
-      <div class="text mobile" id="NASA">
+      <div class="text mobile" id="NASA-mobile">
         <h1>NASA</h1>
         <h4>Mission Concept Academy</h4>
         <p class="desc">
@@ -343,7 +344,7 @@
         </div>
       </div>
 
-      <div class="text mobile" id="RJF">
+      <div class="text mobile" id="RJF-mobile">
         <h1>Raymond James</h1>
         <h4>Internship Summer 2021</h4>
 
@@ -391,7 +392,7 @@
       </div>
       <div class="vl mobile"></div>
 
-      <div class="text mobile" id="Scanned">
+      <div class="text mobile" id="Scanned-mobile">
         <h1>Scanned</h1>
         <h4>Co-Founder</h4>
 
@@ -441,12 +442,19 @@ export default {
   name: "Home",
   methods: {
     scrollInto(id) {
-      document.getElementById(id).scrollIntoView({
-        behavior: "smooth",
-        block: "center",
-        // inline: 'end',
-      });
-      console.log(id);
+      if (window.innerWidth > 768 || id === "About") {
+        document.getElementById(id).scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+        });
+        // console.log(id);
+      } else {
+        document.getElementById(`${id}-mobile`).scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+        // console.log(`${id}-mobile`);
+      }
     },
   },
 
@@ -459,11 +467,10 @@ export default {
       document
         .getElementById("fader")
         .setAttribute("style", "visibility: hidden; z-index: -1");
-      console.log("test");
     }, 6000);
     let canvas = document.getElementById("stars");
 
-    console.log(document.getElementById("stars"));
+    // console.log(document.getElementById("stars"));
 
     function createStar() {
       let star = document.createElement("span");
@@ -1083,24 +1090,37 @@ a {
   animation: spin-left 200s linear infinite;
 }
 
-.mobile {
-  display: none;
-}
-
-@media only screen and (max-width: 768px) {
-  #stars,
-  #fader {
+/* Desktop CSS */
+@media only screen and (min-width: 768px) {
+  .mobile {
     display: none;
   }
+  .desktop {
+    display: inherit;
+  }
+}
+
+/* Mobile CSS */
+@media only screen and (max-width: 768px) {
+  #stars,
+  #fader,
+  .desktop {
+    display: none;
+  }
+
   .nav-bar {
     height: inherit;
   }
 
-  .desktop {
-    display: none;
-  }
   .mobile {
-    display: inherit !important;
+    display: inherit;
+  }
+
+  #Raytheon-mobile,
+  #NASA-mobile,
+  #Scanned-mobile,
+  #RJF-mobile {
+    scroll-margin-top: 400px;
   }
 }
 
