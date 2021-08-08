@@ -413,9 +413,9 @@
         </div>
       </div>
 
-      <div class="vl"></div>
+      <div class="vl desktop"></div>
 
-      <div class="social-links">
+      <div class="social-links desktop">
         <a href="https://www.facebook.com/WittySkates"
           ><i class="fab fa-facebook-f"></i
         ></a>
@@ -665,13 +665,12 @@ a {
 .social-links {
   display: flex;
   padding-bottom: 50px;
-  /* padding-top: 50px; */
   justify-content: center;
 }
 
 .social-links a {
-  width: 80px;
   height: 80px;
+  width: 80px;
   text-align: center;
   text-decoration: none;
   color: white;
