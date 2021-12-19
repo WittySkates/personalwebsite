@@ -4,7 +4,7 @@
       <span>Navigate using the planets!</span>
     </div>
 
-    <b-navbar toggleable="md" class="nav-bar" type="dark" sticky>
+    <!-- <b-navbar toggleable="md" class="nav-bar" type="dark" sticky>
       <b-navbar-brand
         @click="scrollInto('About')"
         style="margin-left:10px;margin-bottom:2px;cursor:pointer"
@@ -15,36 +15,25 @@
 
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
-          <b-nav-item @click="scrollInto('NASA')">NASA</b-nav-item>
-          <b-nav-item @click="scrollInto('Scanned')">Scanned</b-nav-item>
-          <b-nav-item @click="scrollInto('RJF')">RJF</b-nav-item>
-          <b-nav-item @click="scrollInto('Raytheon')">Raytheon</b-nav-item>
+          <b-nav-item @click="scrollInto('NASA')">Experience</b-nav-item>
+          <b-nav-item @click="scrollInto('Scanned')">Projects</b-nav-item>
+          <b-nav-item @click="scrollInto('RJF')">Research</b-nav-item>
+          <b-nav-item @click="scrollInto('Raytheon')">Contact</b-nav-item>
         </b-navbar-nav>
         <b-navbar-nav style="font-size: 17px;" class="ms-auto">
-          <b-nav-item
-            href="./Resume.pdf"
-            target="blank"
-            style="padding-right:15px"
+          <b-nav-item href="./Resume.pdf" target="blank" style="padding-right:15px"
             >Resume</b-nav-item
           >
         </b-navbar-nav>
       </b-collapse>
-    </b-navbar>
+    </b-navbar> -->
 
     <div id="stars">
       <div id="solarSketch">
         <div id="Planet4-orbit">
-          <div
-            id="Planet4"
-            @click="scrollInto('Raytheon')"
-            style="cursor: pointer;"
-          ></div>
-          <p
-            id="Planet4-label"
-            @click="scrollInto('Raytheon')"
-            style="cursor: pointer;"
-          >
-            Raytheon
+          <div id="Planet4" @click="scrollInto('tabs', 4)" style="cursor: pointer;"></div>
+          <p id="Planet4-label" @click="scrollInto('tabs', 4)" style="cursor: pointer;">
+            Contact
           </p>
         </div>
 
@@ -57,47 +46,23 @@
             <div id="Planet3-1"></div>
             <p id="Planet3-1-label"></p>
           </div>
-          <div
-            id="Planet3"
-            @click="scrollInto('RJF')"
-            style="cursor: pointer;"
-          ></div>
-          <p
-            id="Planet3-label"
-            @click="scrollInto('RJF')"
-            style="cursor: pointer;"
-          >
-            RJF
+          <div id="Planet3" @click="scrollInto('tabs', 3)" style="cursor: pointer;"></div>
+          <p id="Planet3-label" @click="scrollInto('tabs', 3)" style="cursor: pointer;">
+            Research
           </p>
         </div>
 
         <div id="Planet2-orbit">
-          <div
-            id="Planet2"
-            @click="scrollInto('Scanned')"
-            style="cursor: pointer;"
-          ></div>
-          <p
-            id="Planet2-label"
-            @click="scrollInto('Scanned')"
-            style="cursor: pointer;"
-          >
-            Scanned
+          <div id="Planet2" @click="scrollInto('tabs', 2)" style="cursor: pointer;"></div>
+          <p id="Planet2-label" @click="scrollInto('tabs', 2)" style="cursor: pointer;">
+            Projects
           </p>
         </div>
 
         <div id="Planet1-orbit">
-          <div
-            id="Planet1"
-            @click="scrollInto('NASA')"
-            style="cursor: pointer;"
-          ></div>
-          <p
-            id="Planet1-label"
-            @click="scrollInto('NASA')"
-            style="cursor: pointer;"
-          >
-            NASA
+          <div id="Planet1" @click="scrollInto('tabs', 1)" style="cursor: pointer;"></div>
+          <p id="Planet1-label" @click="scrollInto('tabs', 1)" style="cursor: pointer;">
+            Experience
           </p>
         </div>
 
@@ -110,352 +75,103 @@
         />
       </div>
     </div>
-
-    <div class="content">
-      <div class="text" id="About">
-        <h1>About Me</h1>
-        <p class="desc">
-          I am a senior at the University of Florida currently pursuing a degree
-          in Computer Engineering with a focus on software. I enjoy learning new
-          things and expanding my horizons in the engineering field. I have
-          found a passion for software development and machine learning and want
-          to apply my skills to find new and efficient solutions to current
-          problems. I want to be a part of something bigger than myself and
-          positively affect and inspire others. Creating has and always will be
-          my passion, the feeling of building or designing something new is what
-          drives me to move forward.
-        </p>
-        <div class="about">
-          <div class="tech">C++</div>
-          <div class="tech">C</div>
-          <div class="tech">Java</div>
-          <div class="tech">Vue</div>
-          <div class="tech">React</div>
-          <div class="tech">JavaScript</div>
-          <div class="tech">Python</div>
-          <div class="tech">HTML</div>
-          <div class="tech">CSS</div>
-          <div class="tech">VHDL</div>
-          <div class="tech">Flutter</div>
-          <div class="tech">SQL</div>
-        </div>
-      </div>
-
-      <div class="center">
-        <h1>2021</h1>
-      </div>
-      <div class="vl"></div>
-
-      <!-- Desktop Rendering -->
-      <div class="text desktop" id="Raytheon">
-        <h1>Raytheon</h1>
-        <h4>Integrated Product and Process Design</h4>
-        <b-row>
-          <b-col cols="8">
+    <div class="background-wrapper">
+      <div class="content-wrapper">
+        <div class="about-wrapper">
+          <div id="About">
+            <h1>About Me</h1>
             <p class="desc">
-              This project was sponsored by Raytheon Intelligence & Space. The
-              goal was to replace the existing end of life GUI that relied on
-              Adobe Flash, which was deprecated in December 2020 by developing a
-              new front-end using a well-supported framework. The goal was to
-              retain the functionality of the legacy GUI and improve on the
-              design. The most important issue in the project was providing the
-              functionality requested by the client in an intuitive and
-              easy-to-use display. The team achieved this by developing the
-              design in coordination with the liaison engineers and by
-              incorporating extensive user experience testing throughout the
-              development of the project. The largest risks involved data
-              security and privacy. The application must be secure, so the team
-              implemented best practices for security and work with the liaison
-              engineers to ensure the application meet the security needs.
+              I am a recent Computer Engineering graduate from the University of Florida with a
+              focus on software. I enjoy learning new things and expanding my horizons in the
+              engineering field. I have found a passion for software development and machine
+              learning and want to apply my skills to find new and efficient solutions to current
+              problems. I want to be a part of something bigger than myself and positively affect
+              and inspire others. Creating has and always will be my passion, the feeling of
+              building or designing something new is what drives me to move forward.
             </p>
-          </b-col>
-          <b-col cols="4">
-            <div class="flexy">
-              <div class="tech">Node</div>
-              <div class="tech">PostgreSQL</div>
-              <div class="tech">CSS</div>
-              <div class="tech">HTML</div>
-              <div class="tech">Vue</div>
-              <div class="tech">JavaScript</div>
+            <div class="about tech">
+              <div>C++</div>
+              <div>C</div>
+              <!-- <div>Java</div> -->
+              <div>Vue</div>
+              <div>React</div>
+              <div>JavaScript</div>
+              <div>Python</div>
+              <div>HTML</div>
+              <div>CSS</div>
+              <div>VHDL</div>
+              <!-- <div>Flutter</div> -->
+              <div>SQL</div>
             </div>
-          </b-col>
-        </b-row>
-      </div>
-
-      <div class="text desktop" id="NASA">
-        <h1>NASA</h1>
-        <h4>Mission Concept Academy</h4>
-        <b-row>
-          <b-col cols="8">
-            <p class="desc">
-              The need to understand the surface and near subsurface of the moon
-              is crucial for the advancements of future missions. Our mission
-              was to develop a payload that can map surface water at a scale of
-              a few kilometers for most of the Permanently Shadowed Regions
-              (PSRs) at the lunar South Polar Region, and for at least one
-              location in a PSR, the abundance of water ice in the top 1 meter
-              of the regolith needs to be determined at a ~ +-1% accuracy, or
-              better, at a spatial sampling of ~ 100m.
-            </p>
-          </b-col>
-          <b-col cols="4">
-            <div class="flexy">
-              <div class="tech">CAD</div>
-              <div class="tech">Python</div>
-              <div class="tech">Siemens nx</div>
-              <div class="tech">Arduino</div>
-            </div>
-          </b-col>
-        </b-row>
-      </div>
-
-      <div class="text desktop" id="RJF">
-        <h1>Raymond James</h1>
-        <h4>Internship Summer 2021</h4>
-        <b-row>
-          <b-col cols="8">
-            <p class="desc">
-              My second summer internship with Raymond James. This timespan
-              comprised of creating reporting analytics using active data,
-              analyzing numerous data sources spanning multiple sectors of
-              Raymond James, and utilizing the ServiceNow platform to develop
-              tools for easy data access.
-            </p>
-          </b-col>
-          <b-col cols="4">
-            <div class="flexy">
-              <div class="tech">ServiceNow</div>
-              <div class="tech">Python</div>
-              <div class="tech">SQL</div>
-              <div class="tech">Tableau</div>
-              <div class="tech">Scikit-learn</div>
-            </div>
-          </b-col>
-        </b-row>
-
-        <div class="center">
-          <h1 style="margin-top:70px">2020</h1>
+          </div>
         </div>
-        <div class="vl"></div>
-
-        <h4>Internship Summer 2020</h4>
-        <b-row>
-          <b-col cols="8">
-            <p class="desc">
-              I worked for Raymond James through their Intern Development
-              Program where I was placed on the team of Service Delivery and
-              Support. During my time I utilized the ServiceNow platform to test
-              and begin implement a Natural Language Understanding chatbot which
-              was to assist internal IT issues that arose. This chatbot was
-              implemented to speed up the time of ticker turn around and user
-              ease.
-            </p>
-          </b-col>
-          <b-col cols="4">
-            <div class="flexy">
-              <div class="tech">ServiceNow</div>
-              <div class="tech">NLP</div>
-              <div class="tech">NLU</div>
-              <div class="tech">JavaScript</div>
-            </div>
-          </b-col>
-        </b-row>
-      </div>
-
-      <div class="center desktop">
-        <h1>2018</h1>
-      </div>
-      <div class="vl desktop"></div>
-
-      <div class="text desktop" id="Scanned">
-        <h1>Scanned</h1>
-        <h4>Co-Founder</h4>
-        <b-row>
-          <b-col cols="8">
-            <p class="desc">
-              I was a Co-Founder of this mobile app built to circumvent the
-              inefficiencies of attendance tracking at meetings and events.
-              Developed with React Native for both IOS and Android, we won
-              $10,000 and first place in the Next Generation Tech startup
-              competition and were later accepted into the Gator Hatchery at the
-              University of Florida. The app had users and sales in numerous
-              states and countries before stopping development.
-            </p>
-          </b-col>
-          <b-col cols="4">
-            <div class="flexy">
-              <div class="tech">JavaScript</div>
-              <div class="tech">React Native</div>
-              <div class="tech">Firebase</div>
-              <div class="tech">React</div>
-            </div>
-          </b-col>
-        </b-row>
-      </div>
-
-      <!-- Mobile Rendering -->
-
-      <div class="text mobile" id="Raytheon-mobile">
-        <h1>Raytheon</h1>
-        <h4>Integrated Product and Process Design</h4>
-        <p class="desc">
-          This project was sponsored by Raytheon Intelligence & Space. The goal
-          was to replace the existing end of life GUI that relied on Adobe
-          Flash, which was deprecated in December 2020 by developing a new
-          front-end using a well-supported framework. The goal was to retain the
-          functionality of the legacy GUI and improve on the design. The most
-          important issue in the project was providing the functionality
-          requested by the client in an intuitive and easy-to-use display. The
-          team achieved this by developing the design in coordination with the
-          liaison engineers and by incorporating extensive user experience
-          testing throughout the development of the project. The largest risks
-          involved data security and privacy. The application must be secure, so
-          the team implemented best practices for security and work with the
-          liaison engineers to ensure the application meet the security needs.
-        </p>
-        <div class="flexy-mobile">
-          <div class="tech">Node</div>
-          <div class="tech">PostgreSQL</div>
-          <div class="tech">CSS</div>
-          <div class="tech">HTML</div>
-          <div class="tech">Vue</div>
-          <div class="tech">JavaScript</div>
+        <div class="tabs flexy" id="tabs">
+          <a @click="activetab = 1" v-bind:class="[activetab === 1 ? 'active' : '']" id="Experience"
+            >Experience</a
+          >
+          <a @click="activetab = 2" v-bind:class="[activetab === 2 ? 'active' : '']" id="Projects"
+            >Projects</a
+          >
+          <a @click="activetab = 3" v-bind:class="[activetab === 3 ? 'active' : '']" id="Research"
+            >Research</a
+          >
+          <a @click="activetab = 4" v-bind:class="[activetab === 4 ? 'active' : '']" id="Contact"
+            >Contact</a
+          >
         </div>
-      </div>
+        <div class="tab-wrapper">
+          <div class="tabs-content">
+            <div v-if="activetab == 1"><Experience /></div>
+            <div v-if="activetab == 2"><Projects /></div>
+            <div v-if="activetab == 3"><Research /></div>
+            <div v-if="activetab == 4"><Contact /></div>
+          </div>
 
-      <div class="text mobile" id="NASA-mobile">
-        <h1>NASA</h1>
-        <h4>Mission Concept Academy</h4>
-        <p class="desc">
-          The need to understand the surface and near subsurface of the moon is
-          crucial for the advancements of future missions. Our mission was to
-          develop a payload that can map surface water at a scale of a few
-          kilometers for most of the Permanently Shadowed Regions (PSRs) at the
-          lunar South Polar Region, and for at least one location in a PSR, the
-          abundance of water ice in the top 1 meter of the regolith needs to be
-          determined at a ~ +-1% accuracy, or better, at a spatial sampling of ~
-          100m.
-        </p>
-        <div class="flexy-mobile">
-          <div class="tech">CAD</div>
-          <div class="tech">Python</div>
-          <div class="tech">Siemens nx</div>
-          <div class="tech">Arduino</div>
+          <div class="vl desktop"></div>
+          <div class="social-links desktop">
+            <a href="https://www.facebook.com/WittySkates"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/in/dupuisconnor/"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a href="https://github.com/WittySkates"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/connor__dupuis/"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/dupuis_connor"><i class="fab fa-twitter"></i></a>
+          </div>
         </div>
-      </div>
-
-      <div class="text mobile" id="RJF-mobile">
-        <h1>Raymond James</h1>
-        <h4>Internship Summer 2021</h4>
-
-        <p class="desc">
-          My second summer internship with Raymond James. This timespan
-          comprised of creating reporting analytics using active data, analyzing
-          numerous data sources spanning multiple sectors of Raymond James, and
-          utilizing the ServiceNow platform to develop tools for easy data
-          access.
-        </p>
-        <div class="flexy-mobile">
-          <div class="tech">ServiceNow</div>
-          <div class="tech">Python</div>
-          <div class="tech">SQL</div>
-          <div class="tech">Tableau</div>
-          <div class="tech">Scikit-learn</div>
-        </div>
-
-        <div class="center">
-          <h1 style="margin-top:70px">2020</h1>
-        </div>
-        <div class="vl"></div>
-
-        <h4>Internship Summer 2020</h4>
-
-        <p class="desc">
-          I worked for Raymond James through their Intern Development Program
-          where I was placed on the team of Service Delivery and Support. During
-          my time I utilized the ServiceNow platform to test and begin implement
-          a Natural Language Understanding chatbot which was to assist internal
-          IT issues that arose. This chatbot was implemented to speed up the
-          time of ticker turn around and user ease.
-        </p>
-
-        <div class="flexy-mobile">
-          <div class="tech">ServiceNow</div>
-          <div class="tech">NLP</div>
-          <div class="tech">NLU</div>
-          <div class="tech">JavaScript</div>
-        </div>
-      </div>
-
-      <div class="center mobile">
-        <h1>2018</h1>
-      </div>
-      <div class="vl mobile"></div>
-
-      <div class="text mobile" id="Scanned-mobile">
-        <h1>Scanned</h1>
-        <h4>Co-Founder</h4>
-
-        <p class="desc">
-          I was a Co-Founder of this mobile app built to circumvent the
-          inefficiencies of attendance tracking at meetings and events.
-          Developed with React Native for both IOS and Android, we won $10,000
-          and first place in the Next Generation Tech startup competition and
-          were later accepted into the Gator Hatchery at the University of
-          Florida. The app had users and sales in numerous states and countries
-          before stopping development.
-        </p>
-
-        <div class="flexy-mobile">
-          <div class="tech">JavaScript</div>
-          <div class="tech">React Native</div>
-          <div class="tech">Firebase</div>
-          <div class="tech">React</div>
-        </div>
-      </div>
-
-      <div class="vl desktop"></div>
-
-      <div class="social-links desktop">
-        <a href="https://www.facebook.com/WittySkates"
-          ><i class="fab fa-facebook-f"></i
-        ></a>
-        <a href="https://www.linkedin.com/in/dupuisconnor/"
-          ><i class="fab fa-linkedin-in"></i
-        ></a>
-        <a href="https://github.com/WittySkates"
-          ><i class="fab fa-github"></i
-        ></a>
-        <a href="https://www.instagram.com/connor__dupuis/"
-          ><i class="fab fa-instagram"></i
-        ></a>
-        <a href="https://twitter.com/dupuis_connor"
-          ><i class="fab fa-twitter"></i
-        ></a>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import Experience from "./Experience.vue";
+import Projects from "./Projects.vue";
+import Research from "./Research.vue";
+import Contact from "./Contact.vue";
+
 export default {
   name: "Home",
+  data: function() {
+    return {
+      activetab: 1
+    };
+  },
+  components: {
+    Experience,
+    Projects,
+    Research,
+    Contact
+  },
   methods: {
-    scrollInto(id) {
-      if (window.innerWidth > 768 || id === "About") {
-        document.getElementById(id).scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
-        console.log(id);
-      } else {
-        document.getElementById(`${id}-mobile`).scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
-        console.log(`${id}-mobile`);
+    scrollInto(id, tab) {
+      if (id != "About") {
+        this.activetab = tab;
       }
-    },
+      document.getElementById(id).scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }
   },
 
   mounted() {
@@ -464,9 +180,7 @@ export default {
       element.classList.add("animate__fadeOut");
     }, 3000);
     setTimeout(function() {
-      document
-        .getElementById("fader")
-        .setAttribute("style", "visibility: hidden; z-index: -1");
+      document.getElementById("fader").setAttribute("style", "visibility: hidden; z-index: -1");
     }, 6000);
     let canvas = document.getElementById("stars");
 
@@ -501,7 +215,7 @@ export default {
     setInterval(function() {
       for (var i = 0; i < 5; i++) createStar();
     }, 250);
-  },
+  }
 };
 </script>
 
@@ -552,14 +266,10 @@ a {
 #stars {
   background: #232741;
   width: 100%;
-  height: 95vh;
+  height: 100vh;
   min-height: 875px;
 }
-.nav-flex {
-  display: flex;
-  gap: 20px;
-  font-size: 17px;
-}
+
 .star {
   animation: fade 10s;
   border-radius: 50%;
@@ -567,27 +277,85 @@ a {
   position: absolute;
 }
 
-.breaker {
-  background-color: #232741;
-  padding-top: 500px;
-  padding-bottom: 500px;
+.text {
+  text-align: justify;
+  text-justify: inter-word;
+  margin-bottom: 70px;
 }
 
-.content {
+.background-wrapper {
+  background-color: #232741;
+}
+
+.content-wrapper {
+  height: 100%;
+  position: relative;
+  color: rgb(240, 240, 240);
+  /* background-color: #343a40; */
+  padding-bottom: 80px;
+  /* padding-left: 25px;
+  padding-right: 25px; */
+  margin-right: 12%;
+  margin-left: 12%;
+  border-radius: 10px;
+}
+
+.about-wrapper {
   height: 100%;
   position: relative;
   color: rgb(240, 240, 240);
   background-color: #343a40;
-  padding-bottom: 10px;
-  padding-top: 80px;
-}
-
-.text {
-  margin-right: 20%;
-  margin-left: 20%;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  margin-bottom: 15px;
+  border-radius: 10px;
   text-align: justify;
   text-justify: inter-word;
-  margin-bottom: 70px;
+}
+
+/* .tabs {
+  margin-top: 15px;
+} */
+
+.tab-wrapper {
+  height: 100%;
+  position: relative;
+  color: rgb(240, 240, 240);
+  background-color: #343a40;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 25px;
+  padding-bottom: 10px;
+  border-radius: 0 0 10px 10px;
+}
+
+/* tabs css*/
+
+.tabs a {
+  float: left;
+  cursor: pointer;
+  padding: 12px 24px;
+  transition: background-color 0.2s;
+  /* background-color: #851a1a; */
+  border-radius: 10px 10px 0 0;
+  font-weight: bold;
+  color: rgb(240, 240, 240);
+  font-size: 18px;
+}
+
+/* Change background color of tabs on hover */
+.tabs a:hover {
+  background-color: #aaa;
+  color: #fff;
+}
+
+/* Styling for active tab */
+.tabs a.active {
+  background-color: #343a40;
+  color: rgb(240, 240, 240);
+  cursor: default;
 }
 
 .vl {
@@ -638,7 +406,7 @@ a {
   margin:5px;
 } */
 
-.tech {
+.tech > div {
   padding: 10px;
   border-radius: 12px;
   box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.2);
@@ -739,10 +507,10 @@ a {
   left: 50%;
 
   background: #232741;
-  height: 180px;
-  width: 180px;
-  margin-top: -90px;
-  margin-left: -90px;
+  height: 160px;
+  width: 160px;
+  margin-top: -80px;
+  margin-left: -80px;
 
   border-color: white;
   border-width: 10px;
@@ -768,9 +536,9 @@ a {
   position: absolute;
   top: 0;
   left: 50%;
-  width: 50px;
-  height: 50px;
-  margin-left: 102px;
+  width: 80px;
+  height: 80px;
+  margin-left: 92px;
   margin-top: 100px;
   background: white;
   border-color: white;
@@ -784,10 +552,10 @@ a {
   top: 50%;
   left: 50%;
 
-  width: 260px;
-  height: 260px;
-  margin-top: -130px;
-  margin-left: -130px;
+  width: 276px;
+  height: 276px;
+  margin-top: -138px;
+  margin-left: -138px;
 
   border-width: 1.8px;
   border-style: dashed;
@@ -807,10 +575,10 @@ a {
   left: 50%;
   /* width: 15px;
   height: 15px; */
-  margin-left: 107px;
-  margin-top: 114px;
+  margin-left: 97px;
+  margin-top: 129px;
   color: #232741;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: bold;
 
   -webkit-animation: spin-right 20s linear infinite;
@@ -826,10 +594,10 @@ a {
   position: absolute;
   top: 0;
   left: 50%;
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   margin-left: -100px;
-  margin-top: 365px;
+  margin-top: 372px;
   background: white;
   border-color: white;
   border-width: 1px;
@@ -865,8 +633,8 @@ a {
   left: 50%;
   /* width: 15px;
   height: 15px; */
-  margin-left: -90px;
-  margin-top: 394px;
+  margin-left: -99px;
+  margin-top: 391px;
   color: #232741;
   font-size: 15px;
   font-weight: bold;
@@ -884,10 +652,10 @@ a {
   position: absolute;
   top: 0;
   left: 50%;
-  width: 50px;
-  height: 50px;
-  margin-left: -25px;
-  margin-top: -28px;
+  width: 70px;
+  height: 70px;
+  margin-left: -35px;
+  margin-top: -37px;
   background: white;
   border-color: white;
   border-width: 2px;
@@ -941,10 +709,10 @@ a {
   position: absolute;
   top: 0;
   left: 50%;
-  width: 80px;
-  height: 80px;
-  margin-left: -40px;
-  margin-top: -42px;
+  width: 90px;
+  height: 90px;
+  margin-left: -45px;
+  margin-top: -47px;
 
   border: 1px dashed white;
   border-radius: 50%;
@@ -981,7 +749,7 @@ a {
   left: 50%;
   /* width: 15px;
   height: 15px; */
-  margin-left: -12px;
+  margin-left: -30px;
   margin-top: -13px;
   color: #232741;
   font-size: 15px;
@@ -1040,7 +808,7 @@ a {
   left: 50%;
   width: 75px;
   height: 75px;
-  margin-left: -323px;
+  margin-left: -328px;
   margin-top: 85px;
   background: white;
   border-color: white;
@@ -1096,12 +864,12 @@ a {
     display: none;
   }
   #About,
-  #Raytheon,
-  #NASA,
-  #Scanned,
   #RJF {
-    scroll-margin-top: 50px;
+    scroll-margin-top: 65px;
   }
+}
+.tabs {
+  scroll-margin-top: 15px;
 }
 
 /* Mobile CSS */
@@ -1116,11 +884,7 @@ a {
     height: inherit;
   }
 
-  #About,
-  #Raytheon-mobile,
-  #NASA-mobile,
-  #Scanned-mobile,
-  #RJF-mobile {
+  #About {
     scroll-margin-top: 280px;
   }
   #Scanned-mobile {
