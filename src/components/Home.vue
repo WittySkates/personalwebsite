@@ -104,7 +104,7 @@
             </div>
           </div>
         </div>
-        <div class="tabs flexy" id="tabs">
+        <div class="tabs" id="tabs">
           <a @click="activetab = 1" v-bind:class="[activetab === 1 ? 'active' : '']" id="Experience"
             >Experience</a
           >
@@ -317,9 +317,15 @@ a {
   text-justify: inter-word;
 }
 
-/* .tabs {
-  margin-top: 15px;
-} */
+.tabs {
+  scroll-margin-top: 15px;
+  display: flex;
+  /* -webkit-flex-direction: row-reverse;
+  flex-direction: row-reverse; */
+  flex-wrap: wrap;
+  gap: 10px;
+  /* justify-content: space-between; */
+}
 
 .tab-wrapper {
   height: 100%;
@@ -345,6 +351,7 @@ a {
   font-weight: bold;
   color: rgb(240, 240, 240);
   font-size: 18px;
+  background-color: #343a4077;
 }
 
 /* Change background color of tabs on hover */
@@ -851,9 +858,6 @@ a {
   #RJF {
     scroll-margin-top: 65px;
   }
-}
-.tabs {
-  scroll-margin-top: 15px;
 }
 
 /* Mobile CSS */
