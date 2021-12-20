@@ -1,10 +1,5 @@
 <template>
   <div>
-    <!-- <div class="center">
-        <h1>2021</h1>
-      </div>
-      <div class="vl"></div> -->
-
     <!-- Desktop Rendering -->
     <div class="text desktop" id="Raytheon">
       <h1>Raytheon</h1>
@@ -86,10 +81,7 @@
         </b-col>
       </b-row>
 
-      <div class="center">
-        <h1 style="margin-top:70px">2020</h1>
-      </div>
-      <div class="vl"></div>
+      <Dateline v-bind:year="2021" class="desktop" />
 
       <h4>Internship Summer 2020</h4>
       <b-row>
@@ -113,10 +105,7 @@
       </b-row>
     </div>
 
-    <div class="center desktop">
-      <h1>2018</h1>
-    </div>
-    <div class="vl desktop"></div>
+    <Dateline v-bind:year="2020" class="desktop" />
 
     <div class="text desktop" id="Scanned">
       <h1>Scanned</h1>
@@ -141,6 +130,8 @@
         </b-col>
       </b-row>
     </div>
+
+    <Dateline v-bind:year="2018" class="desktop" />
 
     <!-- Mobile Rendering -->
 
@@ -191,7 +182,6 @@
     <div class="text mobile" id="RJF-mobile">
       <h1>Raymond James</h1>
       <h4>Internship Summer 2021</h4>
-
       <p class="desc">
         My second summer internship with Raymond James. This timespan comprised of creating
         reporting analytics using active data, analyzing numerous data sources spanning multiple
@@ -206,10 +196,7 @@
         <div>Scikit-learn</div>
       </div>
 
-      <div class="center">
-        <h1 style="margin-top:70px">2020</h1>
-      </div>
-      <div class="vl"></div>
+      <Dateline v-bind:year="2021" class="mobile" />
 
       <h4>Internship Summer 2020</h4>
 
@@ -229,15 +216,11 @@
       </div>
     </div>
 
-    <div class="center mobile">
-      <h1>2018</h1>
-    </div>
-    <div class="vl mobile"></div>
+    <Dateline v-bind:year="2020" class="mobile" />
 
     <div class="text mobile" id="Scanned-mobile">
       <h1>Scanned</h1>
       <h4>Co-Founder</h4>
-
       <p class="desc">
         I was a Co-Founder of this mobile app built to circumvent the inefficiencies of attendance
         tracking at meetings and events. Developed with React Native for both IOS and Android, we
@@ -253,13 +236,16 @@
         <div>React</div>
       </div>
     </div>
+
+    <Dateline v-bind:year="2018" class="mobile" />
   </div>
 </template>
 
 <script>
+import Dateline from "./Dateline.vue";
 export default {
   name: "Experience",
-  components: {}
+  components: { Dateline }
 };
 </script>
 

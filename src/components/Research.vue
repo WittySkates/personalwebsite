@@ -1,28 +1,23 @@
 <template>
   <div>
-    <!-- <div class="center">
-        <h1>2021</h1>
-      </div>
-      <div class="vl"></div> -->
-
     <!-- Desktop Rendering -->
     <div class="text desktop" id="RapidModelPredictor">
       <h1>Rapid Model Predictor</h1>
-      <h4>University of Florida</h4>
+      <h4>Department of Electrical & Computer Engineering, University of Florida</h4>
       <b-row>
         <b-col cols="8">
           <p class="desc">
-            This project was sponsored by Raytheon Intelligence & Space. The goal was to replace the
-            existing end of life GUI that relied on Adobe Flash, which was deprecated in December
-            2020 by developing a new front-end using a well-supported framework. The goal was to
-            retain the functionality of the legacy GUI and improve on the design. The most important
-            issue in the project was providing the functionality requested by the client in an
-            intuitive and easy-to-use display. The team achieved this by developing the design in
-            coordination with the liaison engineers and by incorporating extensive user experience
-            testing throughout the development of the project. The largest risks involved data
-            security and privacy. The application must be secure, so the team implemented best
-            practices for security and work with the liaison engineers to ensure the application
-            meet the security needs.
+            To greatly enhance the clinical effectiveness of electrical neuromodulation therapies
+            for various medical conditions (e.g., pain, movement disorders, depression, and
+            sensorimotor prosthetics), efficient and patient-specific computer models are needed for
+            the prediction of the neural response. The objective of this work is to develop a method
+            based on deep-learning neural networks to replace computationally expensive methods for
+            the prediction of neural fiber activation by electrical stimulation. A neural
+            network-based, rapid predictor will decrease the computational demands and allow for
+            implementation of real-time patient-specific models. Approach. We developed an
+            artificial neural network (ANN) to predict the binary activation response of myelinated
+            nerve fibers from deep brain stimulation. Training, testing, and optimization was
+            parallelized across 200 nodes on the UF supercomputer, HiPerGator.
           </p>
         </b-col>
         <b-col cols="4">
@@ -39,7 +34,7 @@
 
     <div class="text desktop" id="Pastebles">
       <h1>Pastebles</h1>
-      <h4>University of Florida</h4>
+      <h4>Department of Electrical & Computer Engineering, University of Florida</h4>
       <b-row>
         <b-col cols="8">
           <p class="desc">
@@ -62,6 +57,8 @@
         </b-col>
       </b-row>
     </div>
+
+    <Dateline v-bind:year="2021" class="desktop" />
 
     <!-- Mobile Rendering -->
 
@@ -112,7 +109,6 @@
     <div class="text mobile" id="RJF-mobile">
       <h1>Raymond James</h1>
       <h4>Internship Summer 2021</h4>
-
       <p class="desc">
         My second summer internship with Raymond James. This timespan comprised of creating
         reporting analytics using active data, analyzing numerous data sources spanning multiple
@@ -127,10 +123,7 @@
         <div>Scikit-learn</div>
       </div>
 
-      <div class="center">
-        <h1 style="margin-top:70px">2020</h1>
-      </div>
-      <div class="vl"></div>
+      <Dateline v-bind:year="2021" class="mobile" />
 
       <h4>Internship Summer 2020</h4>
 
@@ -150,15 +143,11 @@
       </div>
     </div>
 
-    <div class="center mobile">
-      <h1>2018</h1>
-    </div>
-    <div class="vl mobile"></div>
+    <Dateline v-bind:year="2020" class="mobile" />
 
     <div class="text mobile" id="Scanned-mobile">
       <h1>Scanned</h1>
       <h4>Co-Founder</h4>
-
       <p class="desc">
         I was a Co-Founder of this mobile app built to circumvent the inefficiencies of attendance
         tracking at meetings and events. Developed with React Native for both IOS and Android, we
@@ -174,13 +163,16 @@
         <div>React</div>
       </div>
     </div>
+
+    <Dateline v-bind:year="2018" class="mobile" />
   </div>
 </template>
 
 <script>
+import Dateline from "./Dateline.vue";
 export default {
   name: "Experience",
-  components: {}
+  components: { Dateline }
 };
 </script>
 

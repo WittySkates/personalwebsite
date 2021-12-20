@@ -127,7 +127,7 @@
             <div v-if="activetab == 4"><Contact /></div>
           </div>
 
-          <div class="vl desktop"></div>
+          <!-- <div class="vl desktop"></div> -->
           <div class="social-links desktop">
             <a href="https://www.facebook.com/WittySkates"><i class="fab fa-facebook-f"></i></a>
             <a href="https://www.linkedin.com/in/dupuisconnor/"
@@ -282,6 +282,9 @@ a {
   text-justify: inter-word;
   margin-bottom: 70px;
 }
+.text > h4 {
+  margin-right: 35%;
+}
 
 .background-wrapper {
   background-color: #232741;
@@ -358,26 +361,6 @@ a {
   cursor: default;
 }
 
-.vl {
-  border-left: 1px solid white;
-  height: 350px;
-  position: relative;
-  margin-left: 50%;
-  margin-top: 90px;
-  margin-bottom: 90px;
-}
-
-.center {
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  left: 16px;
-  right: 0px;
-  text-align: center;
-  margin-top: 150px;
-  letter-spacing: 20px;
-}
-
 #contact {
   text-align: left;
   margin-left: -125px;
@@ -439,6 +422,7 @@ a {
 
 .social-links {
   display: flex;
+  padding-top: 10px;
   padding-bottom: 50px;
   justify-content: center;
 }
