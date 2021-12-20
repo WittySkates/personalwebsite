@@ -38,12 +38,10 @@
       <b-row>
         <b-col cols="8">
           <p class="desc">
-            The need to understand the surface and near subsurface of the moon is crucial for the
-            advancements of future missions. Our mission was to develop a payload that can map
-            surface water at a scale of a few kilometers for most of the Permanently Shadowed
-            Regions (PSRs) at the lunar South Polar Region, and for at least one location in a PSR,
-            the abundance of water ice in the top 1 meter of the regolith needs to be determined at
-            a ~ +-1% accuracy, or better, at a spatial sampling of ~ 100m.
+            Created modular wearable technology that utilizes ML, a microcontroller, and an IMU to
+            predict current action (ie. bicep curls, side lunges, sitting, etc.). Used TensorFlow to
+            create and train a model which is then hosted on a ESP32 microcontroller. Developed
+            software that allows the ESP32 and IMU to communicate and make inferences about the data
           </p>
         </b-col>
         <b-col cols="4">
@@ -61,110 +59,49 @@
     <Dateline v-bind:year="2021" class="desktop" />
 
     <!-- Mobile Rendering -->
-
-    <div class="text mobile" id="Raytheon-mobile">
-      <h1>Raytheon</h1>
-      <h4>Integrated Product and Process Design</h4>
+    <div class="text mobile" id="RapidModelPredictor-mobile">
+      <h1>Rapid Model Predictor</h1>
+      <h4>Department of Electrical & Computer Engineering, University of Florida</h4>
       <p class="desc">
-        This project was sponsored by Raytheon Intelligence & Space. The goal was to replace the
-        existing end of life GUI that relied on Adobe Flash, which was deprecated in December 2020
-        by developing a new front-end using a well-supported framework. The goal was to retain the
-        functionality of the legacy GUI and improve on the design. The most important issue in the
-        project was providing the functionality requested by the client in an intuitive and
-        easy-to-use display. The team achieved this by developing the design in coordination with
-        the liaison engineers and by incorporating extensive user experience testing throughout the
-        development of the project. The largest risks involved data security and privacy. The
-        application must be secure, so the team implemented best practices for security and work
-        with the liaison engineers to ensure the application meet the security needs.
+        To greatly enhance the clinical effectiveness of electrical neuromodulation therapies for
+        various medical conditions (e.g., pain, movement disorders, depression, and sensorimotor
+        prosthetics), efficient and patient-specific computer models are needed for the prediction
+        of the neural response. The objective of this work is to develop a method based on
+        deep-learning neural networks to replace computationally expensive methods for the
+        prediction of neural fiber activation by electrical stimulation. A neural network-based,
+        rapid predictor will decrease the computational demands and allow for implementation of
+        real-time patient-specific models. Approach. We developed an artificial neural network (ANN)
+        to predict the binary activation response of myelinated nerve fibers from deep brain
+        stimulation. Training, testing, and optimization was parallelized across 200 nodes on the UF
+        supercomputer, HiPerGator.
       </p>
-      <div class="flexy-mobile tech">
-        <div>Node</div>
-        <div>PostgreSQL</div>
-        <div>CSS</div>
-        <div>HTML</div>
-        <div>Vue</div>
-        <div>JavaScript</div>
-      </div>
-    </div>
-
-    <div class="text mobile" id="NASA-mobile">
-      <h1>NASA</h1>
-      <h4>Mission Concept Academy</h4>
-      <p class="desc">
-        The need to understand the surface and near subsurface of the moon is crucial for the
-        advancements of future missions. Our mission was to develop a payload that can map surface
-        water at a scale of a few kilometers for most of the Permanently Shadowed Regions (PSRs) at
-        the lunar South Polar Region, and for at least one location in a PSR, the abundance of water
-        ice in the top 1 meter of the regolith needs to be determined at a ~ +-1% accuracy, or
-        better, at a spatial sampling of ~ 100m.
-      </p>
-      <div class="flexy-mobile tech">
-        <div>CAD</div>
+      <div class="flexy tech">
         <div>Python</div>
-        <div>Siemens nx</div>
-        <div>Arduino</div>
+        <div>Tensor Flow</div>
+        <div>Neuron</div>
+        <div>Bash</div>
+        <div>HiperGator</div>
       </div>
     </div>
 
-    <div class="text mobile" id="RJF-mobile">
-      <h1>Raymond James</h1>
-      <h4>Internship Summer 2021</h4>
+    <div class="text mobile" id="Pastebles-mobile">
+      <h1>Pastebles</h1>
+      <h4>Department of Electrical & Computer Engineering, University of Florida</h4>
       <p class="desc">
-        My second summer internship with Raymond James. This timespan comprised of creating
-        reporting analytics using active data, analyzing numerous data sources spanning multiple
-        sectors of Raymond James, and utilizing the ServiceNow platform to develop tools for easy
-        data access.
+        Created modular wearable technology that utilizes ML, a microcontroller, and an IMU to
+        predict current action (ie. bicep curls, side lunges, sitting, etc.). Used TensorFlow to
+        create and train a model which is then hosted on a ESP32 microcontroller. Developed software
+        that allows the ESP32 and IMU to communicate and make inferences about the data
       </p>
-      <div class="flexy-mobile tech">
-        <div>ServiceNow</div>
+      <div class="flexy tech">
+        <div>C</div>
+        <div>C++</div>
+        <div>Tensor Flow</div>
         <div>Python</div>
-        <div>SQL</div>
-        <div>Tableau</div>
-        <div>Scikit-learn</div>
-      </div>
-
-      <Dateline v-bind:year="2021" class="mobile" />
-
-      <h4>Internship Summer 2020</h4>
-
-      <p class="desc">
-        I worked for Raymond James through their Intern Development Program where I was placed on
-        the team of Service Delivery and Support. During my time I utilized the ServiceNow platform
-        to test and begin implement a Natural Language Understanding chatbot which was to assist
-        internal IT issues that arose. This chatbot was implemented to speed up the time of ticker
-        turn around and user ease.
-      </p>
-
-      <div class="flexy-mobile tech">
-        <div>ServiceNow</div>
-        <div>NLP</div>
-        <div>NLU</div>
-        <div>JavaScript</div>
+        <div>Javascript</div>
       </div>
     </div>
-
-    <Dateline v-bind:year="2020" class="mobile" />
-
-    <div class="text mobile" id="Scanned-mobile">
-      <h1>Scanned</h1>
-      <h4>Co-Founder</h4>
-      <p class="desc">
-        I was a Co-Founder of this mobile app built to circumvent the inefficiencies of attendance
-        tracking at meetings and events. Developed with React Native for both IOS and Android, we
-        won $10,000 and first place in the Next Generation Tech startup competition and were later
-        accepted into the Gator Hatchery at the University of Florida. The app had users and sales
-        in numerous states and countries before stopping development.
-      </p>
-
-      <div class="flexy-mobile tech">
-        <div>JavaScript</div>
-        <div>React Native</div>
-        <div>Firebase</div>
-        <div>React</div>
-      </div>
-    </div>
-
-    <Dateline v-bind:year="2018" class="mobile" />
+    <Dateline v-bind:year="2021" class="mobile" />
   </div>
 </template>
 

@@ -4,31 +4,30 @@
       <span>Navigate using the planets!</span>
     </div>
 
-    <!-- <b-navbar toggleable="md" class="nav-bar" type="dark" sticky>
-      <b-navbar-brand
-        @click="scrollInto('About')"
-        style="margin-left:10px;margin-bottom:2px;cursor:pointer"
-      >
-        &lt; CD /&gt;
-      </b-navbar-brand>
-      <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+    <div id="stars">
+      <b-navbar toggleable="md" class="nav-bar" type="dark">
+        <b-navbar-brand
+          @click="scrollInto('About')"
+          style="margin-left:10px;margin-bottom:2px;cursor:pointer"
+        >
+          &lt; CD /&gt;
+        </b-navbar-brand>
+        <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
-      <b-collapse id="nav-collapse" is-nav>
-        <b-navbar-nav>
+        <b-collapse id="nav-collapse" is-nav>
+          <!-- <b-navbar-nav>
           <b-nav-item @click="scrollInto('NASA')">Experience</b-nav-item>
           <b-nav-item @click="scrollInto('Scanned')">Projects</b-nav-item>
           <b-nav-item @click="scrollInto('RJF')">Research</b-nav-item>
           <b-nav-item @click="scrollInto('Raytheon')">Contact</b-nav-item>
-        </b-navbar-nav>
-        <b-navbar-nav style="font-size: 17px;" class="ms-auto">
-          <b-nav-item href="./Resume.pdf" target="blank" style="padding-right:15px"
-            >Resume</b-nav-item
-          >
-        </b-navbar-nav>
-      </b-collapse>
-    </b-navbar> -->
-
-    <div id="stars">
+        </b-navbar-nav> -->
+          <b-navbar-nav style="font-size: 17px;" class="ms-auto">
+            <b-nav-item href="./Resume.pdf" target="blank" style="padding-right:15px"
+              >Resume</b-nav-item
+            >
+          </b-navbar-nav>
+        </b-collapse>
+      </b-navbar>
       <div id="solarSketch">
         <div id="Planet4-orbit">
           <div id="Planet4" @click="scrollInto('tabs', 4)" style="cursor: pointer;"></div>
@@ -414,7 +413,8 @@ a {
   z-index: 3;
   height: 5vh;
   min-height: 30px;
-  background-color: #232741;
+  background-color: transparent;
+  position: relative;
 }
 
 /* Socials */
@@ -477,7 +477,7 @@ a {
 
 #solarSketch {
   position: relative;
-  top: 50%;
+  top: 45vh;
   /* margin-top: 450px; */
   left: 0%;
   background-color: #232741;
